@@ -34,7 +34,14 @@ ns.points = {
     ["Helheim"] = {
 
     },
-    ["HighMountain"] = {
+    ["Highmountain"] = {
+        [49647128] = {quest=39606, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Inside cave"},
+        [54174159] = {quest=40483, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Cave entrance @ 55.1, 44.3"},
+        [52023241] = {quest=40505, currency=ARTIFACT, label="Treasure Chest"},
+        [39704830] = {quest=39494, currency=ARTIFACT, label="Floating Treasure", note="On river surface"},
+        [55134965] = {quest=40487, currency=ARTIFACT, label="Small Treasure Chest"},
+        [43582510] = {quest=40478, currency=ARTIFACT, label="Treasure Chest", note="Cave entrance @ 42.5, 25.4"},
+        [49647128] = {quest=39606, currency=ARTIFACT, label="Small Treasure Chest"},
 
     },
     ["MardumtheShatteredAbyss"] = {
