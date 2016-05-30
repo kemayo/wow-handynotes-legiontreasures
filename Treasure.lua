@@ -69,7 +69,16 @@ ns.points = {
 
     },
     ["Valsharah"] = {
-
+        [64708230] = {quest=38391, currency=ARTIFACT, label="Small Treasure Chest"},
+        [56008376] = {quest=38861, currency=ARTIFACT, label="Small Treasure Chest"},
+        [56225730] = {quest=39072, currency=ARTIFACT, label="Small Treasure Chest"},
+        [62707040] = {quest=39069, currency=ARTIFACT, label="Small Treasure Chest", note="Second floor balcony"},
+        [63007700] = {quest=39070, currency=ARTIFACT, label="Small Treasure Chest"},
+        [61006400] = {quest=39087, currency=ARTIFACT, label="Small Treasure Chest"},
+        [38456530] = {quest=39080, currency=ARTIFACT, label="Small Treasure Chest", note="Basement"},
+        [37005734] = {quest=39083, currency=ARTIFACT, label="Small Treasure Chest"},
+        [63904556] = {quest=44139, currency=ARTIFACT, label="Small Treasure Chest"},
+        [42008850] = {quest=39085, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["VaultOfTheWardensDH"] = {
 
