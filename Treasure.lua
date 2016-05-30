@@ -19,7 +19,17 @@ ns.points = {
     },
     --]]
     ["Azsuna"] = {
-
+        [42600810] = {quest=38367, currency=ARTIFACT, label="Treasure Chest"},
+        [51502030] = {quest=42289, currency=ARTIFACT, label="Treasure Chest", note="Cave entrance @ 47.8, 23.7"},
+        [53504545] = {quest=42283, currency=ARTIFACT, label="Small Treasure Chest"},
+        [53543982] = {quest=42284, currency=ARTIFACT, label="Small Treasure Chest"},
+        [55905690] = {quest=38365, currency=ARTIFACT, label="Disputed Treasure"},
+        [56443481] = {quest=38251, currency=ARTIFACT, label="Treasure Chest"},
+        [57901220] = {quest=37958, currency=ARTIFACT, label="Treasure Chest"},
+        [58364378] = {quest=37830, currency=ARTIFACT, label="Glimmering Treasure Chest"},
+        [62405840] = {quest=42273, currency=ARTIFACT, label="Small Treasure Chest"},
+        [63005420] = {quest=42278, currency=ARTIFACT, label="Small Treasure Chest"},
+        [65462961] = {quest=42958, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["Helheim"] = {
 
