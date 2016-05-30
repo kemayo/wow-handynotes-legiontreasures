@@ -14,4 +14,7 @@ ns.points = {
         },
     },
     --]]
+    ["Stormheim"] = {
+        [35735415] = {quest=38677, item=140310, label="Treasure Chest"}, -- treasure chest on the wreck
+    },
 }
