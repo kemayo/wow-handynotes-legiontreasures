@@ -18,6 +18,8 @@ local GetAchievementInfo = GetAchievementInfo
 local GetAchievementCriteriaInfo = GetAchievementCriteriaInfo
 local GetCurrencyInfo = GetCurrencyInfo
 
+local ARTIFACT_LABEL = '|cffff8000' .. ARTIFACT_POWER .. '|r'
+
 local cache_tooltip = CreateFrame("GameTooltip", "HNLegionTreasuresTooltip")
 cache_tooltip:AddFontStrings(
     cache_tooltip:CreateFontString("$parentTextLeft1", nil, "GameTooltipText"),
@@ -70,6 +72,9 @@ local function work_out_label(point)
         fallback = 'npc:'..point.npc
     end
     if point.currency then
+        if point.currency == 'ARTIFACT' then
+            return ARTIFACT_LABEL
+        end
         local name, _, texture = GetCurrencyInfo(point.currency)
         if name then
             return name
@@ -85,9 +90,16 @@ local function work_out_texture(point)
         end
     end
     if point.currency then
-        local texture = select(3, GetCurrencyInfo(point.currency))
-        if texture then
-            return trimmed_icon(texture)
+        if point.currency == 'ARTIFACT' then
+            local texture = select(10, GetAchievementInfo(11144))
+            if texture then
+                return trimmed_icon(texture)
+            end
+        else
+            local texture = select(3, GetCurrencyInfo(point.currency))
+            if texture then
+                return trimmed_icon(texture)
+            end
         end
     end
     if point.achievement then
@@ -185,7 +197,12 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddDoubleLine(CREATURE, mob_name(point.npc) or point.npc)
         end
         if point.currency then
-            local name = GetCurrencyInfo(point.currency)
+            local name
+            if point.currency == 'ARTIFACT' then
+                name = ARTIFACT_LABEL
+            else
+                name = GetCurrencyInfo(point.currency)
+            end
             tooltip:AddDoubleLine(CURRENCY, name or point.currency)
         end
         if point.achievement then
