@@ -67,14 +67,23 @@ ns.points = {
 
     },
     ["Highmountain"] = {
-        [49647128] = {quest=39606, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Inside cave"},
-        [54174159] = {quest=40483, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Cave entrance @ 55.1, 44.3"},
-        [52023241] = {quest=40505, currency=ARTIFACT, label="Treasure Chest"},
+        [37353381] = {quest=40477, currency=ARTIFACT, label="Small Treasure Chest"},
+        [39376229] = {quest=40474, currency=ARTIFACT, label="Treasure Chest"},
         [39704830] = {quest=39494, currency=ARTIFACT, label="Floating Treasure", note="On river surface"},
-        [55134965] = {quest=40487, currency=ARTIFACT, label="Small Treasure Chest"},
+        [42203482] = {quest=40480, currency=ARTIFACT, label="Small Treasure Chest"},
         [43582510] = {quest=40478, currency=ARTIFACT, label="Treasure Chest", note="Cave entrance @ 42.5, 25.4"},
+        [43582510] = {quest=40478, currency=ARTIFACT, label="Treasure Chest"}, -- Cave entrace at 42.5 to 25.4
+        [45573462] = {quest=40481, currency=ARTIFACT, label="Small Treasure Chest"},
+        [49647128] = {quest=39606, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Inside cave"},
         [49647128] = {quest=39606, currency=ARTIFACT, label="Small Treasure Chest"},
-
+        [50013714] = {quest=39466, currency=ARTIFACT, label="Treasure Chest"},
+        [50983880] = {quest=40498, currency=ARTIFACT, label="Treasure Chest"},
+        [52023241] = {quest=40505, currency=ARTIFACT, label="Treasure Chest"},
+        [53035224] = {quest=40493, currency=ARTIFACT, label="Small Treasure Chest"},
+        [53063946] = {quest=40499, currency=ARTIFACT, label="Small Treasure Chest"},
+        [53454352] = {quest=40484, currency=ARTIFACT, label="Small Treasure Chest"},
+        [54174159] = {quest=40483, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Cave entrance @ 55.1, 44.3"},
+        [55134965] = {quest=40487, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["MardumtheShatteredAbyss"] = {
 
