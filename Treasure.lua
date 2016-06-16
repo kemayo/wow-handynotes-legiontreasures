@@ -63,9 +63,6 @@ ns.points = {
         [66064345] = {quest=40751, currency=ARTIFACT, label="Small Treasure Chest"},
         [68872973] = {quest=44103, currency=ARTIFACT, label="Small Treasure Chest", note="Underwater cave, entrance is on east side of cliff"},
     },
-    ["Helheim"] = {
-
-    },
     ["Highmountain"] = {
         [37353381] = {quest=40477, currency=ARTIFACT, label="Small Treasure Chest"},
         [39376229] = {quest=40474, currency=ARTIFACT, label="Treasure Chest"},
@@ -84,9 +81,6 @@ ns.points = {
         [53454352] = {quest=40484, currency=ARTIFACT, label="Small Treasure Chest"},
         [54174159] = {quest=40483, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Cave entrance @ 55.1, 44.3"},
         [55134965] = {quest=40487, currency=ARTIFACT, label="Small Treasure Chest"},
-    },
-    ["MardumtheShatteredAbyss"] = {
-
     },
     ["Stormheim"] = {
         [27335749] = {quest=38529, currency=ARTIFACT, label="Treasure Chest", note="Cave entrance @ 31.4, 57.1"},
@@ -115,12 +109,6 @@ ns.points = {
     },
     ["Suramar"] = {
         [23414880] = {quest=43842, currency=ARTIFACT, label="Small Treasure Chest"},
-    },
-    ["ThunderTotem"] = {
-
-    },
-    ["ThunderTotemInterior"] = {
-
     },
     ["Valsharah"] = {
         [33815826] = {quest=39081, currency=ARTIFACT, label="Treasure Chest"},
@@ -171,7 +159,37 @@ ns.points = {
         [69475999] = {quest=38781, currency=ARTIFACT, label="Small Treasure Chest"},
         [70225704] = {quest=38783, currency=ARTIFACT, label="Small Treasure Chest"},
     },
-    ["VaultOfTheWardensDH"] = {
 
+    -- Small zones
+    ["Darkpens"] = {
+        [42018849] = {quest=39085, item=138783, label="Small Treasure Chest", note="Top of wall @ 41.4, 45.6"},
+        [50905168] = {quest=39086, item=138783, label="Glimmering Treasure Chest", note="Top of wall @ 41.4, 45.6"},
+    },
+    ["Helheim"] = {
+        [28186375] = {quest=39870, npc=97630, item=129188, pet=true, label="Soulthirster"},
+    },
+    ["OceanusCove"] = {
+        [69294839] = {quest=37649, item=138783, label="Glimmering Treasure Chest"},
+        [45346686] = {quest=42291, item=138783, label="Small Treasure Chest"},
+    },
+    ["BitestoneEnclave"] = {
+        [85213787] = {quest=40489, item=138783, label="Treasure Chest"},
+    },
+    ["LifespringCavern"] = {
+        [80887207] = {quest=40476, item=138783, label="Glimmering Treasure Chest"},
+    },
+    ["MardumtheShatteredAbyss"] = {
+    },
+    ["ThunderTotem"] = {
+        [13715555] = {quest=40491, item=138783, label="Small Treasure Chest"},
+    },
+    ["ThunderTotemInterior"] = {
+        [62946793] = {quest=40471, item=138783, label="Treasure Chest"},
+    },
+    ["NeltharionsVault"] = {
+        [63733725] = {quest=39606, item=138783, label="Treasures of Deathwing"},
+        [40215031] = {quest=40509, item=138783, label="Treasure Chest"},
+    },
+    ["VaultOfTheWardensDH"] = {
     },
 }
