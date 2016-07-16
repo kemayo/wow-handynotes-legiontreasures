@@ -196,13 +196,32 @@ ns.points = {
     ["BitestoneEnclave"] = {
         [85213787] = {quest=40489, currency=ARTIFACT, label="Treasure Chest"},
     },
+    ["CrypticHollow"] = {
+        [48761530] = {quest=39972, item=129196, label="Small Treasure Chest"},
+        [54855845] = {quest=39973, item=128946, label="Small Treasure Chest"},
+    },
+    ["SoulEngine"] = {
+        [50304964] = {quest=40772, item=129210, label="Small Treasure Chest"},
+    },
     ["LifespringCavern"] = {
         [80887207] = {quest=40476, currency=ARTIFACT, label="Glimmering Treasure Chest"},
     },
-    ["MardumtheShatteredAbyss"] = {
+    ["StonedarkGrotto"] = {
+        [35987235] = {quest=40478, currency=ARTIFACT, label="Treasure Chest"},
+    },
+    ["MucksnoutDen"] = {
+        [60592533] = {quest=40494, currency=ARTIFACT, label="Treasure Chest"},
+    },
+    ["SuramarLegionScar"] = {
+        [40502903] = {quest=40902, currency=ARTIFACT, label="Small Treasure Chest"},
+        [54573780] = {quest=43835, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["ThunderTotem"] = {
         [13715555] = {quest=40491, currency=ARTIFACT, label="Small Treasure Chest"},
+        [63435929] = {quest=39531, item=141322, label="A Steamy Jewelry Box"},
+        [50667537] = {quest=40472, currency=ARTIFACT, label="Small Treasure Chest"},
+        [32354174] = {quest=40475, currency=ARTIFACT, label="Small Treasure Chest"},
+        [31843842] = {quest=44352, currency=ARTIFACT, label="Treasure Chest"}, -- in an underwater cave
     },
     ["ThunderTotemInterior"] = {
         [62946793] = {quest=40471, currency=ARTIFACT, label="Treasure Chest"},
@@ -210,6 +229,7 @@ ns.points = {
     ["NeltharionsVault"] = {
         [63733725] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing"},
         [40215031] = {quest=40509, currency=ARTIFACT, label="Treasure Chest"},
+        [60425458] = {quest=40508, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["VaultOfTheWardensDH"] = {
     },
