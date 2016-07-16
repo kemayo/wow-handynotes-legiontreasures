@@ -232,5 +232,26 @@ ns.points = {
         [60425458] = {quest=40508, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["VaultOfTheWardensDH"] = {
+        [58693475] = {quest=40909, item=129210, label="Small Treasure Chest", note="First stage"},
+        [47325464] = {quest=38690, item=129210, label="Small Treasure Chest", note="First stage"},
+        [32104817] = {quest=40911, item=129196, label="Small Treasure Chest", note="Second stage"},
+        [41506361] = {quest=40914, item=129196, label="Small Treasure Chest", note="Second stage"},
+        [56994013] = {quest=40913, item=129210, label="Small Treasure Chest", note="Second stage"},
+        [41413287] = {quest=40912, item=129210, label="Small Treasure Chest", note="Second stage"},
+        [24421005] = {quest=40915, item=129210, label="Small Treasure Chest", note="Third stage"},
+        [23268157] = {quest=40916, item=129210, label="Small Treasure Chest", note="Third stage"},
+    },
+
+    -- DH starter
+    ["MardumtheShatteredAbyss"] = {
+        [34857020] = {quest=39970, item=129210, label="Small Treasure Chest"},
+        [45017785] = {quest=39971, item=129192, label="Small Treasure Chest"},
+        [41763761] = {quest=40759, item=129196, label="Small Treasure Chest"},
+        [51135079] = {quest=40743, item=129210, label="Small Treasure Chest"},
+        [76243899] = {quest=40338, item=129210, label="Small Treasure Chest"},
+        [82075043] = {quest=40820, item=129196, label="Small Treasure Chest"},
+        [78755047] = {quest=40274, item=129210, label="Small Treasure Chest"},
+        [73494892] = {quest=39975, item=129195, label="Small Treasure Chest"},
+        [42194916] = {quest=40223, item=129210, label="Small Treasure Chest"},
     },
 }
