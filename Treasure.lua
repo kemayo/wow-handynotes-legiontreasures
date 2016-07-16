@@ -100,6 +100,7 @@ ns.points = {
         [31105600] = {quest=38676, currency=ORDER, label="Small Treasure Chest"},
         [32054719] = {quest=43196, currency=ARTIFACT, label="Treasure Chest"},
         [35735415] = {quest=38677, currency=ARTIFACT, item=140310, label="Treasure Chest"}, -- treasure chest on the wreck
+        [39571934] = {quest=38498, currency=ARTIFACT, label="Small Treasure Chest"},
         [41744604] = {quest=38488, currency=ARTIFACT, label="Small Treasure Chest"},
         [42616579] = {quest=38474, currency=ARTIFACT, label="Treasure Chest"},
         [46768040] = {quest=38481, currency=ARTIFACT, label="Treasure Chest", note="Requires: Stormforged Grapple Launcher"},
@@ -122,6 +123,13 @@ ns.points = {
     },
     ["Suramar"] = {
         [23414880] = {quest=43842, currency=ARTIFACT, label="Small Treasure Chest"},
+        [25958548] = {quest=43831, currency=ARTIFACT, label="Small Treasure Chest"},
+        [29768817] = {quest=43748, item=141655, label="Shimmering Ancient Mana Cluster"},
+        [38138712] = {quest=43830, currency=ARTIFACT, label="Small Treasure Chest"},
+        [44302289] = {quest=43850, currency=ARTIFACT, label="Treasure Chest"},
+        [46552599] = {quest=43744, item=141655, label="Shimmering Ancient Mana Cluster"},
+        [51503859] = {quest=43855, currency=ARTIFACT, label="Small Treasure Chest"},
+        [52733130] = {quest=40767, currency=ARTIFACT, label="Dusty Coffer"},
     },
     ["Valsharah"] = {
         [33815826] = {quest=39081, currency=ARTIFACT, label="Treasure Chest"},
