@@ -162,33 +162,33 @@ ns.points = {
 
     -- Small zones
     ["Darkpens"] = {
-        [42018849] = {quest=39085, item=138783, label="Small Treasure Chest", note="Top of wall @ 41.4, 45.6"},
-        [50905168] = {quest=39086, item=138783, label="Glimmering Treasure Chest", note="Top of wall @ 41.4, 45.6"},
+        [42018849] = {quest=39085, currency=ARTIFACT, label="Small Treasure Chest", note="Top of wall @ 41.4, 45.6"},
+        [50905168] = {quest=39086, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Top of wall @ 41.4, 45.6"},
     },
     ["Helheim"] = {
         [28186375] = {quest=39870, npc=97630, item=129188, pet=true, label="Soulthirster"},
     },
     ["OceanusCove"] = {
-        [69294839] = {quest=37649, item=138783, label="Glimmering Treasure Chest"},
-        [45346686] = {quest=42291, item=138783, label="Small Treasure Chest"},
+        [69294839] = {quest=37649, currency=ARTIFACT, label="Glimmering Treasure Chest"},
+        [45346686] = {quest=42291, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["BitestoneEnclave"] = {
-        [85213787] = {quest=40489, item=138783, label="Treasure Chest"},
+        [85213787] = {quest=40489, currency=ARTIFACT, label="Treasure Chest"},
     },
     ["LifespringCavern"] = {
-        [80887207] = {quest=40476, item=138783, label="Glimmering Treasure Chest"},
+        [80887207] = {quest=40476, currency=ARTIFACT, label="Glimmering Treasure Chest"},
     },
     ["MardumtheShatteredAbyss"] = {
     },
     ["ThunderTotem"] = {
-        [13715555] = {quest=40491, item=138783, label="Small Treasure Chest"},
+        [13715555] = {quest=40491, currency=ARTIFACT, label="Small Treasure Chest"},
     },
     ["ThunderTotemInterior"] = {
-        [62946793] = {quest=40471, item=138783, label="Treasure Chest"},
+        [62946793] = {quest=40471, currency=ARTIFACT, label="Treasure Chest"},
     },
     ["NeltharionsVault"] = {
-        [63733725] = {quest=39606, item=138783, label="Treasures of Deathwing"},
-        [40215031] = {quest=40509, item=138783, label="Treasure Chest"},
+        [63733725] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing"},
+        [40215031] = {quest=40509, currency=ARTIFACT, label="Treasure Chest"},
     },
     ["VaultOfTheWardensDH"] = {
     },
