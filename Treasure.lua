@@ -196,13 +196,6 @@ ns.points = {
     ["BitestoneEnclave"] = {
         [85213787] = {quest=40489, currency=ARTIFACT, label="Treasure Chest"},
     },
-    ["CrypticHollow"] = {
-        [48761530] = {quest=39972, item=129196, label="Small Treasure Chest"},
-        [54855845] = {quest=39973, item=128946, label="Small Treasure Chest"},
-    },
-    ["SoulEngine"] = {
-        [50304964] = {quest=40772, item=129210, label="Small Treasure Chest"},
-    },
     ["LifespringCavern"] = {
         [80887207] = {quest=40476, currency=ARTIFACT, label="Glimmering Treasure Chest"},
     },
@@ -231,16 +224,6 @@ ns.points = {
         [40215031] = {quest=40509, currency=ARTIFACT, label="Treasure Chest"},
         [60425458] = {quest=40508, currency=ARTIFACT, label="Small Treasure Chest"},
     },
-    ["VaultOfTheWardensDH"] = {
-        [58693475] = {quest=40909, item=129210, label="Small Treasure Chest", note="First stage"},
-        [47325464] = {quest=38690, item=129210, label="Small Treasure Chest", note="First stage"},
-        [32104817] = {quest=40911, item=129196, label="Small Treasure Chest", note="Second stage"},
-        [41506361] = {quest=40914, item=129196, label="Small Treasure Chest", note="Second stage"},
-        [56994013] = {quest=40913, item=129210, label="Small Treasure Chest", note="Second stage"},
-        [41413287] = {quest=40912, item=129210, label="Small Treasure Chest", note="Second stage"},
-        [24421005] = {quest=40915, item=129210, label="Small Treasure Chest", note="Third stage"},
-        [23268157] = {quest=40916, item=129210, label="Small Treasure Chest", note="Third stage"},
-    },
 
     -- DH starter
     ["MardumtheShatteredAbyss"] = {
@@ -253,5 +236,22 @@ ns.points = {
         [78755047] = {quest=40274, item=129210, label="Small Treasure Chest"},
         [73494892] = {quest=39975, item=129195, label="Small Treasure Chest"},
         [42194916] = {quest=40223, item=129210, label="Small Treasure Chest"},
+    },
+    ["CrypticHollow"] = {
+        [48761530] = {quest=39972, item=129196, label="Small Treasure Chest"},
+        [54855845] = {quest=39973, item=128946, label="Small Treasure Chest"},
+    },
+    ["SoulEngine"] = {
+        [50304964] = {quest=40772, item=129210, label="Small Treasure Chest"},
+    },
+    ["VaultOfTheWardensDH"] = {
+        [58693475] = {quest=40909, item=129210, label="Small Treasure Chest", level=1},
+        [47325464] = {quest=38690, item=129210, label="Small Treasure Chest", level=1},
+        [32104817] = {quest=40911, item=129196, label="Small Treasure Chest", level=2},
+        [41506361] = {quest=40914, item=129196, label="Small Treasure Chest", level=2},
+        [56994013] = {quest=40913, item=129210, label="Small Treasure Chest", level=2},
+        [41413287] = {quest=40912, item=129210, label="Small Treasure Chest", level=2},
+        [24421005] = {quest=40915, item=129210, label="Small Treasure Chest", level=3},
+        [23268157] = {quest=40916, item=129210, label="Small Treasure Chest", level=3},
     },
 }
