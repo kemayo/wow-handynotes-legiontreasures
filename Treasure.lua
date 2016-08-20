@@ -182,60 +182,75 @@ ns.points = {
     },
 
     -- Small zones
-    ["Darkpens"] = {
+    ["Darkpens"] = { -- Val'sharah
         [42018849] = {quest=39085, currency=ARTIFACT, label="Small Treasure Chest", note="Top of wall @ 41.4, 45.6"},
         [50905168] = {quest=39086, currency=ARTIFACT, label="Glimmering Treasure Chest", note="Top of wall @ 41.4, 45.6"},
     },
-    ["Helheim"] = {
+    ["Helheim"] = { -- Stormheim
         [28186375] = {quest=39870, npc=97630, item=129188, pet=true, label="Soulthirster"},
     },
-    ["OceanusCove"] = {
+    ["StormDrakeDen"] = { -- Stormheim
+        [20134125] = {quest=38529, currency=ARTIFACT, label="Treasure Chest"},
+    },
+    ["OceanusCove"] = { -- Azsuna
         [69294839] = {quest=37649, currency=ARTIFACT, label="Glimmering Treasure Chest"},
         [45346686] = {quest=42291, currency=ARTIFACT, label="Small Treasure Chest"},
     },
-    ["BitestoneEnclave"] = {
+    ["BitestoneEnclave"] = { -- Highmountain
         [85213787] = {quest=40489, currency=ARTIFACT, label="Treasure Chest"},
     },
-    ["LifespringCavern"] = {
+    ["LifespringCavern"] = { -- Highmountain
         [80887207] = {quest=40476, currency=ARTIFACT, label="Glimmering Treasure Chest"},
     },
-    ["StonedarkGrotto"] = {
+    ["StonedarkGrotto"] = { -- Highmountain
         [35987235] = {quest=40478, currency=ARTIFACT, label="Treasure Chest"},
     },
-    ["MucksnoutDen"] = {
+    ["MucksnoutDen"] = { -- Highmountain
         [60592533] = {quest=40494, currency=ARTIFACT, label="Treasure Chest"},
     },
-    ["SuramarLegionScar"] = {
-        [40502903] = {quest=40902, currency=ARTIFACT, label="Small Treasure Chest"},
-        [54573780] = {quest=43835, currency=ARTIFACT, label="Small Treasure Chest"},
-    },
-    ["ThunderTotem"] = {
+    ["ThunderTotem"] = { -- Highmountain
         [13715555] = {quest=40491, currency=ARTIFACT, label="Small Treasure Chest"},
         [63435929] = {quest=39531, item=141322, label="A Steamy Jewelry Box"},
         [50667537] = {quest=40472, currency=ARTIFACT, label="Small Treasure Chest"},
         [32354174] = {quest=40475, currency=ARTIFACT, label="Small Treasure Chest"},
         [31843842] = {quest=44352, currency=ARTIFACT, label="Treasure Chest"}, -- in an underwater cave
     },
-    ["ThunderTotemInterior"] = {
+    ["ThunderTotemInterior"] = { -- Highmountain
         [62946793] = {quest=40471, currency=ARTIFACT, label="Treasure Chest"},
     },
-    ["NeltharionsVault"] = {
+    ["NeltharionsVault"] = { -- Highmountain
         [63733725] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing"},
         [40215031] = {quest=40509, currency=ARTIFACT, label="Treasure Chest"},
         [60425458] = {quest=40508, currency=ARTIFACT, label="Small Treasure Chest"},
     },
+    ["SuramarLegionScar"] = { -- ...Suramar
+        [40502903] = {quest=40902, currency=ARTIFACT, label="Small Treasure Chest"},
+        [54573780] = {quest=43835, currency=ARTIFACT, label="Small Treasure Chest"},
+    },
+    ["NarthalasAcademy"] = { -- Suramar
+        [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs"},
+        [38605414] = {quest=43838, currency=ARTIFACT, label="Small Treasure Chest", note="Downstairs"},
+    },
+    ["FalanaarTunnels"] = { -- Suramar
+        [35513253] = {quest=43747, item=139786, label="Manachest"},
+        [48644258] = {quest=43839, currency=ARTIFACT, label="Small Treasure Chest", note="Climb spiderweb"},
+    },
 
     -- DH starter
     ["MardumtheShatteredAbyss"] = {
+        [23065389] = {quest=40797, item=129210, label="Small Treasure Chest", note="Cave entrance @ 23.6, 54.2"},
         [34857020] = {quest=39970, item=129210, label="Small Treasure Chest"},
-        [45017785] = {quest=39971, item=129192, label="Small Treasure Chest"},
         [41763761] = {quest=40759, item=129196, label="Small Treasure Chest"},
-        [51135079] = {quest=40743, item=129210, label="Small Treasure Chest"},
-        [76243899] = {quest=40338, item=129210, label="Small Treasure Chest"},
-        [82075043] = {quest=40820, item=129196, label="Small Treasure Chest"},
-        [78755047] = {quest=40274, item=129210, label="Small Treasure Chest"},
-        [73494892] = {quest=39975, item=129195, label="Small Treasure Chest"},
         [42194916] = {quest=40223, item=129210, label="Small Treasure Chest"},
+        [45017785] = {quest=39971, item=129192, label="Small Treasure Chest"},
+        [51135079] = {quest=40743, item=129210, label="Small Treasure Chest"},
+        [66922767] = {quest=39974, item=129210, label="Small Treasure Chest"},
+        [69704240] = {quest=39976, item=129210, label="Small Treasure Chest"},
+        [73494892] = {quest=39975, item=129195, label="Small Treasure Chest"},
+        [74285453] = {quest=39977, item=129210, label="Small Treasure Chest", note="Cave entrance @ 70.7, 54.0"},
+        [76243899] = {quest=40338, item=129210, label="Small Treasure Chest"},
+        [78755047] = {quest=40274, item=129210, label="Small Treasure Chest"},
+        [82075043] = {quest=40820, item=129196, label="Small Treasure Chest"},
     },
     ["CrypticHollow"] = {
         [48761530] = {quest=39972, item=129196, label="Small Treasure Chest"},
