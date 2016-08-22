@@ -173,6 +173,7 @@ ns.points = {
         [62708526] = {quest=44136, currency=ARTIFACT, label="Small Treasure Chest"},
         [63007700] = {quest=39070, currency=ARTIFACT, label="Small Treasure Chest"},
         [63277401] = {quest=39102, currency=ARTIFACT, label="Treasure Chest"},
+        [63378841] = {quest=38389, currency=ARTIFACT, label="Small Treasure Chest"},
         [63904556] = {quest=44139, currency=ARTIFACT, label="Small Treasure Chest"},
         [64608546] = {quest=38900, currency=ARTIFACT, label="Treasure Chest"},
         [64708230] = {quest=38391, currency=ARTIFACT, label="Small Treasure Chest"},
