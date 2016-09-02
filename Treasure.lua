@@ -224,7 +224,7 @@ ns.points = {
         [43225488] = {quest=39084, currency=ARTIFACT, label="Treasure Chest", note="Top of wall"},
         [44358257] = {quest=38387, currency=ARTIFACT, label="Treasure Chest", note="Cave under the inn; entrance behind the building"},
         [46448630] = {quest=38277, currency=ARTIFACT, label="Small Treasure Chest"},
-        [46897240] = {quest=38363, currency=ARTIFACT, label="Small Treasure Chest"},
+        [48687381] = {quest=38363, currency=ARTIFACT, label="Small Treasure Chest", note="Under tree roots"},
         [48607234] = {quest=38366, currency=ARTIFACT, label="Small Treasure Chest"},
         [48998615] = {quest=38886, currency=ARTIFACT, label="Small Treasure Chest"},
         [51247777] = {quest=38388, currency=ARTIFACT, label="Small Treasure Chest", note="Cave entrance @ 50.9, 77.0"},
