@@ -189,7 +189,7 @@ ns.points = {
         [44803100] = {quest=43986, item=140326, label="Enchanted Burial Urn"},
         [46552599] = {quest=43744, item=141655, label="Shimmering Ancient Mana Cluster"},
         [48117321] = {quest=43865, currency=ARTIFACT, label="Small Treasure Chest", note="Grapple to it"},
-        [48143399] = {quest=43853, item=, label="Small Treasure Chest"},
+        [48143399] = {quest=43853, label="Small Treasure Chest"},
         [48288261] = {quest=43866, currency=ARTIFACT, label="Small Treasure Chest", note="Grapple from 48.4, 82.2"},
         [48297121] = {quest=44324, currency=ARTIFACT, label="Treasure Chest", note="Jumping puzzle!"},
         [48587217] = {quest=44323, currency=ARTIFACT, label="Treasure Chest", note="Upstairs"},
