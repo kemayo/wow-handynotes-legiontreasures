@@ -10,6 +10,7 @@ ns.defaults = {
         icon_alpha = 1.0,
         icon_item = true,
         tooltip_item = true,
+        tooltip_questid = false,
     },
     char = {
         hidden = {
@@ -91,6 +92,12 @@ ns.options = {
                     type = "toggle",
                     name = "Show repeatable",
                     desc = "Show items which are repeatable? This generally means ones which have a daily tracking quest attached",
+                    order = 40,
+                },
+                tooltip_questid = {
+                    type = "toggle",
+                    name = "Show quest ids",
+                    desc = "Show the internal id of the quest associated with this node. Handy if you want to report a problem with it.",
                     order = 40,
                 },
                 unhide = {

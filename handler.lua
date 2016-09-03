@@ -209,6 +209,9 @@ local function handle_tooltip(tooltip, point)
         if point.note then
             tooltip:AddLine(point.note, nil, nil, nil, true)
         end
+        if ns.db.tooltip_questid then
+            tooltip:AddDoubleLine("QuestID", point.quest or UNKNOWN)
+        end
     else
         tooltip:SetText(UNKNOWN)
     end
