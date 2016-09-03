@@ -31,7 +31,7 @@ ns.points = {
         [49653448] = {quest=37831, currency=ARTIFACT, label="Small Treasure Chest"},
         [50215029] = {quest=42290, currency=ARTIFACT, label="Small Treasure Chest"},
         [50465211] = {quest=44081, currency=ARTIFACT, item=140685, label="Treacherous Stallions", note="Ley Portal @ 60.3, 46.3; kill the stallions"},
-        [51502030] = {quest=42289, currency=ARTIFACT, label="Treasure Chest", note="Cave entrance @ 47.8, 23.7"},
+        [51502430] = {quest=42289, currency=ARTIFACT, label="Treasure Chest", note="Leyhollow cave entrance @ 47.8, 23.7"},
         [52004210] = {quest=42281, currency=ARTIFACT, label="Small Treasure Chest"},
         [52842059] = {quest=42339, currency=ARTIFACT, label="Treasure Chest", note="Cave entrance @ 53.9, 22.4; don't wake up the bears"},
         [53033726] = {quest=37596, currency=ARTIFACT, label="Small Treasure Chest"},
