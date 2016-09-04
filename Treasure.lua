@@ -275,6 +275,10 @@ ns.points = {
     ["StormDrakeDen"] = { -- Stormheim
         [20134125] = {quest=38529, currency=ARTIFACT, label=CHEST},
     },
+    ["NarthalasAcademy"] = { -- Azsuna
+        [53633986] = {quest=42284, currency=ARTIFACT, label=CHEST_SM},
+        [71212211] = {quest=42285, currency=ARTIFACT, label=CHEST_SM, note="Door opens after you finish nearby quests"},
+    },
     ["OceanusCove"] = { -- Azsuna
         [69294839] = {quest=37649, currency=ARTIFACT, label=CHEST_GLIM},
         [45346686] = {quest=42291, currency=ARTIFACT, label=CHEST_SM},
@@ -310,13 +314,9 @@ ns.points = {
         [40502903] = {quest=40902, currency=ARTIFACT, label=CHEST_SM},
         [54573780] = {quest=43835, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["NarthalasAcademy"] = { -- Suramar
-        [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs"},
-        [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs"},
-        [53633986] = {quest=42284, currency=ARTIFACT, label=CHEST_SM},
-        [71212211] = {quest=42285, currency=ARTIFACT, label=CHEST_SM, note="Door opens after you finish nearby quests"},
-    },
     ["FalanaarTunnels"] = { -- Suramar
+        -- [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs"},
+        -- [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs"},
         [35513253] = {quest=43747, item=139786, label="Manachest"},
         [48644258] = {quest=43839, currency=ARTIFACT, label=CHEST_SM, note="Climb spiderweb"},
     },
