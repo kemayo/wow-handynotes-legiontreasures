@@ -5,6 +5,7 @@ local ARTIFACT = 'ARTIFACT'
 local CHEST = 'Treasure Chest'
 local CHEST_SM = 'Small Treasure Chest'
 local CHEST_GLIM = 'Glimmering Treasure Chest'
+local REQ_GRAPPLE = 'Requires: Stormforged Grapple Launcher'
 
 ns.points = {
     --[[ structure:
@@ -26,7 +27,7 @@ ns.points = {
         [34583556] = {quest=44102, currency=ARTIFACT, label=CHEST_SM},
         [40575767] = {quest=38316, currency=ARTIFACT, label=CHEST},
         [41393075] = {quest=42292, currency=ARTIFACT, label=CHEST},
-        [42600810] = {quest=38367, currency=ARTIFACT, label=CHEST},
+        [42600810] = {quest=38367, currency=ARTIFACT, label=CHEST_GLIM},
         [44473946] = {quest=37713, currency=ARTIFACT, label=CHEST_SM},
         [47860773] = {quest=42295, currency=ARTIFACT, label=CHEST_SM},
         [49384536] = {quest=37828, currency=ARTIFACT, item=122681, label=CHEST},
@@ -118,30 +119,30 @@ ns.points = {
         [40656852] = {quest=38475, currency=ARTIFACT, label=CHEST_SM},
         [41744604] = {quest=38488, currency=ARTIFACT, label=CHEST_SM},
         [42336112] = {quest=38477, currency=ARTIFACT, label=CHEST_SM},
-        [42473407] = {quest=43189, currency=ARTIFACT, label=CHEST, note="Entrance @ 42.2, 34.9"},
+        [42473407] = {quest=43189, currency=ARTIFACT, item=141896, label=CHEST_GLIM, note="Entrance @ 42.2, 34.9"},
         [42616579] = {quest=38474, currency=ARTIFACT, label=CHEST},
         [43164049] = {quest=43238, currency=ARTIFACT, label=CHEST_SM},
         [43708009] = {quest=43239, currency=ARTIFACT, label=CHEST_SM},
         [44166997] = {quest=38489, currency=ARTIFACT, label=CHEST_SM},
-        [44983823] = {quest=43240, currency=ARTIFACT, label=CHEST_SM},
+        [44983823] = {quest=43240, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [46606496] = {quest=38681, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 48.2, 65.2"},
         [46768040] = {quest=38481, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 48.2, 65.2"},
-        [47463412] = {quest=43255, currency=ARTIFACT, label=CHEST_SM},
+        [47463412] = {quest=43255, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [47986237] = {quest=38738, currency=ARTIFACT, label=CHEST},
         [48137421] = {quest=38476, currency=ARTIFACT, label=CHEST_SM},
         [49085999] = {quest=43207, currency=ARTIFACT, label=CHEST_SM},
         [49694731] = {quest=38763, currency=ARTIFACT, label=CHEST_GLIM, note="Guarded by Vault Keepers"},
-        [49777801] = {quest=38485, currency=ARTIFACT, label=CHEST_SM, note="Requires: Stormforged Grapple Launcher"},
+        [49777801] = {quest=38485, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [50061816] = {quest=43195, currency=ARTIFACT, label=CHEST},
         [50314100] = {quest=38483, currency=ARTIFACT, label=CHEST_SM},
         [50554125] = {quest=43246, currency=ARTIFACT, label=CHEST_SM},
-        [52018058] = {quest=38480, currency=ARTIFACT, label=CHEST_SM, note="Requires: Stormforged Grapple Launcher"},
+        [52018058] = {quest=38480, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [53229314] = {quest=43190, currency=ARTIFACT, label=CHEST_SM},
         [55004716] = {quest=40095, currency=ARTIFACT, label=CHEST},
         [57946321] = {quest=40090, currency=ARTIFACT, label=CHEST_SM},
         [58044751] = {quest=40082, currency=ARTIFACT, label=CHEST_SM},
         [59305846] = {quest=40088, currency=ARTIFACT, label=CHEST},
-        [60834273] = {quest=40094, currency=ARTIFACT, label=CHEST_SM, note="Requires: Stormforged Grapple Launcher"},
+        [60834273] = {quest=40094, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [61404440] = {quest=40093, currency=ARTIFACT, label=CHEST_SM},
         [61836289] = {quest=40089, currency=ARTIFACT, label=CHEST},
         [61836289] = {quest=40089, currency=ARTIFACT, label=CHEST},
