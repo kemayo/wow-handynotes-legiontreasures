@@ -132,8 +132,22 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
         return false
     end
     if (not ns.db.found) then
-        if point.quest and IsQuestFlaggedCompleted(point.quest) then
-            return false
+        if point.quest then
+            if type(point.quest) == 'table' then
+                -- if it's a table, only count as complete if all quests are complete
+                local complete = true
+                for _, quest in ipairs(point.quest) do
+                    if not IsQuestFlaggedCompleted(quest) then
+                        complete = false
+                        break
+                    end
+                end
+                if complete then
+                    return false
+                end
+            elseif IsQuestFlaggedCompleted(point.quest) then
+                return false
+            end
         end
         if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
             return false

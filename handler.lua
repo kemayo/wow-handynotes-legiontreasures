@@ -83,6 +83,19 @@ local function work_out_label(point)
     return UNKNOWN
 end
 local function work_out_texture(point)
+    if point.atlas then
+        if not icon_cache[point.atlas] then
+            local texture, _, _, left, right, top, bottom = GetAtlasInfo(point.atlas)
+            icon_cache[point.atlas] = {
+                icon = texture,
+                tCoordLeft = left,
+                tCoordRight = right,
+                tCoordTop = top,
+                tCoordBottom = bottom,
+            }
+        end
+        return icon_cache[point.atlas]
+    end
     if point.item and ns.db.icon_item then
         local texture = select(10, GetItemInfo(point.item))
         if texture then
@@ -210,7 +223,11 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddLine(point.note, nil, nil, nil, true)
         end
         if ns.db.tooltip_questid then
-            tooltip:AddDoubleLine("QuestID", point.quest or UNKNOWN)
+            local quest = point.quest
+            if type(quest) == 'table' then
+                quest = string.join(", ", unpack(quest))
+            end
+            tooltip:AddDoubleLine("QuestID", quest or UNKNOWN)
         end
     else
         tooltip:SetText(UNKNOWN)
@@ -331,7 +348,8 @@ do
             if value and ns.should_show_point(state, value, currentZone, currentLevel) then
             -- Debug("iter step", state, icon, ns.db.icon_scale, ns.db.icon_alpha, category, quest)
                 local label, icon = get_point_info(value)
-                return state, nil, icon, ns.db.icon_scale, ns.db.icon_alpha
+                local scale = (point and point.scale or 1) * ns.db.icon_scale
+                return state, nil, icon, scale, ns.db.icon_alpha
             end
             state, value = next(t, state) -- Get next data
         end
