@@ -1,11 +1,22 @@
 local myname, ns = ...
 
+-- note to self: I like Garr_TreasureIcon...
+
 local ORDER = 1220; -- order resources currency
 local ARTIFACT = 'ARTIFACT'
 local CHEST = 'Treasure Chest'
 local CHEST_SM = 'Small Treasure Chest'
 local CHEST_GLIM = 'Glimmering Treasure Chest'
 local REQ_GRAPPLE = 'Requires: Stormforged Grapple Launcher'
+local path = function(questid, label, atlas)
+    label = label or "Path to treasure"
+    atlas = atlas or "map-icon-SuramarDoor.tga" -- 'PortalPurple'
+    return {quest=questid, label=label, atlas=atlas, path=true}
+end
+local grapple = function(questid)
+    -- 'Vehicle-SilvershardMines-Arrow'
+    return path(questid, "Grapple start point", 'MiniMap-DeadArrow')
+end
 
 ns.points = {
     --[[ structure:
@@ -35,9 +46,12 @@ ns.points = {
         [49653448] = {quest=37831, currency=ARTIFACT, label=CHEST_SM},
         [50215029] = {quest=42290, currency=ARTIFACT, label=CHEST_SM},
         [50465211] = {quest=44081, currency=ARTIFACT, item=140685, label="Treacherous Stallions", note="Ley Portal @ 60.3, 46.3; kill the stallions"},
+        [60304630] = path(44081, "Ley Portal", "MagePortalAlliance"),
         [51502430] = {quest=42289, currency=ARTIFACT, label=CHEST, note="Leyhollow cave entrance @ 47.8, 23.7"},
+        [47802370] = path(42289),
         [52004210] = {quest=42281, currency=ARTIFACT, label=CHEST_SM},
         [52842059] = {quest=42339, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 53.9, 22.4; don't wake up the bears"},
+        [53902240] = path(42339),
         [53033726] = {quest=37596, currency=ARTIFACT, label=CHEST_SM},
         [53176444] = {quest=37829, currency=ARTIFACT, label=CHEST},
         [53504545] = {quest=42283, currency=ARTIFACT, label=CHEST_SM},
@@ -53,15 +67,18 @@ ns.points = {
         [55905690] = {quest=38365, currency=ARTIFACT, label="Disputed Treasure"},
         [56443481] = {quest=38251, currency=ARTIFACT, item=132950, label=CHEST},
         [56892499] = {quest=42338, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 55.7, 25.4"},
+        [55702540] = path(42338),
         [57153106] = {quest=38419, currency=ARTIFACT, label=CHEST},
         [57901220] = {quest=37958, currency=ARTIFACT, label=CHEST},
         [58364378] = {quest=37830, currency=ARTIFACT, label=CHEST_GLIM},
         [58381229] = {quest=37980, currency=ARTIFACT, label=CHEST, note="Ley Portal @ 58.7, 14.1"},
+        [58701410] = path(37980, "Ley Portal", "MagePortalAlliance"),
         [58645340] = {quest=40752, currency=ARTIFACT, label=CHEST_SM},
         [59876316] = {quest=42272, currency=ARTIFACT, label=CHEST_SM},
         [62405840] = {quest=42273, currency=ARTIFACT, label=CHEST_SM},
         [62814479] = {quest=42294, currency=ARTIFACT, label=CHEST_SM},
         [63005420] = {quest=42278, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 64.0, 52.9"},
+        [64005290] = path(42278),
         [63231521] = {quest=37832, currency=ARTIFACT, label=CHEST},
         [63653919] = {quest=42293, currency=ARTIFACT, label=CHEST_SM},
         [65066978] = {quest=38239, item=129070, label="Seemingly Unguarded Treasure", note="Seemingly..."},
@@ -78,6 +95,7 @@ ns.points = {
         [42203482] = {quest=40480, currency=ARTIFACT, label=CHEST_SM},
         [42212730] = {quest=40479, currency=ARTIFACT, label=CHEST},
         [43582510] = {quest=40478, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 42.5, 25.4"},
+        [42502540] = path(40478),
         [43757275] = {quest=40510, currency=ARTIFACT, label=CHEST_SM},
         [45192746] = {quest=44279, currency=ARTIFACT, label=CHEST_SM, note="Underwater cave"},
         [45573462] = {quest=40481, currency=ARTIFACT, label=CHEST_SM},
@@ -101,41 +119,48 @@ ns.points = {
         [53615103] = {quest=39824, item=131810, label=CHEST, note="1/4 of slow fall toy; on ledge", toy=true},
         [53615103] = {quest=39824, item=131810, label=CHEST, note="Ledge above the rare"},
         [54174159] = {quest=40483, currency=ARTIFACT, label=CHEST_GLIM, note="Cave entrance @ 55.1, 44.3"},
+        [55104430] = path(40483),
         [55134965] = {quest=40487, currency=ARTIFACT, label=CHEST_SM},
     },
     ["Stormheim"] = {
         [27335749] = {quest=38529, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 31.4, 57.1"},
+        [31405710] = path(38529),
         [31105600] = {quest=38676, currency=ORDER, label=CHEST_SM},
         [32054719] = {quest=43196, currency=ARTIFACT, label=CHEST},
         [32742791] = {quest=38490, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 33.6, 27.3"},
+        [33602730] = path(38490),
         [33143607] = {quest=38495, currency=ARTIFACT, label=CHEST},
         [35033660] = {quest=38487, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 34.8, 34.2"},
+        [34803420] = path(38487),
         [35176898] = {quest=38478, currency=ARTIFACT, label=CHEST_SM},
         [35735415] = {quest=38677, currency=ARTIFACT, item=140310, label=CHEST, note="On the wrecked ship"},
         [35924792] = {quest=38680, currency=ARTIFACT, label=CHEST_SM},
         [37183865] = {quest=43208, currency=ARTIFACT, label=CHEST_SM},
         [39486518] = {quest=38486, currency=ARTIFACT, label=CHEST},
         [39571934] = {quest=38498, currency=ARTIFACT, label=CHEST_SM},
-        [40656852] = {quest=38475, currency=ARTIFACT, label=CHEST_SM},
+        [40656852] = {quest=38475, currency=ARTIFACT, label=CHEST_SM, note="In tower; grapple to wall, then to top of tower"},
         [41744604] = {quest=38488, currency=ARTIFACT, label=CHEST_SM},
         [42336112] = {quest=38477, currency=ARTIFACT, label=CHEST_SM},
         [42473407] = {quest=43189, currency=ARTIFACT, item=141896, label=CHEST_GLIM, note="Entrance @ 42.2, 34.9"},
+        [42203490] = path(43189),
         [42616579] = {quest=38474, currency=ARTIFACT, label=CHEST},
-        [43164049] = {quest=43238, currency=ARTIFACT, label=CHEST_SM},
-        [43708009] = {quest=43239, currency=ARTIFACT, label=CHEST_SM},
-        [44166997] = {quest=38489, currency=ARTIFACT, label=CHEST_SM},
+        [43164049] = {quest=43238, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
+        [43708009] = {quest=43239, currency=ARTIFACT, label=CHEST_SM, note="Grapple starting by Erilar at 43.8, 80.6"},
+        [43708009] = grapple(43239),
+        [44166997] = {quest=38489, currency=ARTIFACT, label=CHEST_SM, note="On top of the hut, grapple up"},
         [44983823] = {quest=43240, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [46606496] = {quest=38681, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 48.2, 65.2"},
-        [46768040] = {quest=38481, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 48.2, 65.2"},
+        [48206520] = path(38681),
+        [46768040] = {quest=38481, currency=ARTIFACT, label=CHEST, note=REQ_GRAPPLE},
         [47463412] = {quest=43255, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [47986237] = {quest=38738, currency=ARTIFACT, label=CHEST},
         [48137421] = {quest=38476, currency=ARTIFACT, label=CHEST_SM},
         [49085999] = {quest=43207, currency=ARTIFACT, label=CHEST_SM},
-        [49694731] = {quest=38763, currency=ARTIFACT, label=CHEST_GLIM, note="Guarded by Vault Keepers"},
+        [49694731] = {quest=38763, currency=ARTIFACT, item=132897, label=CHEST_GLIM, note="Guarded by Vault Keepers"},
         [49777801] = {quest=38485, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [50061816] = {quest=43195, currency=ARTIFACT, label=CHEST},
-        [50314100] = {quest=38483, currency=ARTIFACT, label=CHEST_SM},
-        [50554125] = {quest=43246, currency=ARTIFACT, label=CHEST_SM},
+        [50314100] = {quest=38483, currency=ARTIFACT, label=CHEST_SM, note="In cave"},
+        [50554125] = {quest=43246, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [52018058] = {quest=38480, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [53229314] = {quest=43190, currency=ARTIFACT, label=CHEST_SM},
         [55004716] = {quest=40095, currency=ARTIFACT, label=CHEST},
@@ -178,6 +203,7 @@ ns.points = {
         [25958548] = {quest=43831, currency=ARTIFACT, label=CHEST_SM},
         [26831696] = {quest=43847, currency=ARTIFACT, label=CHEST_SM},
         [26877073] = {quest=43987, item=140327, label="Kyrtos's Research Notes", note="Cave entrance @ 27.3, 72.9"},
+        [27307290] = path(43987),
         [29271622] = {quest=43848, item=138783, label=CHEST},
         [29768817] = {quest=43748, item=141655, label="Shimmering Ancient Mana Cluster"},
         [31956249] = {quest=43831, currency=ARTIFACT, label=CHEST_SM},
@@ -187,6 +213,7 @@ ns.points = {
         [42051968] = {quest=43849, item=139786, label=CHEST_GLIM},
         [42577668] = {quest=43870, currency=ARTIFACT, label=CHEST_SM, note="Upstairs"},
         [44053194] = {quest=43856, item=139786, label=CHEST_GLIM, note="Cave entrance behind waterfall @ 42.2, 30.0"},
+        [42203000] = path(43856),
         [44302289] = {quest=43850, currency=ARTIFACT, label=CHEST},
         [44387587] = {quest=43869, currency=ARTIFACT, label=CHEST_SM},
         [44803100] = {quest=43986, item=140326, label="Enchanted Burial Urn"},
@@ -194,10 +221,12 @@ ns.points = {
         [48117321] = {quest=43865, currency=ARTIFACT, label=CHEST_SM, note="Grapple to it"},
         [48143399] = {quest=43853, label=CHEST_SM},
         [48288261] = {quest=43866, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 48.4, 82.2"},
+        [48408220] = grapple(43866),
         [48297121] = {quest=44324, currency=ARTIFACT, label=CHEST, note="Jumping puzzle!"},
         [48587217] = {quest=44323, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [48957379] = {quest=43867, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [49988493] = {quest=43864, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 50.0, 84.5"},
+        [50008450] = grapple(43864),
         [50068061] = {quest=44325, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [51503859] = {quest=43855, currency=ARTIFACT, label=CHEST_SM},
         [51908214] = {quest=43868, currency=ARTIFACT, label=CHEST},
@@ -219,9 +248,9 @@ ns.points = {
         [38456530] = {quest=39080, currency=ARTIFACT, label=CHEST_SM, note="Basement; must have completed The Farmsteads"},
         [38626718] = {quest=39079, currency=ARTIFACT, label=CHEST_SM},
         [39945460] = {quest=38369, currency=ARTIFACT, label=CHEST_SM},
-        [41404560] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="Top of wall @ 41.4, 45.6"},
-        [41414561] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM, note="Top of wall @ 41.4, 45.6"},
-        [42008850] = {quest=39085, currency=ARTIFACT, label=CHEST_SM},
+        [41404560] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="Top of wall"}, -- TODO: which of these is right?
+        [41414561] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM, note="Top of wall"},
+        [42008850] = {quest=39085, currency=ARTIFACT, label=CHEST_SM}, -- TODO: which of these is right?
         [42665801] = {quest=39077, currency=ARTIFACT, label=CHEST_SM},
         [43068822] = {quest=44138, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 43.7, 89.9"},
         [43225488] = {quest=39084, currency=ARTIFACT, label=CHEST, note="Top of wall"},
@@ -231,7 +260,9 @@ ns.points = {
         [48687381] = {quest=38363, currency=ARTIFACT, label=CHEST_SM, note="Under tree roots"},
         [48998615] = {quest=38886, currency=ARTIFACT, label=CHEST_SM},
         [51247777] = {quest=38388, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 50.9, 77.0"},
+        [50907700] = path(38388),
         [54003489] = {quest=38390, currency=ARTIFACT, label=CHEST_GLIM, note="Cave entrance @ 53.2, 38.0"},
+        [53203800] = path(38390),
         [54187061] = {quest=39093, currency=ARTIFACT, label=CHEST_SM, note="In cave"},
         [54417419] = {quest=38359, currency=ARTIFACT, label=CHEST_SM, note="In house behind the fence"},
         [54506048] = {quest=39097, currency=ARTIFACT, label=CHEST, note="In cave"},
@@ -241,6 +272,7 @@ ns.points = {
         [56225730] = {quest=39072, currency=ARTIFACT, label=CHEST_SM},
         [59887228] = {quest=38943, currency=ARTIFACT, label=CHEST_SM, note="Upstairs, stairs on the right"},
         [60498216] = {quest=38893, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 62.1, 86.1"},
+        [62108610] = path(38893),
         [61006400] = {quest=39087, currency=ARTIFACT, label=CHEST_SM},
         [61017917] = {quest=39089, currency=ARTIFACT, label=CHEST_GLIM},
         [61073421] = {quest=39088, currency=ARTIFACT, label=CHEST, note="Underwater, hidden in roots"},
@@ -249,6 +281,7 @@ ns.points = {
         [62707040] = {quest=39069, currency=ARTIFACT, label=CHEST_SM, note="Second floor balcony"},
         [62708526] = {quest=44136, currency=ARTIFACT, label=CHEST_SM},
         [63007700] = {quest=39070, currency=ARTIFACT, label=CHEST_SM, note="Inside Den of Claws, entrance @ 62.2, 76.2"},
+        [62207620] = path(39070, "Den of Claws entrance"),
         [63277401] = {quest=39102, currency=ARTIFACT, label=CHEST},
         [63378841] = {quest=38389, currency=ARTIFACT, label=CHEST_SM},
         [63904556] = {quest=44139, currency=ARTIFACT, label=CHEST_SM},
@@ -258,6 +291,7 @@ ns.points = {
         [65398629] = {quest=39074, currency=ARTIFACT, label=CHEST},
         [66284122] = {quest=39108, currency=ARTIFACT, label=CHEST},
         [67215928] = {quest=38782, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 65.9, 56.3"},
+        [65905630] = path(38782),
         [67395342] = {quest=38386, currency=ARTIFACT, label=CHEST_SM},
         [68334060] = {quest=39073, currency=ARTIFACT, label=CHEST_SM},
         [69475999] = {quest=38781, currency=ARTIFACT, label=CHEST_SM},
@@ -324,6 +358,7 @@ ns.points = {
     -- DH starter
     ["MardumtheShatteredAbyss"] = {
         [23065389] = {quest=40797, item=129210, label=CHEST_SM, note="Cave entrance @ 23.6, 54.2"},
+        [23605420] = path(40797),
         [34857020] = {quest=39970, item=129210, label=CHEST_SM},
         [41763761] = {quest=40759, item=129196, label=CHEST_SM},
         [42194916] = {quest=40223, item=129210, label=CHEST_SM},
@@ -333,6 +368,7 @@ ns.points = {
         [69704240] = {quest=39976, item=129210, label=CHEST_SM},
         [73494892] = {quest=39975, item=129195, label=CHEST_SM},
         [74285453] = {quest=39977, item=129210, label=CHEST_SM, note="Cave entrance @ 70.7, 54.0"},
+        [70705400] = path(39977),
         [76243899] = {quest=40338, item=129210, label=CHEST_SM},
         [78755047] = {quest=40274, item=129210, label=CHEST_SM},
         [82075043] = {quest=40820, item=129196, label=CHEST_SM},
