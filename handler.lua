@@ -96,29 +96,31 @@ local function work_out_texture(point)
         end
         return icon_cache[point.atlas]
     end
-    if point.item and ns.db.icon_item then
-        local texture = select(10, GetItemInfo(point.item))
-        if texture then
-            return trimmed_icon(texture)
-        end
-    end
-    if point.currency then
-        if point.currency == 'ARTIFACT' then
-            local texture = select(10, GetAchievementInfo(11144))
-            if texture then
-                return trimmed_icon(texture)
-            end
-        else
-            local texture = select(3, GetCurrencyInfo(point.currency))
+    if ns.db.icon_item then
+        if point.item then
+            local texture = select(10, GetItemInfo(point.item))
             if texture then
                 return trimmed_icon(texture)
             end
         end
-    end
-    if point.achievement then
-        local texture = select(10, GetAchievementInfo(point.achievement))
-        if texture then
-            return trimmed_icon(texture)
+        if point.currency then
+            if point.currency == 'ARTIFACT' then
+                local texture = select(10, GetAchievementInfo(11144))
+                if texture then
+                    return trimmed_icon(texture)
+                end
+            else
+                local texture = select(3, GetCurrencyInfo(point.currency))
+                if texture then
+                    return trimmed_icon(texture)
+                end
+            end
+        end
+        if point.achievement then
+            local texture = select(10, GetAchievementInfo(point.achievement))
+            if texture then
+                return trimmed_icon(texture)
+            end
         end
     end
     if point.follower then
@@ -130,6 +132,7 @@ local function work_out_texture(point)
                 tCoordRight = right,
                 tCoordTop = top,
                 tCoordBottom = bottom,
+                scale = 1.5,
             }
         end
         return follower_texture
@@ -143,18 +146,20 @@ local function work_out_texture(point)
                 tCoordRight = right,
                 tCoordTop = top,
                 tCoordBottom = bottom,
+                scale = 1.5,
             }
         end
         return npc_texture
     end
     if not default_texture then
-        local texture, _, _, left, right, top, bottom = GetAtlasInfo("VignetteLoot")
+        local texture, _, _, left, right, top, bottom = GetAtlasInfo("VignetteLoot") -- Garr_TreasureIcon @ x2
         default_texture = {
             icon = texture,
             tCoordLeft = left,
             tCoordRight = right,
             tCoordTop = top,
             tCoordBottom = bottom,
+            scale = 1.5,
         }
     end
     return default_texture
@@ -346,9 +351,8 @@ do
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
             if value and ns.should_show_point(state, value, currentZone, currentLevel) then
-            -- Debug("iter step", state, icon, ns.db.icon_scale, ns.db.icon_alpha, category, quest)
                 local label, icon = get_point_info(value)
-                local scale = (point and point.scale or 1) * ns.db.icon_scale
+                local scale = (point and point.scale or 1) * (icon and icon.scale or 1) * ns.db.icon_scale
                 return state, nil, icon, scale, ns.db.icon_alpha
             end
             state, value = next(t, state) -- Get next data

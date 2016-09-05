@@ -2,6 +2,7 @@
 
 ## Changed in v5
 
+* Change the item-icon setting default to false, and have it affect achievement icons and currency icons as well. Makes for a more legible map, on the whole.
 * Separate nodes added for cave entrances / grapple points leading to treasures.
 
 ## Changed in v4

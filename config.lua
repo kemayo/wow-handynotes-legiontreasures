@@ -8,7 +8,7 @@ ns.defaults = {
         repeatable = true,
         icon_scale = 1.0,
         icon_alpha = 1.0,
-        icon_item = true,
+        icon_item = false,
         tooltip_item = true,
         tooltip_questid = false,
     },
