@@ -68,19 +68,19 @@ local function work_out_label(point)
     if point.label then
         return point.label
     end
-    if point.item then
-        local _, link, _, _, _, _, _, _, _, texture = GetItemInfo(point.item)
-        if link then
-            return link
-        end
-        fallback = 'item:'..point.item
-    end
     if point.npc then
         local name = mob_name(point.npc)
         if name then
             return name
         end
         fallback = 'npc:'..point.npc
+    end
+    if point.item then
+        local _, link, _, _, _, _, _, _, _, texture = GetItemInfo(point.item)
+        if link then
+            return link
+        end
+        fallback = 'item:'..point.item
     end
     if point.currency then
         if point.currency == 'ARTIFACT' then
@@ -175,6 +175,9 @@ local function handle_tooltip(tooltip, point)
         if point.label then
             tooltip:AddLine(point.label)
         end
+        if point.npc then
+            tooltip:AddLine(mob_name(point.npc) or ("npc:"..point.npc))
+        end
         if point.item then
             local name, link = GetItemInfo(point.item)
             tooltip:AddLine(link and (link:gsub("[%[%]]", "")) or name)
@@ -189,9 +192,6 @@ local function handle_tooltip(tooltip, point)
             else
                 tooltip:AddLine(UNKNOWN, 1, 0, 0)
             end
-        end
-        if point.npc then
-            tooltip:AddDoubleLine(CREATURE, mob_name(point.npc) or point.npc)
         end
         if point.currency then
             local name
@@ -227,7 +227,7 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddDoubleLine("QuestID", quest or UNKNOWN)
         end
 
-        if ns.db.tooltip_item and (point.item or point.npc) then
+        if (ns.db.tooltip_item or IsShiftKeyDown()) and (point.item or point.npc) then
             local comparison = ShoppingTooltip1
 
             do

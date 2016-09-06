@@ -13,10 +13,12 @@ local path = function(questid, label, atlas, scale)
     atlas = atlas or "map-icon-SuramarDoor.tga" -- 'PortalPurple'
     return {quest=questid, label=label, atlas=atlas, path=true, scale=scale or 1}
 end
+ns.path = path
 local grapple = function(questid)
     -- 'Vehicle-SilvershardMines-Arrow'
     return path(questid, "Grapple start point", 'MiniMap-DeadArrow', 1.5)
 end
+ns.grapple = grapple
 
 ns.points = {
     --[[ structure:
@@ -308,7 +310,6 @@ ns.points = {
         [50905168] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM, note="Top of wall @ 41.4, 45.6"},
     },
     ["Helheim"] = { -- Stormheim
-        [28186375] = {quest=39870, npc=97630, item=129188, pet=true}, -- Soulthirster
     },
     ["StormDrakeDen"] = { -- Stormheim
         [20134125] = {quest=38529, currency=ARTIFACT, label=CHEST},
