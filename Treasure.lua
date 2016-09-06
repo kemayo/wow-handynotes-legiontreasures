@@ -247,7 +247,7 @@ ns.points = {
     },
     ["Valsharah"] = {
         [33815826] = {quest=39081, currency=ARTIFACT, label=CHEST},
-        [37005734] = {quest=39083, currency=ARTIFACT, label=CHEST_SM},
+        -- [37005734] = {quest=39083, currency=ARTIFACT, label=CHEST_SM},
         [38456530] = {quest=39080, currency=ARTIFACT, label=CHEST_SM, note="Basement; must have completed The Farmsteads"},
         [38626718] = {quest=39079, currency=ARTIFACT, label=CHEST_SM},
         [39945460] = {quest=38369, currency=ARTIFACT, label=CHEST_SM},
