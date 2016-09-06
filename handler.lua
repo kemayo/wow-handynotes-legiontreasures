@@ -38,7 +38,7 @@ local function mob_name(id)
     return name_cache[id]
 end
 
-local default_texture, npc_texture, follower_texture
+local default_texture, npc_texture, follower_texture, currency_texture
 local icon_cache = {}
 local trimmed_icon = function(texture)
     if not icon_cache[texture] then
@@ -51,6 +51,17 @@ local trimmed_icon = function(texture)
         }
     end
     return icon_cache[texture]
+end
+local atlas_texture = function(atlas, scale)
+    local texture, _, _, left, right, top, bottom = GetAtlasInfo(atlas)
+    return {
+        icon = texture,
+        tCoordLeft = left,
+        tCoordRight = right,
+        tCoordTop = top,
+        tCoordBottom = bottom,
+        scale = scale or 1,
+    }
 end
 local function work_out_label(point)
     local fallback
@@ -85,14 +96,7 @@ end
 local function work_out_texture(point)
     if point.atlas then
         if not icon_cache[point.atlas] then
-            local texture, _, _, left, right, top, bottom = GetAtlasInfo(point.atlas)
-            icon_cache[point.atlas] = {
-                icon = texture,
-                tCoordLeft = left,
-                tCoordRight = right,
-                tCoordTop = top,
-                tCoordBottom = bottom,
-            }
+            icon_cache[point.atlas] = atlas_texture(point.atlas)
         end
         return icon_cache[point.atlas]
     end
@@ -122,45 +126,28 @@ local function work_out_texture(point)
                 return trimmed_icon(texture)
             end
         end
+    else
+        if point.currency then
+            if not currency_texture then
+                currency_texture = atlas_texture("VignetteLoot", 1.5)
+            end
+            return currency_texture
+        end
     end
     if point.follower then
         if not follower_texture then
-            local texture, _, _, left, right, top, bottom = GetAtlasInfo("GreenCross")
-            follower_texture = {
-                icon = texture,
-                tCoordLeft = left,
-                tCoordRight = right,
-                tCoordTop = top,
-                tCoordBottom = bottom,
-                scale = 1.5,
-            }
+            follower_texture = atlas_texture("GreenCross", 1.5)
         end
         return follower_texture
     end
     if point.npc then
         if not npc_texture then
-            local texture, _, _, left, right, top, bottom = GetAtlasInfo("DungeonSkull")
-            npc_texture = {
-                icon = texture,
-                tCoordLeft = left,
-                tCoordRight = right,
-                tCoordTop = top,
-                tCoordBottom = bottom,
-                scale = 1.5,
-            }
+            npc_texture = atlas_texture("DungeonSkull", 1.5)
         end
         return npc_texture
     end
     if not default_texture then
-        local texture, _, _, left, right, top, bottom = GetAtlasInfo("VignetteLoot") -- Garr_TreasureIcon @ x2
-        default_texture = {
-            icon = texture,
-            tCoordLeft = left,
-            tCoordRight = right,
-            tCoordTop = top,
-            tCoordBottom = bottom,
-            scale = 1.5,
-        }
+        default_texture = atlas_texture("Garr_TreasureIcon", 2)
     end
     return default_texture
 end
@@ -187,14 +174,12 @@ local function handle_tooltip(tooltip, point)
         -- major:
         if point.label then
             tooltip:AddLine(point.label)
-        elseif point.item then
-            if ns.db.tooltip_item or IsLeftShiftKeyDown() then
-                tooltip:SetHyperlink(("item:%d"):format(point.item))
-            else
-                local link = select(2, GetItemInfo(point.item))
-                tooltip:AddLine(link)
-            end
-        elseif point.follower then
+        end
+        if point.item then
+            local name, link = GetItemInfo(point.item)
+            tooltip:AddLine(link and (link:gsub("[%[%]]", "")) or name)
+        end
+        if point.follower then
             local follower = C_Garrison.GetFollowerInfo(point.follower)
             if follower then
                 local quality = BAG_ITEM_QUALITY_COLORS[follower.quality]
@@ -204,11 +189,8 @@ local function handle_tooltip(tooltip, point)
             else
                 tooltip:AddLine(UNKNOWN, 1, 0, 0)
             end
-        elseif point.npc then
-            tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
         end
-
-        if point.item and point.npc then
+        if point.npc then
             tooltip:AddDoubleLine(CREATURE, mob_name(point.npc) or point.npc)
         end
         if point.currency then
@@ -221,18 +203,77 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddDoubleLine(CURRENCY, name or point.currency)
         end
         if point.achievement then
-            local _, name = GetAchievementInfo(point.achievement)
-            tooltip:AddDoubleLine(BATTLE_PET_SOURCE_6, name or point.achievement)
+            local _, name, _, complete = GetAchievementInfo(point.achievement)
+            tooltip:AddDoubleLine(BATTLE_PET_SOURCE_6, name or point.achievement,
+                nil, nil, nil,
+                complete and 0 or 1, complete and 1 or 0, 0
+            )
+            if point.criteria then
+                local criteria, _, complete = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+                tooltip:AddDoubleLine(" ", criteria,
+                    nil, nil, nil,
+                    complete and 0 or 1, complete and 1 or 0, 0
+                )
+            end
         end
         if point.note then
             tooltip:AddLine(point.note, nil, nil, nil, true)
         end
-        if ns.db.tooltip_questid then
+        if point.quest and ns.db.tooltip_questid then
             local quest = point.quest
             if type(quest) == 'table' then
                 quest = string.join(", ", unpack(quest))
             end
             tooltip:AddDoubleLine("QuestID", quest or UNKNOWN)
+        end
+
+        if ns.db.tooltip_item and (point.item or point.npc) then
+            local comparison = ShoppingTooltip1
+
+            do
+                local side
+                local rightDist = 0
+                local leftPos = tooltip:GetLeft() or 0
+                local rightPos = tooltip:GetRight() or 0
+
+                rightDist = GetScreenWidth() - rightPos
+
+                if (leftPos and (rightDist < leftPos)) then
+                    side = "left"
+                else
+                    side = "right"
+                end
+
+                -- see if we should slide the tooltip
+                if tooltip:GetAnchorType() and tooltip:GetAnchorType() ~= "ANCHOR_PRESERVE" then
+                    local totalWidth = 0
+                    if ( primaryItemShown  ) then
+                        totalWidth = totalWidth + comparison:GetWidth()
+                    end
+
+                    if ( (side == "left") and (totalWidth > leftPos) ) then
+                        tooltip:SetAnchorType(tooltip:GetAnchorType(), (totalWidth - leftPos), 0)
+                    elseif ( (side == "right") and (rightPos + totalWidth) >  GetScreenWidth() ) then
+                        tooltip:SetAnchorType(tooltip:GetAnchorType(), -((rightPos + totalWidth) - GetScreenWidth()), 0)
+                    end
+                end
+
+                comparison:SetOwner(tooltip, "ANCHOR_NONE")
+                comparison:ClearAllPoints()
+
+                if ( side and side == "left" ) then
+                    comparison:SetPoint("TOPRIGHT", tooltip, "TOPLEFT", 0, -10)
+                else
+                    comparison:SetPoint("TOPLEFT", tooltip, "TOPRIGHT", 0, -10)
+                end
+            end
+
+            if point.item then
+                comparison:SetHyperlink(("item:%d"):format(point.item))
+            elseif point.npc then
+                comparison:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
+            end
+            comparison:Show()
         end
     else
         tooltip:SetText(UNKNOWN)
@@ -251,7 +292,7 @@ local info = {}
 
 function HLHandler:OnEnter(mapFile, coord)
     local tooltip = self:GetParent() == WorldMapButton and WorldMapTooltip or GameTooltip
-    if ( self:GetCenter() > UIParent:GetCenter() ) then -- compare X coordinate
+    if self:GetCenter() > UIParent:GetCenter() then -- compare X coordinate
         tooltip:SetOwner(self, "ANCHOR_LEFT")
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -341,6 +382,7 @@ function HLHandler:OnLeave(mapFile, coord)
     else
         GameTooltip:Hide()
     end
+    ShoppingTooltip1:Hide()
 end
 
 do

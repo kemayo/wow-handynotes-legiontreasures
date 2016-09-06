@@ -2,9 +2,11 @@
 
 ## Changed in v5
 
+* Show item previews in an attached tooltip rather than squeezing them into the main tooltip.
 * Change the item-icon setting default to false, and have it affect achievement icons and currency icons as well. Makes for a more legible map, on the whole.
-* Fixes in Stormheim.
+* Given their rarity in this expansion, give nodes with an actual item a special icon.
 * Separate nodes added for cave entrances / grapple points leading to treasures.
+* Fixes in Stormheim.
 
 ## Changed in v4
 
