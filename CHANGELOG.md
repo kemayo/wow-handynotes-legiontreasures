@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v6
+
+* Added more Highmountain grapple points.
+* Made grapple point icon more visible.
+
 ## Changed in v5
 
 * Show item previews in an attached tooltip rather than squeezing them into the main tooltip.

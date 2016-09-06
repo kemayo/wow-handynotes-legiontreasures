@@ -8,14 +8,14 @@ local CHEST = 'Treasure Chest'
 local CHEST_SM = 'Small Treasure Chest'
 local CHEST_GLIM = 'Glimmering Treasure Chest'
 local REQ_GRAPPLE = 'Requires: Stormforged Grapple Launcher'
-local path = function(questid, label, atlas)
+local path = function(questid, label, atlas, scale)
     label = label or "Path to treasure"
     atlas = atlas or "map-icon-SuramarDoor.tga" -- 'PortalPurple'
-    return {quest=questid, label=label, atlas=atlas, path=true}
+    return {quest=questid, label=label, atlas=atlas, path=true, scale=scale or 1}
 end
 local grapple = function(questid)
     -- 'Vehicle-SilvershardMines-Arrow'
-    return path(questid, "Grapple start point", 'MiniMap-DeadArrow')
+    return path(questid, "Grapple start point", 'MiniMap-DeadArrow', 1.5)
 end
 
 ns.points = {
@@ -192,8 +192,9 @@ ns.points = {
         [73975858] = {quest=43237, currency=ARTIFACT, label=CHEST_SM},
         [74414182] = {quest=43306, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [75164949] = {quest=42629, currency=ARTIFACT, label=CHEST, note="On top of the mast"},
-        [75676060] = {quest=43304, currency=ARTIFACT, label=CHEST_SM},
+        [75676060] = {quest=43304, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
         [78427138] = {quest=43307, currency=ARTIFACT, label=CHEST, note="*Really* requires the Stormforged Grapple Launcher"},
+        [75846406] = grapple(43307),
         [81876750] = {quest=40099, currency=ARTIFACT, label=CHEST},
         [82405451] = {quest=43191, currency=ARTIFACT, label=CHEST_SM},
     },
