@@ -147,7 +147,7 @@ local function work_out_texture(point)
         return npc_texture
     end
     if not default_texture then
-        default_texture = atlas_texture("Garr_TreasureIcon", 2)
+        default_texture = atlas_texture("Garr_TreasureIcon", 2.6)
     end
     return default_texture
 end
