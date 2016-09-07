@@ -162,7 +162,7 @@ ns.points = {
         [48206520] = path(38681),
         [46768040] = {quest=38481, currency=ARTIFACT, label=CHEST, note=REQ_GRAPPLE},
         [47463412] = {quest=43255, currency=ARTIFACT, label=CHEST_SM, note=REQ_GRAPPLE},
-        [47986237] = {quest=38738, currency=ARTIFACT, label=CHEST},
+        [47986237] = {quest=38738, currency=ARTIFACT, label=CHEST, note="Underwater, at base of waterfall"},
         [48137421] = {quest=38476, currency=ARTIFACT, label=CHEST_SM},
         [49085999] = {quest=43207, currency=ARTIFACT, label=CHEST_SM},
         [49694731] = {quest=38763, currency=ARTIFACT, item=132897, label=CHEST_GLIM, note="Guarded by Vault Keepers"},

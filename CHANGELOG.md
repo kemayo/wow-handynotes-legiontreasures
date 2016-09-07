@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v7
+
+* Tweaked the rare icon size.
+* Added more notes / fixes.
+
 ## Changed in v6
 
 * Added rares to all zones, because I got tired of people complaining and it's not like I don't have the dataset available from [SilverDragon](https://mods.curse.com/addons/WoW/silver-dragon).

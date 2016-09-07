@@ -142,7 +142,7 @@ local function work_out_texture(point)
     end
     if point.npc then
         if not npc_texture then
-            npc_texture = atlas_texture("DungeonSkull", 1.5)
+            npc_texture = atlas_texture("DungeonSkull", 1)
         end
         return npc_texture
     end
