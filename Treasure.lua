@@ -317,6 +317,10 @@ ns.points = {
         [50905168] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM, note="Top of wall @ 41.4, 45.6"},
     },
     ["Helheim"] = { -- Stormheim
+        [79842471] = {quest=38510, currency=ARTIFACT, label=CHEST_SM},
+        [83322456] = {quest=38503, currency=ARTIFACT, label=CHEST, note="Underwater in a ship"},
+        [19634698] = {quest=38516, currency=ARTIFACT, label=CHEST},
+        [60845332] = {quest=38383, currency=ARTIFACT, label=CHEST_SM},
     },
     ["StormDrakeDen"] = { -- Stormheim
         [20134125] = {quest=38529, currency=ARTIFACT, label=CHEST},

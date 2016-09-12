@@ -3,7 +3,7 @@
 ## Changed in v7
 
 * Tweaked the rare icon size.
-* Added more notes / fixes.
+* Added more notes / fixes. (Thanks to: LaoTseu.)
 
 ## Changed in v6
 
