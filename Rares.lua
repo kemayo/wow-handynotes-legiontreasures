@@ -38,7 +38,7 @@ merge(ns.points["Azsuna"], {
 merge(ns.points["Highmountain"], {
     [36751635] = {quest=40084, npc=98299, item=131799}, -- Bodash the Hoarder
     [37704570] = {quest=40405, npc=97449, item=131761}, -- Bristlemaul
-    [40955775] = {quest=39993, npc=97793, item=131773, note="Abandoned Fishing Pole"}, -- Flamescale
+    [40955775] = {quest=39963, npc=97793, item=131773, note="Abandoned Fishing Pole"}, -- Flamescale
     [41503185] = {quest=40175, npc=98890, item=131921}, -- Slumber
     [41954150] = {quest=39782, npc=97203, item=129175, note="Abandoned Fishing Pole"}, -- Tenpak Flametotem
     [43164800] = {quest=40413, npc=100230, item=131781, note="Loot chest afterwards"}, -- Amateur hunters (100230, 100231, 100232)
