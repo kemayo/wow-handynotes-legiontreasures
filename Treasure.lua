@@ -130,6 +130,7 @@ ns.points = {
         [54174159] = {quest=40483, currency=ARTIFACT, label=CHEST_GLIM, note="Cave entrance @ 55.1, 44.3"},
         [55104430] = path(40483),
         [55134965] = {quest=40487, currency=ARTIFACT, label=CHEST_SM},
+        [38406150] = path(40476, "Lifespring Cavern"),
     },
     ["Stormheim"] = {
         [27335749] = {quest=38529, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 31.4, 57.1"},
@@ -337,7 +338,7 @@ ns.points = {
         [85213787] = {quest=40489, currency=ARTIFACT, label=CHEST},
     },
     ["LifespringCavern"] = { -- Highmountain
-        [80887207] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM},
+        [61703450] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM, level=21},
     },
     ["StonedarkGrotto"] = { -- Highmountain
         [35987235] = {quest=40478, currency=ARTIFACT, label=CHEST},
