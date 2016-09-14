@@ -3,6 +3,7 @@
 ## Changed in v7
 
 * Tweaked the rare icon size.
+* Highmountain got a number of cave entrances marked.
 * Added more notes / fixes. (Thanks to: LaoTseu.)
 
 ## Changed in v6

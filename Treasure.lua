@@ -100,6 +100,7 @@ ns.points = {
         [37353381] = {quest=40477, currency=ARTIFACT, label=CHEST_SM},
         [39307621] = {quest=40473, currency=ARTIFACT, label=CHEST, note="Hard to reach; try from behind the totem"},
         [39376229] = {quest=40474, currency=ARTIFACT, label=CHEST},
+        [39555744] = {quest=39812, currency=ARTIFACT, label=CHEST},
         [39704830] = {quest=39494, currency=ARTIFACT, label="Floating Treasure", note="On river surface"},
         [42203482] = {quest=40480, currency=ARTIFACT, label=CHEST_SM},
         [42212730] = {quest=40479, currency=ARTIFACT, label=CHEST},
@@ -131,6 +132,7 @@ ns.points = {
         [55104430] = path(40483),
         [55134965] = {quest=40487, currency=ARTIFACT, label=CHEST_SM},
         [38406150] = path(40476, "Lifespring Cavern"),
+        [41407250] = path(40489, "Bitestone Enclave"),
     },
     ["Stormheim"] = {
         [27335749] = {quest=38529, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 31.4, 57.1"},
