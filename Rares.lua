@@ -84,7 +84,7 @@ merge(ns.points["Stormheim"], {
     [67303990] = {quest=38685, npc=92763, item=129041}, -- The Nameless King
     [72504990] = {quest=38837, npc=93371, item=129035}, -- Mordvigbjorn
     [73454765] = {quest=40109, npc=98421, item=138419}, -- Kottr Vondyr
-    [73906060] = {quest=43343, npc=94347, item=130134}, -- Dread-Rider Cortis
+    [73906060] = {quest=43343, npc=94347, item=130134, faction="Alliance"}, -- Dread-Rider Cortis
     [78606115] = {quest=40113, npc=98503, item=138421}, -- Grrvrgull the Conqueror
 })
 merge(ns.points["Suramar"], {
