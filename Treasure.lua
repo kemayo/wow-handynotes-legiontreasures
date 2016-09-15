@@ -307,7 +307,7 @@ ns.points = {
         [63378841] = {quest=38389, currency=ARTIFACT, label=CHEST_SM},
         [63904556] = {quest=44139, currency=ARTIFACT, label=CHEST_SM},
         [64608546] = {quest=38900, currency=ARTIFACT, label=CHEST},
-        [64708230] = {quest=38391, currency=ARTIFACT, label=CHEST_SM},
+        [65907920] = {quest=38391, currency=ARTIFACT, label=CHEST_SM},
         [64715126] = {quest=38355, currency=ARTIFACT, label=CHEST_SM},
         [65398629] = {quest=39074, currency=ARTIFACT, label=CHEST},
         [66604090] = {quest=39108, currency=ARTIFACT, label=CHEST},
