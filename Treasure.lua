@@ -134,6 +134,7 @@ ns.points = {
         [55134965] = {quest=40487, currency=ARTIFACT, label=CHEST_SM},
         [38406150] = path(40476, "Lifespring Cavern"),
         [41407250] = path(40489, "Bitestone Enclave"),
+        [44707230] = path({39606, 40508, 40509}, "Neltharion's Vault"),
     },
     ["Stormheim"] = {
         [27335749] = {quest=38529, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 31.4, 57.1"},
@@ -364,7 +365,8 @@ ns.points = {
         [62946793] = {quest=40471, currency=ARTIFACT, label=CHEST},
     },
     ["NeltharionsVault"] = { -- Highmountain
-        [63733725] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing", level=30},
+        [52002890] = path(39606, "Titan Waygate"),
+        [59304130] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing", note="Take the Waygate to get up, and use the brazier", level=29},
         [40215031] = {quest=40509, currency=ARTIFACT, label=CHEST, level=29},
         [60425458] = {quest=40508, currency=ARTIFACT, label=CHEST_SM, level=29},
     },
