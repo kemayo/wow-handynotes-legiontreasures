@@ -123,6 +123,7 @@ ns.points = {
         [52023241] = {quest=40505, currency=ARTIFACT, label=CHEST},
         [52305141] = {quest=39766, item=131802, label="Totally Safe Treasure Chest"},
         [53035224] = {quest=40493, currency=ARTIFACT, label=CHEST_SM},
+        [49905380] = path(40493, "Crystal Fissure"),
         [53063946] = {quest=40499, currency=ARTIFACT, label=CHEST_SM},
         [53414868] = {quest=40500, currency=ARTIFACT, label=CHEST_SM},
         [53454352] = {quest=40484, currency=ARTIFACT, label=CHEST_SM},
@@ -359,9 +360,9 @@ ns.points = {
         [62946793] = {quest=40471, currency=ARTIFACT, label=CHEST},
     },
     ["NeltharionsVault"] = { -- Highmountain
-        [63733725] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing"},
-        [40215031] = {quest=40509, currency=ARTIFACT, label=CHEST},
-        [60425458] = {quest=40508, currency=ARTIFACT, label=CHEST_SM},
+        [63733725] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing", level=30},
+        [40215031] = {quest=40509, currency=ARTIFACT, label=CHEST, level=29},
+        [60425458] = {quest=40508, currency=ARTIFACT, label=CHEST_SM, level=29},
     },
     ["SuramarLegionScar"] = { -- ...Suramar
         [40502903] = {quest=40902, currency=ARTIFACT, label=CHEST_SM},
