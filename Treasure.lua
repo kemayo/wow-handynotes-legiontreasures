@@ -305,7 +305,7 @@ ns.points = {
         [64708230] = {quest=38391, currency=ARTIFACT, label=CHEST_SM},
         [64715126] = {quest=38355, currency=ARTIFACT, label=CHEST_SM},
         [65398629] = {quest=39074, currency=ARTIFACT, label=CHEST},
-        [66284122] = {quest=39108, currency=ARTIFACT, label=CHEST},
+        [66604090] = {quest=39108, currency=ARTIFACT, label=CHEST},
         [67215928] = {quest=38782, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 65.9, 56.3"},
         [65905630] = path(38782),
         [67395342] = {quest=38386, currency=ARTIFACT, label=CHEST_SM},
