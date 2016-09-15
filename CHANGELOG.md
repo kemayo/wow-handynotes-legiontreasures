@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v8
+
+* Added more treasures to Suramar.
+* Fixed the Temple of Fal'adora marker on the Suramar surface so it won't vanish until you've gotten both the treasures below it.
+
 ## Changed in v7
 
 * Tweaked the rare icon size.
