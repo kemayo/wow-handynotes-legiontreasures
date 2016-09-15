@@ -240,7 +240,7 @@ ns.points = {
         [48143399] = {quest=43853, label=CHEST_SM},
         [48288261] = {quest=43866, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 48.4, 82.2"},
         [48408220] = grapple(43866),
-        [48297121] = {quest=44324, currency=ARTIFACT, label=CHEST, note="Jumping puzzle!"},
+        [48297121] = {quest=44324, currency=ARTIFACT, label=CHEST, note="Jumping puzzle! I recommend starting on the bookshelf."},
         [48587217] = {quest=44323, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [48957379] = {quest=43867, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [49988493] = {quest=43864, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 50.0, 84.5"},
