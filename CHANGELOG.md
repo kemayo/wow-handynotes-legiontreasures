@@ -4,7 +4,7 @@
 
 * Tweaked the rare icon size.
 * Highmountain got a number of cave entrances marked.
-* Added more notes / fixes. (Thanks to: LaoTseu, Victaliaa.)
+* Added more notes / fixes. (Thanks to: LaoTseu, Victaliaa. Ssateneth)
 
 ## Changed in v6
 
