@@ -46,7 +46,7 @@ merge(ns.points["Highmountain"], {
     [45705500] = {quest=40681, npc=101077, item=131730}, -- Sekhan
     [46500745] = {quest=40096, npc=98311, item=131797}, -- Mrrklr
     [46653145] = {quest=39646, npc=96410, item=131900, note="Abandoned Fishing Pole"}, -- Majestic Elderhorn
-    [48404015] = {quest=39806, npc=97345, item=131809}, -- Crawshuk the Hungry
+    [48404015] = {quest=39806, npc=97345, item=131809, note="1/4 of slow fall toy", toy=true}, -- Crawshuk the Hungry
     [48502545] = {quest=39646, npc=96410, item=131900, note="Wanders a bit"}, -- Majestic Elderhorn
     [48605000] = {quest=39784, npc=97215, item=131756, note="Help him tame Arru, loot inside the cave afterwards"}, -- Beastmaster Pao'lek
     [49202710] = {quest=40242, npc=96621, item=131808}, -- Mellok, Son of Torok 
