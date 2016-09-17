@@ -348,6 +348,8 @@ ns.points = {
         [53633986] = {quest=42284, currency=ARTIFACT, label=CHEST_SM},
         [71212211] = {quest=42285, currency=ARTIFACT, label=CHEST_SM, note="Door opens after you finish nearby quests"},
     },
+    ["TempleofaThousandLights"] = { -- Azsuna
+    },
     ["OceanusCove"] = { -- Azsuna
         [69294839] = {quest=37649, currency=ARTIFACT, label=CHEST_GLIM},
         [45346686] = {quest=42291, currency=ARTIFACT, label=CHEST_SM},

@@ -26,6 +26,7 @@ merge(ns.points["Azsuna"], {
     [52402305] = {quest=38268, npc=91289, item=129063}, -- Cailyn Paledoom
     [53404400] = {quest=37821, npc=89846, item=129066}, -- Captain Volo'ren
     [55104590] = {quest=42450, npc=107127, item=129086}, -- Brawlgoth
+    [55476980] = {quest=42699, npc=108255, item=141877}, -- Coura, Mistress of Arcana
     [56102905] = {quest=38061, npc=90901, item=138395}, -- Pridelord Meowl
     [59304630] = {quest=38212, npc=91100, item=129068, note="Top of the mountain"}, -- Brogozog
     [59601230] = {quest=37932, npc=90244, item=129085, note="Unbound rift"}, -- Arcavellus
@@ -152,6 +153,9 @@ merge(ns.points["Valsharah"], {
 merge(ns.points["Helheim"], {
     [28156375] = {quest=39870, npc=97630, item=129188, pet=true}, -- Soulthirster
     [85105030] = {quest=38461, npc=92040, item=129044}, -- Fenri
+})
+merge(ns.points["TempleofaThousandLights"], {
+    [62303090] = {quest=42699, npc=108255, item=141877}, -- Coura, Mistress of Arcana
 })
 
 -- DH starter:
