@@ -61,6 +61,7 @@ merge(ns.points["Highmountain"], {
     [54504060] = {quest=39866, npc=97593, item=131792, note="Top of mountain"}, -- Mynta Talonscreech
     [56357250] = {quest=39235, npc=94877, item=138396}, -- Brogrul the Mighty
     [56406050] = {quest=40347, npc=96590, item=131775, note="Wanders a bit"}, -- Gurbog da Basher
+    [52405850] = {quest=40423, npc=109498, item=131767, note="Use the Seemingly Unguarded Treasure to summon the Unethical Adventurers"}, -- Unethical Adventurers
 })
 merge(ns.points["Stormheim"], {
     [36505250] = {quest=38472, npc=92152, item=138418}, -- Whitewater Typhoon
