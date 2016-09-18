@@ -323,8 +323,9 @@ ns.points = {
         [64715126] = {quest=38355, currency=ARTIFACT, label=CHEST_SM},
         [65398629] = {quest=39074, currency=ARTIFACT, label=CHEST},
         [66604090] = {quest=39108, currency=ARTIFACT, label=CHEST},
-        [67215928] = {quest=38782, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 65.9, 56.3"},
-        [65905630] = path(38782),
+        -- [67105770] = {quest=, item=139023, label="Elven Chest"}, -- no tracking quest triggers here...
+        [67215928] = {quest=38782, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 65.9, 56.3; doesn't appear until area quests are finished"},
+        [65905630] = path(38782, "Darkgrove Cavern"),
         [67395342] = {quest=38386, currency=ARTIFACT, label=CHEST_SM},
         [68334060] = {quest=39073, currency=ARTIFACT, label=CHEST_SM},
         [69475999] = {quest=38781, currency=ARTIFACT, label=CHEST_SM},
