@@ -220,10 +220,12 @@ ns.points = {
         [17275462] = {quest=43844, currency=ARTIFACT, label=CHEST},
         [19791604] = {quest=43845, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 19.4, 19.4"},
         [19401940] = path(43845),
+        [20605040] = path({43839, 43840, 43747}, "Falanaar Tunnels"),
         [21425446] = {quest=42842, item=136269, label="Kel'danath's Manaflask"},
         [22863574] = path({43838, 43988}, "Temple of Fal'adora"),
         [23414880] = {quest=43842, currency=ARTIFACT, label=CHEST_SM},
         [25958548] = {quest=43831, currency=ARTIFACT, label=CHEST_SM},
+        [26354127] = {quest=42827, item=139890, label="Ancient Mana Chunk"},
         [26831696] = {quest=43847, currency=ARTIFACT, label=CHEST_SM},
         [26877073] = {quest=43987, item=140327, label="Kyrtos's Research Notes", note="Cave entrance @ 27.3, 72.9"},
         [27307290] = path(43987),
@@ -389,12 +391,13 @@ ns.points = {
         [54573780] = {quest=43835, currency=ARTIFACT, label=CHEST_SM},
     },
     ["FalanaarTunnels"] = { -- Suramar
-        [23354815] = {quest=43840, currency=ARTIFACT, label=CHEST},
-        [35513253] = {quest=43747, item=139786, label="Manachest"},
-        [48644258] = {quest=43839, currency=ARTIFACT, label=CHEST_SM, note="Climb spiderweb"},
-        -- Downstairs in Temple of Fal'adora:
-        [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs"},
-        [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs"},
+        -- Tunnels
+        [58307020] = {quest=43840, currency=ARTIFACT, label=CHEST, level=33}, -- also triggered 43839
+        [35513253] = {quest=43747, item=141655, label="Shimmering Ancient Mana Cluster", level=33},
+        [48644258] = {quest=43839, currency=ARTIFACT, label=CHEST_SM, note="Climb spiderweb", level=33}, -- TODO: verify location
+        -- Temple of Fal'adora:
+        [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs", level=32},
+        [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs", level=32},
     },
 
     -- DH starter
