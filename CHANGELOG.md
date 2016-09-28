@@ -4,6 +4,7 @@
 
 * Added more treasures to Suramar.
 * More entrances in Highmountain, also finally all the parts of the slow fall toy.
+* Fixed some treasures in Val'sharah, and noted some places where phasing requirements exist.
 * Fixed the Temple of Fal'adora marker on the Suramar surface so it won't vanish until you've gotten both the treasures below it.
 
 ## Changed in v7
