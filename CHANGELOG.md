@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v9
+
+* Some helpful notes clarifying positions.
+
 ## Changed in v8
 
 * Added more treasures to Suramar.
