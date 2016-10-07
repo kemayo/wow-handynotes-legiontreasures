@@ -138,6 +138,7 @@ ns.points = {
         [44707230] = path({39606, 40508, 40509}, "Neltharion's Vault"),
         [51603740] = path({40496, 40497, 40406}, "Rockcrawler Chasm"),
         [48103390] = path({40496, 40497, 40406}, "Rockcrawler Chasm"),
+        [32206680] = {achievement=10774, item=139773, toy=true}, -- Emerald Winds
     },
     ["Stormheim"] = {
         [27335749] = {quest=38529, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 31.4, 57.1"},
@@ -246,7 +247,7 @@ ns.points = {
         [44803100] = {quest=43986, item=140326, label="Enchanted Burial Urn", note="Doesn't stand out much; by the bench, upper level"},
         [46552599] = {quest=43744, item=141655, label="Shimmering Ancient Mana Cluster"},
         [48117321] = {quest=43865, currency=ARTIFACT, label=CHEST_SM, note="Grapple to it"},
-        [48143399] = {quest=43853, item=141655, label=CHEST_SM},
+        [48143399] = {quest=43853, currency=ARTIFACT, label=CHEST_SM},
         [48288261] = {quest=43866, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 48.4, 82.2"},
         [48408220] = grapple(43866),
         [48297121] = {quest=44324, currency=ARTIFACT, label=CHEST, note="Jumping puzzle! I recommend starting on the bookshelf."},
