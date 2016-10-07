@@ -2,6 +2,7 @@
 
 ## Changed in v9
 
+* Include Emerald Winds, even though it's not technically a treasure.
 * Some helpful notes clarifying positions.
 
 ## Changed in v8
