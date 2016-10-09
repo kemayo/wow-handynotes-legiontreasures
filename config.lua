@@ -152,7 +152,7 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
         if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
             return false
         end
-        if point.toy and point.item and select(4, C_ToyBox.GetToyInfo(point.item)) then
+        if point.toy and point.item and PlayerHasToy(point.item) then
             return false
         end
     end
