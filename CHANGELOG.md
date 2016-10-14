@@ -4,6 +4,7 @@
 
 * Include Emerald Winds, even though it's not technically a treasure.
 * Some helpful notes clarifying positions.
+* Missing Suramar treasure.
 
 ## Changed in v8
 

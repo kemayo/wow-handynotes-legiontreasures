@@ -268,6 +268,7 @@ ns.points = {
         [60356851] = {quest=43876, item=139786, label=CHEST_GLIM},
         [61365550] = {quest=43872, currency=ARTIFACT, label=CHEST},
         [63654911] = {quest=43857, currency=ARTIFACT, label=CHEST_SM},
+        [65814191] = {quest=43743, item=141655, label="Shimmering Ancient Mana Cluster", note="At the back of the leyline cave"},
         [67315511] = {quest=43858, currency=ARTIFACT, label=CHEST},
         [71464975] = {quest=43859, currency=ARTIFACT, label=CHEST_SM},
         [76886150] = {quest=43860, currency=ARTIFACT, label=CHEST_SM, note="Underwater, in a sunken ship"},
@@ -399,6 +400,9 @@ ns.points = {
         -- Temple of Fal'adora:
         [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs", level=32},
         [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs", level=32},
+    },
+    ["LeylineMicro01"] = { -- Elor'shan
+        [49301730] = {quest=43743, item=141655, label="Shimmering Ancient Mana Cluster"},
     },
 
     -- DH starter
