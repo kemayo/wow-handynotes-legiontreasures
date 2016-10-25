@@ -121,7 +121,7 @@ merge(ns.points["Suramar"], {
     [62506370] = {quest=43793, npc=111653, item=121810}, -- Miasu
     [62554810] = {quest=43495, npc=110726, item=139969}, -- Cadraeus
     [65555915] = {quest=43481, npc=110656, item=140403}, -- Arcanist Lylandre
-    [66656715] = {quest=43968, npc=107846, item=140314}, -- Pinchshank
+    [66656715] = {quest=43968, npc=107846, item=140314, toy=true}, -- Pinchshank
     [67657105] = {quest=41136, npc=103214, item=140381, note="Cave entrance @ 72.4, 68.1"}, -- Har'kess the Insatiable
     [72406810] = ns.path(41136),
     [68155895] = {quest=41135, npc=100864, item=139952, note="Cave entrance @ 69.9, 57.0"}, -- Cora'Kar
