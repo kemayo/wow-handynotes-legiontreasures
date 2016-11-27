@@ -406,6 +406,12 @@ do
         currentLevel = level
         mapFile = string.gsub(mapFile, "_terrain%d+$", "")
         currentZone = mapFile
+        if minimap and ns.map_spellids[mapFile] then
+            local buffName = GetSpellInfo(ns.map_spellids[mapFile])
+            if UnitBuff("player", buffName) then
+                return iter
+            end
+        end
         return iter, ns.points[mapFile], nil
     end
 end

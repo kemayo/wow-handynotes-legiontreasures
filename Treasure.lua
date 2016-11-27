@@ -27,6 +27,14 @@ local grapple = function(questid, note)
 end
 ns.grapple = grapple
 
+ns.map_spellids = {
+    ["Azsuna"] = 182958,
+    ["Highmountain"] = 188741,
+    ["Stormheim"] = 182957,
+    ["Suramar"] = 199416,
+    ["Valsharah"] = 185719,
+}
+
 ns.points = {
     --[[ structure:
     [mapFile] = { -- "_terrain1" etc will be stripped from attempts to fetch this
