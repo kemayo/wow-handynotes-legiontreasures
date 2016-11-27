@@ -28,6 +28,7 @@ merge(ns.points["Azsuna"], {
     [55104590] = {quest=42450, npc=107127, item=129086}, -- Brawlgoth
     [55476980] = {quest=42699, npc=108255, item=141877}, -- Coura, Mistress of Arcana
     [56102905] = {quest=38061, npc=90901, item=138395}, -- Pridelord Meowl
+    [58517882] = {quest=44671, npc=108136, item=129081}, -- The Muscle
     [59304630] = {quest=38212, npc=91100, item=129068, note="Top of the mountain"}, -- Brogozog
     [59601230] = {quest=37932, npc=90244, item=129085, note="Unbound rift"}, -- Arcavellus
     [59705520] = {quest=37822, npc=89850, item=129065}, -- The Oracle
