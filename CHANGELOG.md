@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v10
+
+* Don't show minimap icons if you have the treasure map buff for that zone active.
+* Missing items in Val'sharah and Azsuna.
+* Missing rare in Azsuna: The Muscle.
+
 ## Changed in v9
 
 * TOC for 7.1.
