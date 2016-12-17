@@ -292,9 +292,7 @@ ns.points = {
         [38456530] = {quest=39080, currency=ARTIFACT, label=CHEST_SM, note="Basement; must have completed The Farmsteads"},
         [38626718] = {quest=39079, currency=ARTIFACT, label=CHEST_SM},
         [39945460] = {quest=38369, currency=ARTIFACT, label=CHEST_SM},
-        [41404560] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="Top of wall"}, -- TODO: which of these is right?
-        [41414561] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM, note="Top of wall"},
-        [42008850] = {quest=39085, currency=ARTIFACT, label=CHEST_SM}, -- TODO: which of these is right?
+        [41404560] = path({39085,39086}, "Darkpens"),
         [42665801] = {quest=39077, currency=ARTIFACT, label=CHEST_SM},
         [43068822] = {quest=44138, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 43.7, 89.9"},
         [43225488] = {quest=39084, currency=ARTIFACT, label=CHEST, note="Top of wall"},
@@ -311,8 +309,8 @@ ns.points = {
         [54417419] = {quest=38359, currency=ARTIFACT, label=CHEST_SM, note="In house behind the fence"},
         [54506048] = {quest=39097, currency=ARTIFACT, item=130152, label=CHEST, note="In cave"},
         [54908056] = {quest=38864, currency=ARTIFACT, label=CHEST_SM, note="In underwater cave"},
-        [54958054] = {quest=38861, currency=ARTIFACT, label=CHEST_SM, note="In underwater cave"},
-        [54108210] = path({38861,38864}, "Route to cave"),
+        -- [54958054] = {quest=38861, currency=ARTIFACT, label=CHEST_SM, note="In underwater cave"}, -- removed? swapped for 38864?
+        [54108210] = path(38864, "Route to cave"),
         [55557762] = {quest=38466, item=130147, toy=true, label="Unguarded Thistlemaw Treasure", note="Unguarded..."},
         [56008376] = {quest=38861, currency=ARTIFACT, label=CHEST_SM},
         [56225730] = {quest=39072, currency=ARTIFACT, label=CHEST_SM},
@@ -347,8 +345,8 @@ ns.points = {
 
     -- Small zones
     ["Darkpens"] = { -- Val'sharah
-        [42018849] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="Top of wall @ 41.4, 45.6"},
-        [50905168] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM, note="Top of wall @ 41.4, 45.6"},
+        [42018849] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="In water at bottom of stairs"},
+        [50905168] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM},
     },
     ["Helheim"] = { -- Stormheim
         [79842471] = {quest=38510, currency=ARTIFACT, label=CHEST_SM},
