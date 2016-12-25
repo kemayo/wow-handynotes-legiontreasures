@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v11
+
+* Added the Wand of Simulated Life in Dalaran
+* Added post-Snowblind battle treasure in Highmountain
+* Darkpens treasures were mixed up
+
 ## Changed in v10
 
 * Don't show minimap icons if you have the treasure map buff for that zone active.

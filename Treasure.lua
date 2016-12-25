@@ -132,6 +132,7 @@ ns.points = {
         [53035224] = {quest=40493, currency=ARTIFACT, label=CHEST_SM},
         [49905380] = path(40493, "Crystal Fissure"),
         [51175305] = {quest=39471, currency=ARTIFACT, label=CHEST_GLIM, note="Path past the Skyhorn"},
+        [52566637] = {quest=42453, currency=ARTIFACT, label=CHEST, note="Only after Battle of Snowblind Mesa quests are done?"},
         [53004830] = path(39471, "Path to Reflection Peak"),
         [53063946] = {quest=40499, currency=ARTIFACT, label=CHEST_SM},
         [53414868] = {quest=40500, currency=ARTIFACT, label=CHEST_SM},
@@ -344,6 +345,9 @@ ns.points = {
     },
 
     -- Small zones
+    ["Dalaran70"] = {
+        [47404120] = {quest=45365, item=143534, toy=true, note="On the table on the second floor of the Legerdemain Lounge", level=10},
+    },
     ["Darkpens"] = { -- Val'sharah
         [42018849] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="In water at bottom of stairs"},
         [50905168] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM},
