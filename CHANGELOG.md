@@ -2,9 +2,11 @@
 
 ## Changed in v11
 
+* TOC for 7.2
 * Added the Wand of Simulated Life in Dalaran
 * Added post-Snowblind battle treasure in Highmountain
 * Darkpens treasures were mixed up
+* Watchman's Rock chest in Stormheim explained better
 
 ## Changed in v10
 
