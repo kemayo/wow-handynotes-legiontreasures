@@ -106,6 +106,7 @@ ns.points = {
     ["Highmountain"] = {
         [36616213] = {quest=40488, currency=ARTIFACT, label=CHEST},
         [37353381] = {quest=40477, currency=ARTIFACT, label=CHEST_SM},
+        [39005450] = {quest=44731, currency=ARTIFACT, label=CHEST},
         [39307621] = {quest=40473, currency=ARTIFACT, label=CHEST, note="Hard to reach; try from behind the totem"},
         [39376229] = {quest=40474, currency=ARTIFACT, label=CHEST},
         [39555744] = {quest=39812, currency=ARTIFACT, label=CHEST},

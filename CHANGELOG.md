@@ -3,6 +3,7 @@
 ## Changed in v12
 
 * Missing chest in Val'sharah
+* Missing chest in Highmountain
 
 ## Changed in v11
 
