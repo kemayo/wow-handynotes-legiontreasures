@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v12
+
+* Missing chest in Val'sharah
+
 ## Changed in v11
 
 * TOC for 7.2
