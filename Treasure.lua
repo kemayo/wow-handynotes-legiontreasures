@@ -106,7 +106,7 @@ ns.points = {
     ["Highmountain"] = {
         [36616213] = {quest=40488, currency=ARTIFACT, label=CHEST},
         [37353381] = {quest=40477, currency=ARTIFACT, label=CHEST_SM},
-        [39005450] = {quest=44731, currency=ARTIFACT, label=CHEST},
+        [39005450] = {quest=44731, currency=ARTIFACT, label=CHEST, note="Path up behind Nesingwary's camp"},
         [39307621] = {quest=40473, currency=ARTIFACT, label=CHEST, note="Hard to reach; try from behind the totem"},
         [39376229] = {quest=40474, currency=ARTIFACT, label=CHEST},
         [39555744] = {quest=39812, currency=ARTIFACT, label=CHEST},
@@ -261,7 +261,7 @@ ns.points = {
         [48143399] = {quest=43853, currency=ARTIFACT, label=CHEST_SM},
         [48288261] = {quest=43866, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 48.4, 82.2"},
         [48408220] = grapple(43866),
-        [48297121] = {quest=44324, currency=ARTIFACT, label=CHEST, note="Jumping puzzle! I recommend starting on the bookshelf."},
+        [48297121] = {quest=44324, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [48587217] = {quest=44323, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [48957379] = {quest=43867, currency=ARTIFACT, label=CHEST, note="Upstairs"},
         [49988493] = {quest=43864, currency=ARTIFACT, label=CHEST_SM, note="Grapple from 50.0, 84.5"},
