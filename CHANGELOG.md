@@ -2,6 +2,7 @@
 
 ## Changed in v12
 
+* Include Dog's pebble in Dalaran
 * Missing chest in Val'sharah
 * Missing chest in Highmountain
 
