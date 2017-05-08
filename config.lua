@@ -162,5 +162,8 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
     if point.npc and not point.follower and not ns.db.show_npcs then
         return false
     end
+    if point.hide_before and not ns.db.upcoming and not IsQuestFlaggedCompleted(point.hide_before) then
+        return false
+    end
     return true
 end
