@@ -2,11 +2,13 @@ local myname, ns = ...
 
 -- note to self: I like Garr_TreasureIcon...
 
-local ORDER = 1220; -- order resources currency
+local ORDER = 1220 -- order resources currency
+local ARGUNITE = 1508
 local ARTIFACT = 'ARTIFACT'
 local CHEST = 'Treasure Chest'
 local CHEST_SM = 'Small Treasure Chest'
 local CHEST_GLIM = 'Glimmering Treasure Chest'
+local LEGION_SUPPLIES = 'Legion War Supplies'
 local REQ_GRAPPLE = 'Requires: Stormforged Grapple Launcher'
 local path = function(questid, label, atlas, note, scale)
     label = label or "Path to treasure"
@@ -346,7 +348,13 @@ ns.points = {
         [69475999] = {quest=38781, currency=ARTIFACT, label=CHEST_SM},
         [70225704] = {quest=38783, currency=ARTIFACT, label=CHEST_SM},
     },
-
+    ["ArgusSurface"] = { -- Krokuun
+    },
+    ["ArgusCore"] = { -- Antoran Wastes
+        [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES}, -- Verify me...
+    },
+    ["ArgusMacAree"] = { -- MacAree
+    },
     -- Small zones
     ["Dalaran70"] = {
         [47404120] = {quest=45365, item=143534, toy=true, note="On the table on the second floor of the Legerdemain Lounge", level=10},
