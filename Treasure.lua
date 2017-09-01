@@ -349,11 +349,17 @@ ns.points = {
         [70225704] = {quest=38783, currency=ARTIFACT, label=CHEST_SM},
     },
     ["ArgusSurface"] = { -- Krokuun
+        [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokun Chest"},
     },
     ["ArgusCore"] = { -- Antoran Wastes
+        [72404210] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES}, -- Verify me...
     },
+    ["ArgusCitadelSpire"] = { -- Nath'raxas Spire
+    },
     ["ArgusMacAree"] = { -- MacAree
+        [27284015] = {quest=48750, label="Shattered House Chest", currency=ARGUNITE},
+        [70245976] = {quest=48748, label="Augari Secret Stash", currency=ARGUNITE},
     },
     -- Small zones
     ["Dalaran70"] = {
