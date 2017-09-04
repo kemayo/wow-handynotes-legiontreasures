@@ -216,7 +216,7 @@ merge(ns.points["ArgusCore"], { -- Antoran Wastes
     [58001200] = {quest=48968, npc=127703, note="3 people on the runes to summon; don't interrupt Doom Star"}, -- Doomcaster Suprax
     [60575159] = {quest=48816, npc=127084, note="Use the portal slightly west from him at 80, 62.4"}, -- Commander Texlaz
     [60674831] = {quest=48815, npc=126946, item=151543}, -- Inquisitor Vethroz
-    [60902290] = {quest=nil, npc=127376}, -- Chief Alchemist Munculus
+    [60902290] = {quest=48865, npc=127376}, -- Chief Alchemist Munculus
     [61703720] = {quest=49183, npc=122958, item=152905, mount=true}, -- Blistermaw
     [61906430] = {quest=48814, npc=126338}, -- Wrath-Lord Yarez
     [62405380] = {quest=48813, npc=126254}, -- Lieutenant Xakaar
