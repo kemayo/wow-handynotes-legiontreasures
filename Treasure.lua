@@ -348,6 +348,9 @@ ns.points = {
         [69475999] = {quest=38781, currency=ARTIFACT, label=CHEST_SM},
         [70225704] = {quest=38783, currency=ARTIFACT, label=CHEST_SM},
     },
+    ["BrokenShore"] = { -- Broken Shore
+        -- TODO: are any treasures actually quest-gated?
+    },
     ["ArgusSurface"] = { -- Krokuun
         [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokun Chest"},
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},

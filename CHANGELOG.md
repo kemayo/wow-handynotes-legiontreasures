@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v13
+
+* You know what, Broken Shore too. Bit out of order, but there we go.
+
 ## Changed in v12
 
 * TOC for 7.3

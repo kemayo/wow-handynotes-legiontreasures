@@ -161,7 +161,7 @@ local get_point_info = function(point)
         elseif point.junk then
             category = "junk"
         end
-        return label, icon, category, point.quest, point.faction, point.scale
+        return label, icon, category, point.quest, point.faction, point.scale, point.alpha or 1
     end
 end
 local get_point_info_by_coord = function(mapFile, coord)
@@ -393,9 +393,9 @@ do
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
             if value and ns.should_show_point(state, value, currentZone, currentLevel) then
-                local label, icon, _, _, _, scale = get_point_info(value)
+                local label, icon, _, _, _, scale, alpha = get_point_info(value)
                 scale = (scale or 1) * (icon and icon.scale or 1) * ns.db.icon_scale
-                return state, nil, icon, scale, ns.db.icon_alpha
+                return state, nil, icon, scale, ns.db.icon_alpha * alpha
             end
             state, value = next(t, state) -- Get next data
         end
@@ -428,13 +428,10 @@ function HL:OnInitialize()
     HandyNotes:RegisterPluginDB(myname:gsub("HandyNotes_", ""), HLHandler, ns.options)
 
     -- watch for LOOT_CLOSED
-    self:RegisterEvent("LOOT_CLOSED")
+    self:RegisterEvent("LOOT_CLOSED", "Refresh")
+    self:RegisterEvent("ZONE_CHANGED_INDOORS", "Refresh")
 end
 
 function HL:Refresh()
     self:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
-end
-
-function HL:LOOT_CLOSED()
-    self:Refresh()
 end
