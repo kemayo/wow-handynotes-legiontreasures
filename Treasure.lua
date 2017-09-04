@@ -353,9 +353,13 @@ ns.points = {
     },
     ["ArgusSurface"] = { -- Krokuun
         [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokun Chest"},
+        [55208120] = {quest=47753, currency=ARGUNITE, label="Eredar War Supplies"},
+        [59307330] = {quest=47753, currency=ARGUNITE, label="Eredar War Supplies"},
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
     },
     ["ArgusCore"] = { -- Antoran Wastes
+        [59923582] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [60204320] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [72404210] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES}, -- Verify me...
     },
