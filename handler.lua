@@ -161,7 +161,7 @@ local get_point_info = function(point)
         elseif point.junk then
             category = "junk"
         end
-        return label, icon, category, point.quest, point.faction, point.scale, point.alpha or 1
+        return label, icon, category, point.quest, point.faction, point.scale
     end
 end
 local get_point_info_by_coord = function(mapFile, coord)
@@ -326,6 +326,36 @@ local function closeAllDropdowns()
     CloseDropDownMenus(1)
 end
 
+local function GetNPCNameFromID(npcID)
+	local DatamineTooltip = _G.CreateFrame("GameTooltip", "NPCScanDatamineTooltip", _G.UIParent, "GameTooltipTemplate")
+	DatamineTooltip:SetOwner(_G.WorldFrame, "ANCHOR_NONE")
+
+
+	DatamineTooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(npcID))
+
+	npcName = _G['NPCScanDatamineTooltipTextLeft1']:GetText()
+
+	if npcName and npcName ~= "" then
+		return npcName
+	else
+		npcName = _G.UNKNOWN
+	end
+
+	return npcName
+end
+
+local function LFGSearchForRare(npcID)
+	
+	npcName = GetNPCNameFromID(npcID);
+	
+	PVEFrame_ShowFrame("GroupFinderFrame", LFGListPVEStub);
+
+	local panel = LFGListFrame.CategorySelection;
+	LFGListCategorySelection_SelectCategory(panel, 6, 0);
+	LFGListCategorySelection_StartFindGroup(panel, npcName);
+	-- LFGListEntryCreation_SetAutoCreateMode(panel:GetParent().EntryCreation, "quest", activityID, questID);
+end
+
 do
     local currentZone, currentCoord
     local function generateMenu(button, level)
@@ -390,6 +420,10 @@ do
                 -- LFGListEntryCreation_SetAutoCreateMode(panel:GetParent().EntryCreation, "quest", activityID, questID)
             end
         end
+		
+		if button == "LeftButton" and down then
+			LFGSearchForRare(ns.points[string.gsub(mapFile, "_terrain%d+$", "")][coord].npc) -- <- fix me
+		end
     end
 end
 
@@ -410,9 +444,9 @@ do
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
             if value and ns.should_show_point(state, value, currentZone, currentLevel) then
-                local label, icon, _, _, _, scale, alpha = get_point_info(value)
+                local label, icon, _, _, _, scale = get_point_info(value)
                 scale = (scale or 1) * (icon and icon.scale or 1) * ns.db.icon_scale
-                return state, nil, icon, scale, ns.db.icon_alpha * alpha
+                return state, nil, icon, scale, ns.db.icon_alpha
             end
             state, value = next(t, state) -- Get next data
         end
@@ -445,10 +479,13 @@ function HL:OnInitialize()
     HandyNotes:RegisterPluginDB(myname:gsub("HandyNotes_", ""), HLHandler, ns.options)
 
     -- watch for LOOT_CLOSED
-    self:RegisterEvent("LOOT_CLOSED", "Refresh")
-    self:RegisterEvent("ZONE_CHANGED_INDOORS", "Refresh")
+    self:RegisterEvent("LOOT_CLOSED")
 end
 
 function HL:Refresh()
     self:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+end
+
+function HL:LOOT_CLOSED()
+    self:Refresh()
 end
