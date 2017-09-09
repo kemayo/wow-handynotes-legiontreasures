@@ -352,7 +352,7 @@ ns.points = {
         -- TODO: are any treasures actually quest-gated?
     },
     ["ArgusSurface"] = { -- Krokuun
-        [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokun Chest"},
+        [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokul Chest", achievement=12074, criteria=37594},
 
         [72293223] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
         [52856280] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
@@ -425,6 +425,8 @@ ns.points = {
         [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES}, -- Verify me...
         [76565823] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [78025620] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
+
+        [75705260] = {quest=49021, currency=ARGUNITE, label="Timeworn Fel Chest", achievement=12074, criteria=37699},
 
         [65224956] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [69785509] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
