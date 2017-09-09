@@ -275,6 +275,10 @@ local function handle_tooltip(tooltip, point)
             end
             comparison:Show()
         end
+
+        if point.npc then
+            tooltip:AddLine("|cffeda55fClick|r to search for groups")
+        end
     else
         tooltip:SetText(UNKNOWN)
     end
@@ -368,10 +372,23 @@ do
     HL_Dropdown.initialize = generateMenu
 
     function HLHandler:OnClick(button, down, mapFile, coord)
+        currentZone = string.gsub(mapFile, "_terrain%d+$", "")
+        currentCoord = coord
+        -- given we're in a click handler, this really *should* exist, but just in case...
+        local point = ns.points[currentZone] and ns.points[currentZone][currentCoord]
         if button == "RightButton" and not down then
-            currentZone = string.gsub(mapFile, "_terrain%d+$", "")
-            currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
+        elseif button == "LeftButton" and down and point.npc then
+            if InCombatLockdown() then
+                print("|cFF33FF99" .. myname .. "|r: Can't search in combat")
+            else
+                local name = mob_name(point.npc)
+                PVEFrame_ShowFrame("GroupFinderFrame", LFGListPVEStub)
+                local panel = LFGListFrame.CategorySelection
+                LFGListCategorySelection_SelectCategory(panel, 6, 0)
+                LFGListCategorySelection_StartFindGroup(panel, name)
+                -- LFGListEntryCreation_SetAutoCreateMode(panel:GetParent().EntryCreation, "quest", activityID, questID)
+            end
         end
     end
 end
