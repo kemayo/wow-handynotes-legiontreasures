@@ -194,7 +194,7 @@ merge(ns.points["ArgusSurface"], { -- Krokuun
     [33007600] = {quest=48562, npc=122912}, -- Commander Sathrenael
     [38145920] = {quest=48563, npc=122911, item=153299, note="Either go through the Xenedar, or climb up from 42, 57.1"}, -- Commander Vecaya
     [41707020] = {quest=48666, npc=125820}, -- Imp Mother Laglath
-    [44390734] = {quest=48561, npc=125824, note="Entrance is south east at 50.3, 17.3"}, -- Khazaduum
+    [50301730] = {quest=48561, npc=125824}, -- Khazaduum
     [44505870] = {quest=48564, npc=124775, item=153255}, -- Commander Endaxis
     [53403090] = {quest=48565, npc=123464, item=153124, toy=true}, -- Sister Subversia
     [55508020] = {quest=48628, npc=123689, item=153329}, -- Talestra the Vile
