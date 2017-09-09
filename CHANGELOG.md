@@ -2,6 +2,8 @@
 
 ## Changed in v13
 
+* Left-click on rares to open up the group finder searching for them by name (thanks znf)
+* Many more treasures in Argus (thanks znf)
 * You know what, Broken Shore too. Bit out of order, but there we go.
 
 ## Changed in v12
