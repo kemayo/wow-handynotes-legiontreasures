@@ -355,11 +355,12 @@ ns.points = {
         [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokun Chest"},
 
         [72293223] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
-
         [52856280] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
+        [61406640] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
 
         [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
         [59544417] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
+        [48603090] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
 
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
         [75006420] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
