@@ -17,6 +17,7 @@ merge(ns.points["Azsuna"], {
     [37404320] = {quest=42280, npc=107113, item=141875}, -- Vorthax
     [41054180] = {quest=37537, npc=89016, item=129080}, -- Ravyn-Drath
     [43152815] = {quest=38352, npc=91579, item=129056}, -- Doomlord Kazrok
+    [43532458] = {quest=42069, npc=105938, item=129087}, -- Felwing
     [45305780] = {quest=37824, npc=89884, item=129090}, -- Flog the Captain-Eater
     [47203420] = {quest=37726, npc=89650, item=129082}, -- Valiyaka the Stormbringer
     [49105520] = {quest=37909, npc=90164, item=129069, note="Patrols the road"}, -- Warbringer Mox'na
@@ -194,7 +195,7 @@ merge(ns.points["ArgusSurface"], { -- Krokuun
     [33007600] = {quest=48562, npc=122912}, -- Commander Sathrenael
     [38145920] = {quest=48563, npc=122911, item=153299, note="Either go through the Xenedar, or climb up from 42, 57.1"}, -- Commander Vecaya
     [41707020] = {quest=48666, npc=125820}, -- Imp Mother Laglath
-    [50301730] = {quest=48561, npc=125824}, -- Khazaduum
+    [50301730] = {quest=48561, npc=125824, item=153316}, -- Khazaduum
     [44505870] = {quest=48564, npc=124775, item=153255}, -- Commander Endaxis
     [53403090] = {quest=48565, npc=123464, item=153124, toy=true}, -- Sister Subversia
     [55508020] = {quest=48628, npc=123689, item=153329}, -- Talestra the Vile
@@ -229,7 +230,7 @@ merge(ns.points["ArgusCore"], { -- Antoran Wastes
     [75605650] = {quest=48818, npc=127096}, -- All-Seer Xanarian
 })
 merge(ns.points["ArgusCitadelSpire"], { -- Nath'raxas Spire
-    [38954032] = {quest=48561, npc=125824}, -- Khazaduum
+    [38954032] = {quest=48561, npc=125824, item=153316}, -- Khazaduum
 })
 
 merge(ns.points["ArgusMacAree"], { -- MacAree

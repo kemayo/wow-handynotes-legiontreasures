@@ -388,6 +388,10 @@ do
                 LFGListCategorySelection_SelectCategory(panel, 6, 0)
                 LFGListCategorySelection_StartFindGroup(panel, name)
                 -- LFGListEntryCreation_SetAutoCreateMode(panel:GetParent().EntryCreation, "quest", activityID, questID)
+
+                -- C_LFGList.Search(6, LFGListSearchPanel_ParseSearchTerms(npcName), 0, 4)
+                -- LFG_LIST_SEARCH_RESULTS_RECEIVED
+                -- local number, ids = C_LFGList.GetSearchResults()
             end
         end
     end

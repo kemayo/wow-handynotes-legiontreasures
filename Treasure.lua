@@ -58,6 +58,7 @@ ns.points = {
         [40575767] = {quest=38316, currency=ARTIFACT, label=CHEST},
         [41393075] = {quest=42292, currency=ARTIFACT, label=CHEST},
         [42600810] = {quest=38367, currency=ARTIFACT, label=CHEST_GLIM},
+        [43402243] = {quest=42297, currency=ARTIFACT, label=CHEST_GLIM},
         [44473946] = {quest=37713, currency=ARTIFACT, label=CHEST_SM},
         [47860773] = {quest=42295, currency=ARTIFACT, label=CHEST_SM},
         [49384536] = {quest=37828, currency=ARTIFACT, item=122681, label=CHEST},
@@ -359,9 +360,10 @@ ns.points = {
         [61406640] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
         [43505520] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
 
-        [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-        [59544417] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
         [48603090] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
+        [59544417] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
+        [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
+        [62803810] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
 
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
         [75006420] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
@@ -373,6 +375,7 @@ ns.points = {
         [51257624] = {quest=48884, currency=ARGUNITE, label="Krokuul Emergency Cache", note="Requires Lightforge Warframe to be equipped in the Vindicaar Matrix. Jump on the rubble."},
 
         [64203910] = {quest=48885, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
+        [62803730] = {quest=48885, currency=ARGUNITE, item=151246, label="Legion Tower Chest", note="Climb up behind the tower", achievement=12074, criteria=37593},
 
         [47705940] = {quest=48886, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
 
@@ -444,6 +447,7 @@ ns.points = {
         [59476292] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
 
         [58704082] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [59602090] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [63311994] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
 
         [43776836] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
@@ -458,6 +462,7 @@ ns.points = {
 
         [43776836] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
         [25263016] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [50605600] = {quest=48371, label="Ancient Eredar Cache", item=153334, currency=ARGUNITE},
 
         [33752371] = {quest=48371, label="Void-Seeped Cache", currency=ARGUNITE},
 
