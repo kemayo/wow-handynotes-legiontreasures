@@ -388,6 +388,7 @@ ns.points = {
         [36396765] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [56675875] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [55605240] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [52025959] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [58207179] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
@@ -397,12 +398,15 @@ ns.points = {
     },
     ["ArgusCore"] = { -- Antoran Wastes
         [60897052] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [62106933] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [64475836] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [67516988] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [69406320] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [56393555] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [51693779] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [59883581] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [58403090] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [66581711] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [64062748] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
