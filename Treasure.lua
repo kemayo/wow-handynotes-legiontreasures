@@ -366,6 +366,7 @@ ns.points = {
         [62803810] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
 
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
+        [69406280] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
         [75006420] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
         [71426162] = {quest=48000, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
@@ -383,12 +384,14 @@ ns.points = {
 
         [32047451] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [35475618] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [37007430] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [41335836] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [36396765] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [56675875] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [55605240] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [53305110] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [52025959] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [58207179] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
@@ -450,10 +453,12 @@ ns.points = {
         [54825759] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
         [59476292] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
 
+        [53603410] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [58704082] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [59602090] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [63311994] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
 
+        [42305750] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
         [43776836] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
         [43617138] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
 
@@ -529,6 +534,7 @@ ns.points = {
         [85213787] = {quest=40489, currency=ARTIFACT, label=CHEST},
     },
     ["LifespringCavern"] = { -- Highmountain
+        [39505740] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM, level=20},
         [61703450] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM, level=21},
     },
     ["StonedarkGrotto"] = { -- Highmountain

@@ -169,7 +169,7 @@ merge(ns.points["BrokenShore"], {
     [40385977] = {quest=46951, npc=120998, note="Inside the Pit of Agony", alpha=0.4}, -- Flllurlokkr
     [41601723] = {quest=47026, npc=121107}, -- Lady Eldrathe
     [42404282] = {quest=46092, npc=117094}, -- Malorus the Soulkeeper
-    [44645317] = {quest=46304, npc=119629, outdoors_only=true, }, -- Lord Hel'Nurath
+    [44645317] = {quest=46304, npc=119629, outdoors_only=true, item=142233, mount=true}, -- Lord Hel'Nurath
     [49114800] = {quest=46100, npc=117090}, -- Xorogun the Flamecarver
     [49553794] = {quest=46097, npc=117136}, -- Doombringer Zar'thoz
     [51814293] = {quest=46093, npc=117086}, -- Emberfire
@@ -188,6 +188,7 @@ merge(ns.points["BrokenShore"], {
     [78322747] = {quest=47036, npc=121134}, -- Duke Sithizi
     [78334004] = {quest=47001, npc=121046}, -- Brother Badatin
     [89473084] = {quest=46102, npc=117103}, -- Felcaller Zelthae
+    [89913238] = {quest=47090, npc=117471}, -- Si'vash
 })
 
 -- Argus:
