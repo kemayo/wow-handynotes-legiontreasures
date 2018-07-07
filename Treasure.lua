@@ -122,6 +122,7 @@ ns.points = {
         [45192746] = {quest=44279, currency=ARTIFACT, label=CHEST_SM, note="Underwater cave"},
         [45573462] = {quest=40481, currency=ARTIFACT, label=CHEST_SM},
         [46227340] = {quest=40489, currency=ARTIFACT, label=CHEST},
+        [46302760] = {quest=44280, item=131753, label=CHEST},
         [46682810] = {quest=40482, currency=ARTIFACT, label=CHEST_GLIM, note="Top of the building"},
         [46814013] = {quest=40507, currency=ARTIFACT, label=CHEST_SM, note="All the way at the top of the mountain"},
         [47644406] = {quest=39503, item=131926, label=CHEST, note="1/4 of slow fall toy", toy=true},
@@ -148,7 +149,7 @@ ns.points = {
         [55134965] = {quest=40487, currency=ARTIFACT, label=CHEST_SM},
         [38406150] = path(40476, "Lifespring Cavern"),
         [41407250] = path(40489, "Bitestone Enclave"),
-        [44707230] = path({39606, 40508, 40509}, "Neltharion's Vault"),
+        [44707230] = path({39606, 40508, 40509, 48381}, "Neltharion's Vault"),
         [51603740] = path({40496, 40497, 40406}, "Rockcrawler Chasm"),
         [48103390] = path({40496, 40497, 40406}, "Rockcrawler Chasm"),
         [32206680] = {achievement=10774, item=139773, toy=true}, -- Emerald Winds
@@ -364,13 +365,14 @@ ns.points = {
         [59544417] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
         [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
         [62803810] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
+        [66802490] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
 
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
         [69406280] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
         [75006420] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
         [71426162] = {quest=48000, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
-        [46508660] = {quest=47997, currency=ARGUNITE, label="Eredar War Supplies"},
+        [46508520] = {quest=47997, currency=ARGUNITE, label="Eredar War Supplies"},
         [40617531] = {quest=47997, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [51257624] = {quest=48884, currency=ARGUNITE, label="Krokuul Emergency Cache", note="Requires Lightforge Warframe to be equipped in the Vindicaar Matrix. Jump on the rubble."},
@@ -398,6 +400,8 @@ ns.points = {
         [59377345] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [58607990] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
+        [55907420] = {quest=49156, currency=ARGUNITE, achievement=12074, criteria=37959, label="Precious Augari Keepsakes", note="Requires Shroud of Arcane Echoes"},
+
     },
     ["ArgusCore"] = { -- Antoran Wastes
         [60897052] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
@@ -410,7 +414,9 @@ ns.points = {
         [51693779] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [59883581] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [58403090] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [55103930] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
+        [59101940] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [66581711] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [64062748] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
@@ -420,11 +426,13 @@ ns.points = {
 
         [72404210] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [66603641] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [68903340] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [69503966] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [55991401] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [59581389] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [55402040] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [54202800] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
         [65225180] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, note="In the cave"},
         [60344695] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
@@ -432,6 +440,7 @@ ns.points = {
         [60684104] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [65484091] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
+        [73306850] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES}, -- Verify me...
         [76565823] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [78025620] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
@@ -439,6 +448,7 @@ ns.points = {
         [75705260] = {quest=49021, currency=ARGUNITE, label="Timeworn Fel Chest", achievement=12074, criteria=37699},
 
         [65224956] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
+        [68005070] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [69785509] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [63075799] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES, note="In the cave"},
 
@@ -451,17 +461,22 @@ ns.points = {
         [53228020] = {quest=48346, label=LEGION_SUPPLIES, currency=ARTIFACT},
         [57097677] = {quest=48346, label="Desperate Eredar's Cache", currency=ARTIFACT, note="Climb from 59.67, 76.40"},
         [54825759] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [54806700] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
         [59476292] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [59906980] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
 
+        [53902320] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [53603410] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [58704082] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [59602090] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
         [63311994] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
 
+        [37205550] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
         [42305750] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
         [43776836] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
         [43617138] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
 
+        [44601860] = {quest=48357, label="Ancient Eredar Cache", currency=ARGUNITE},
         [57821057] = {quest=48357, label="Ancient Eredar Cache", currency=ARGUNITE},
 
         [28904422] = {quest=48361, label="Void-Seeped Cache", currency=ARGUNITE},
@@ -470,6 +485,7 @@ ns.points = {
         [62013276] = {quest=48362, label="Ancient Eredar Cache", currency=ARGUNITE},
 
         [43776836] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [48704980] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
         [25263016] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
         [50605600] = {quest=48371, label="Ancient Eredar Cache", item=153334, currency=ARGUNITE},
 
@@ -487,7 +503,9 @@ ns.points = {
 
         [40896985] = {quest=49153, currency=ARGUNITE, label="Augari Goods", note="Requires Shroud of Arcane Echoes to be equipped in the Vindicaar Matrix. Stealth before opening."},
 
+        [31552541] = {quest=49264, label="Void-Seeped Cache", currency=ARGUNITE},
         [37583619] = {quest=49264, label="Void-Seeped Cache", currency=ARGUNITE},
+        [37102010] = {quest=49264, label="Void-Seeped Cache", currency=ARGUNITE},
 
         [40275130] = {quest=48747, currency=ARGUNITE, label="Void-Tinged Chest", note="Requires Lightforge Warframe to be equipped in the Vindicaar Matrix. Jump on the rubble."},
 

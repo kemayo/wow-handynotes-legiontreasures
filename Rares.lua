@@ -159,6 +159,9 @@ merge(ns.points["Helheim"], {
 merge(ns.points["TempleofaThousandLights"], {
     [62303090] = {quest=42699, npc=108255, item=141877}, -- Coura, Mistress of Arcana
 })
+merge(ns.points["NeltharionsVault"], {
+    [54508400] = {quest=48381, npc=125951, item=141708, level=30}, -- Obsidian Deathwarder
+})
 
 -- Broken Shore:
 merge(ns.points["BrokenShore"], {
