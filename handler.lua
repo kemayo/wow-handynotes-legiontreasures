@@ -428,6 +428,9 @@ do
         mapFile = string.gsub(mapFile, "_terrain%d+$", "")
         currentZone = mapFile
         if minimap and ns.map_spellids[mapFile] then
+            if ns.map_spellids[mapFile] == true then
+                return iter
+            end
             local buffName = GetSpellInfo(ns.map_spellids[mapFile])
             if UnitBuff("player", buffName) then
                 return iter

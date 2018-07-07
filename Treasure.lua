@@ -35,6 +35,9 @@ ns.map_spellids = {
     ["Stormheim"] = 182957,
     ["Suramar"] = 199416,
     ["Valsharah"] = 185719,
+    ["ArgusMacAree"] = true,
+    ["ArgusCore"] = true,
+    ["ArgusSurface"] = true,
 }
 
 ns.points = {
