@@ -357,7 +357,7 @@ ns.points = {
         -- TODO: are any treasures actually quest-gated?
     },
     ["ArgusSurface"] = { -- Krokuun
-        [48505890] = {quest=48886, currency=ARGUNITE, label="Lost Krokul Chest", achievement=12074, criteria=37594},
+        [48505890] = {quest=48886, currency=ARGUNITE, achievement=12074, criteria=37594}, -- Lost Krokul Chest
 
         [72293223] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
         [52856280] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
@@ -369,6 +369,7 @@ ns.points = {
         [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
         [62803810] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
         [66802490] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
+        [62394178] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
 
         [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
         [69406280] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
@@ -381,7 +382,7 @@ ns.points = {
         [51257624] = {quest=48884, currency=ARGUNITE, label="Krokuul Emergency Cache", note="Requires Lightforge Warframe to be equipped in the Vindicaar Matrix. Jump on the rubble."},
 
         [64203910] = {quest=48885, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
-        [62803730] = {quest=48885, currency=ARGUNITE, item=151246, label="Legion Tower Chest", note="Climb up behind the tower", achievement=12074, criteria=37593},
+        [62803730] = {quest=48885, currency=ARGUNITE, item=151246, note="Climb up behind the tower", achievement=12074, criteria=37593}, -- Legion Tower Chest
 
         [47705940] = {quest=48886, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
 
@@ -403,10 +404,14 @@ ns.points = {
         [59377345] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [58607990] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
-        [55907420] = {quest=49156, currency=ARGUNITE, achievement=12074, criteria=37959, label="Precious Augari Keepsakes", note="Requires Shroud of Arcane Echoes"},
+        [55907420] = {quest=49156, currency=ARGUNITE, achievement=12074, criteria=37959, note="Requires Shroud of Arcane Echoes"}, -- Precious Augari Keepsakes
 
     },
     ["ArgusCore"] = { -- Antoran Wastes
+        [57346366] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37960, note="Requires Shroud of Arcane Echoes"}, -- Missing Augari Chest
+        [49135934] = {quest=49020, currency=ARGUNITE, achievement=12074, criteria=37698, note="Behind the waterfall"}, -- Legion Treasure Hoard
+
+        [57836485] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [60897052] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [62106933] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [64475836] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
@@ -448,7 +453,7 @@ ns.points = {
         [76565823] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [78025620] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
 
-        [75705260] = {quest=49021, currency=ARGUNITE, label="Timeworn Fel Chest", achievement=12074, criteria=37699},
+        [75705260] = {quest=49021, currency=ARGUNITE, achievement=12074, criteria=37699}, -- Timeworn Fel Chest
 
         [65224956] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
         [68005070] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
