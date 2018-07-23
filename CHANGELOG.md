@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v14
+
+* Flagged all the non-achievement Argus treasure chests as junk, and hid them by default
+* Achievement criteria based labels display better
+* Fixed some world map tooltip issues
+* Fixed TomTom right click integration
+
 ## Changed in v13
 
 * Updated for 8.0.1
