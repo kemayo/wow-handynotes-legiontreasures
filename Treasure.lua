@@ -357,166 +357,163 @@ ns.points = {
         -- TODO: are any treasures actually quest-gated?
     },
     ["ArgusSurface"] = { -- Krokuun
-        [48505890] = {quest=48886, currency=ARGUNITE, achievement=12074, criteria=37594}, -- Lost Krokul Chest
-
-        [72293223] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
-        [52856280] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
-        [61406640] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
-        [43505520] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies"},
-
-        [48603090] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-        [59544417] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-        [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-        [62803810] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-        [66802490] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-        [62394178] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies"},
-
-        [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", note="Up on the ridge"},
-        [69406280] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
-        [75006420] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies"},
-        [71426162] = {quest=48000, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [46508520] = {quest=47997, currency=ARGUNITE, label="Eredar War Supplies"},
-        [40617531] = {quest=47997, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [51257624] = {quest=48884, currency=ARGUNITE, label="Krokuul Emergency Cache", note="Requires Lightforge Warframe to be equipped in the Vindicaar Matrix. Jump on the rubble."},
-
-        [64203910] = {quest=48885, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
-        [62803730] = {quest=48885, currency=ARGUNITE, item=151246, note="Climb up behind the tower", achievement=12074, criteria=37593}, -- Legion Tower Chest
-
-        [47705940] = {quest=48886, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
-
-        [75246960] = {quest=49154, currency=ARGUNITE, label="Long-Lost Augari Treasure", note="Requires Shroud of Arcane Echoes to be equipped in the Vindicaar Matrix. Stealth before opening."},
-
-        [32047451] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [35475618] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [37007430] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [41335836] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [36396765] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [56675875] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [55605240] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [53305110] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [52025959] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [58207179] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [59377345] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [58607990] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
+        [48505890] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37594}, -- Lost Krokul Chest
+        [51257624] = {quest=48884, currency=ARGUNITE, achievement=12074, criteria=37592, note="Requires Lightforge Warframe. Jump on the rubble."}, -- Krokuul Emergency Cache
         [55907420] = {quest=49156, currency=ARGUNITE, achievement=12074, criteria=37959, note="Requires Shroud of Arcane Echoes"}, -- Precious Augari Keepsakes
+        [62803730] = {quest=nil, currency=ARGUNITE, item=151246, note="Climb up behind the tower", achievement=12074, criteria=37593}, -- Legion Tower Chest
+        [75246960] = {quest=49154, currency=ARGUNITE, achievement=12074, criteria=37958, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Long-Lost Augari Treasure
 
+        -- Junk:
+        [72293223] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [52856280] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [61406640] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [43505520] = {quest=48339, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+
+        [48603090] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [59544417] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [61573519] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [62803810] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [66802490] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [62394178] = {quest=47999, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+
+        [67606990] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", junk=true, note="Up on the ridge"},
+        [69406280] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [75006420] = {quest=48000, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [71426162] = {quest=48000, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [46508520] = {quest=47997, currency=ARGUNITE, label="Eredar War Supplies", junk=true},
+        [40617531] = {quest=47997, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [64203910] = {quest=48885, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="Requires Light's Judgement. Blow the pile of ruble with the ability"},
+
+        [47705940] = {quest=48886, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="Requires Light's Judgement. Blow the pile of ruble with the ability"},
+
+        [32047451] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [35475618] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [37007430] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [41335836] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [36396765] = {quest=48336, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [56675875] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [55605240] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [53305110] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [52025959] = {quest=47752, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [58207179] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [59377345] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [58607990] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
     },
     ["ArgusCore"] = { -- Antoran Wastes
-        [57346366] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37960, note="Requires Shroud of Arcane Echoes"}, -- Missing Augari Chest
         [49135934] = {quest=49020, currency=ARGUNITE, achievement=12074, criteria=37698, note="Behind the waterfall"}, -- Legion Treasure Hoard
-
-        [57836485] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [60897052] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [62106933] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [64475836] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [67516988] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [69406320] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [56393555] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [51693779] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [59883581] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [58403090] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [55103930] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [59101940] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [66581711] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [64062748] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [57735890] = {quest=48385, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [55925384] = {quest=48385, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [48225455] = {quest=48385, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [72404210] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [66603641] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [68903340] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [69503966] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [55991401] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [59581389] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [55402040] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [54202800] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [65225180] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, note="In the cave"},
-        [60344695] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [64315036] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, note="In the cave"},
-        [60684104] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [65484091] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
-        [73306850] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES}, -- Verify me...
-        [76565823] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [78025620] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES},
-
+        [52102720] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37697, note="Requires Light's Judgement"}, -- Fel-Bound Chest
+        [57346366] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37960, note="Requires Shroud of Arcane Echoes"}, -- Missing Augari Chest
+        [58906140] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37695, note="Requires Lightforged Warframe"}, -- Forgotten Legion Supplies
+        [65903980] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37696, note="Requires Light's Judgement"}, -- Ancient Legion War Cache
         [75705260] = {quest=49021, currency=ARGUNITE, achievement=12074, criteria=37699}, -- Timeworn Fel Chest
 
-        [65224956] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [68005070] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [69785509] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [63075799] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES, note="In the cave"},
+        -- Junk:
+        [57836485] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [60897052] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [62106933] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [64475836] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [67516988] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [69406320] = {quest=48382, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
 
-        [52102720] = {quest=49019, currency=ARGUNITE, label=LEGION_SUPPLIES},
-        [65204060] = {quest=49018, currency=ARGUNITE, label=LEGION_SUPPLIES, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
+        [56393555] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [51693779] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [59883581] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [58403090] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [55103930] = {quest=48383, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [59101940] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [66581711] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [64062748] = {quest=48384, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [57735890] = {quest=48385, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [55925384] = {quest=48385, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [48225455] = {quest=48385, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [72404210] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [66603641] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [68903340] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [69503966] = {quest=48387, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [55991401] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [59581389] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [55402040] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [54202800] = {quest=48388, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [65225180] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="In the cave"},
+        [60344695] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [64315036] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="In the cave"},
+        [60684104] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [65484091] = {quest=48389, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [73306850] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [76465651] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true}, -- Verify me...
+        [76565823] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [78025620] = {quest=48390, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+
+        [65224956] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [68005070] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [69785509] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [63075799] = {quest=48391, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="In the cave"},
+
+        [52102720] = {quest=49019, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
+        [65204060] = {quest=49018, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
     },
     ["ArgusCitadelSpire"] = { -- Nath'raxas Spire
     },
     ["ArgusMacAree"] = { -- MacAree
-        [53228020] = {quest=48346, label=LEGION_SUPPLIES, currency=ARTIFACT},
-        [57097677] = {quest=48346, label="Desperate Eredar's Cache", currency=ARTIFACT, note="Climb from 59.67, 76.40"},
-        [54825759] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [54806700] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [59476292] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [59906980] = {quest=48346, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [27284015] = {quest=48750, achievement=12074, criteria=37601, currency=ARGUNITE, note="You will need a Glider, jump from 31.92, 45.19"}, -- Shattered House Chest
+        [40275130] = {quest=48747, achievement=12074, criteria=37598, currency=ARGUNITE, note="Requires Lightforge Warframe. Jump on the rubble."}, -- Void-Tinged Chest
+        [40896985] = {quest=49153, achievement=12074, criteria=37957, currency=ARGUNITE, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Augari Goods
+        [42900550] = {quest=nil, achievement=12074, criteria=37595, currency=ARGUNITE, note="Requires Lightforged Warframe."}, -- Eredar Treasure Cache
+        [43445440] = {quest=48751, achievement=12074, criteria=37602, currency=ARTIFACT, note="You will need a Glider"}, -- Doomseeker's Treasure
+        [50693851] = {quest=48744, achievement=12074, criteria=37596, currency=ARTIFACT}, -- Chest of Ill-Gotten Gains
+        [57097677] = {quest=48346, achievement=12074, criteria=37600, currency=ARTIFACT, note="Climb from 59.67, 76.40"}, -- Desperate Eredar's Cache
+        [62152241] = {quest=49151, achievement=12074, criteria=37956, currency=ARGUNITE, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Secret Augari Chest
+        [62207120] = {quest=nil, achievement=12074, criteria=37597, currency=ARGUNITE, note="Requires Light's Judgement'."}, -- Student's Surprising Surplus
+        [70245976] = {quest=48748, achievement=12074, criteria=37599, currency=ARGUNITE}, -- Augari Secret Stash
+        [70602730] = {quest=nil, achievement=12074, criteria=37955, currency=ARGUNITE, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Augari-Runed Chest
 
-        [53902320] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [53603410] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [58704082] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [59602090] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [63311994] = {quest=48350, label="Ancient Eredar Cache", currency=ARGUNITE},
+        -- Junk:
+        [53228020] = {quest=48346, label=LEGION_SUPPLIES, junk=true, currency=ARTIFACT},
+        [54825759] = {quest=48346, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [54806700] = {quest=48346, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [59476292] = {quest=48346, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [59906980] = {quest=48346, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
 
-        [37205550] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [42305750] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [43776836] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [43617138] = {quest=48351, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [53902320] = {quest=48350, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [53603410] = {quest=48350, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [58704082] = {quest=48350, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [59602090] = {quest=48350, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [63311994] = {quest=48350, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
 
-        [44601860] = {quest=48357, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [57821057] = {quest=48357, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [37205550] = {quest=48351, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [42305750] = {quest=48351, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [43776836] = {quest=48351, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [43617138] = {quest=48351, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
 
-        [28904422] = {quest=48361, label="Void-Seeped Cache", currency=ARGUNITE},
-        [25834447] = {quest=48361, label="Void-Seeped Cache", currency=ARGUNITE},
+        [44601860] = {quest=48357, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [57821057] = {quest=48357, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
 
-        [62013276] = {quest=48362, label="Ancient Eredar Cache", currency=ARGUNITE},
+        [28904422] = {quest=48361, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
+        [25834447] = {quest=48361, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
 
-        [43776836] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [48704980] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [25263016] = {quest=48371, label="Ancient Eredar Cache", currency=ARGUNITE},
-        [50605600] = {quest=48371, label="Ancient Eredar Cache", item=153334, currency=ARGUNITE},
+        [62013276] = {quest=48362, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
 
-        [33752371] = {quest=48371, label="Void-Seeped Cache", currency=ARGUNITE},
+        [43776836] = {quest=48371, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [48704980] = {quest=48371, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [25263016] = {quest=48371, label="Ancient Eredar Cache", junk=true, currency=ARGUNITE},
+        [50605600] = {quest=48371, label="Ancient Eredar Cache", junk=true, item=153334, currency=ARGUNITE},
 
-        [50693851] = {quest=48744, label="Chest of Ill-Gotten Gains", currency=ARTIFACT},
+        [33752371] = {quest=48371, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
 
-        [70245976] = {quest=48748, label="Augari Secret Stash", currency=ARGUNITE},
-
-        [27284015] = {quest=48750, label="Shattered House Chest", currency=ARGUNITE, note="You will need a Glider, jump from 31.92, 45.19"},
-
-        [43445440] = {quest=48751, label="Doomseeker's Treasure", currency=ARTIFACT, note="You will need a Glider"},
-
-        [62152241] = {quest=49151, currency=ARGUNITE, label="Secret Augari Chest", note="Requires Shroud of Arcane Echoes to be equipped in the Vindicaar Matrix. Stealth before opening."},
-
-        [40896985] = {quest=49153, currency=ARGUNITE, label="Augari Goods", note="Requires Shroud of Arcane Echoes to be equipped in the Vindicaar Matrix. Stealth before opening."},
-
-        [31552541] = {quest=49264, label="Void-Seeped Cache", currency=ARGUNITE},
-        [37583619] = {quest=49264, label="Void-Seeped Cache", currency=ARGUNITE},
-        [37102010] = {quest=49264, label="Void-Seeped Cache", currency=ARGUNITE},
-
-        [40275130] = {quest=48747, currency=ARGUNITE, label="Void-Tinged Chest", note="Requires Lightforge Warframe to be equipped in the Vindicaar Matrix. Jump on the rubble."},
-
+        [31552541] = {quest=49264, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
+        [37583619] = {quest=49264, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
+        [37102010] = {quest=49264, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
     },
     -- Small zones
     ["Dalaran70"] = {

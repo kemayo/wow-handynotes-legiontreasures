@@ -2,7 +2,7 @@ local myname, ns = ...
 
 ns.defaults = {
     profile = {
-        show_junk = true,
+        show_junk = false,
         show_npcs = true,
         found = false,
         repeatable = true,
@@ -71,11 +71,6 @@ ns.options = {
                     desc = "Show the full tooltips for items",
                     order = 10,
                 },
-                -- show_junk = {
-                --     type = "toggle",
-                --     name = "Junk",
-                --     desc = "Show items which don't count for any achievement",
-                -- },
                 found = {
                     type = "toggle",
                     name = "Show found",
@@ -88,12 +83,18 @@ ns.options = {
                     desc = "Show rare NPCs to be killed, generally for items or achievements",
                     order = 30,
                 },
-                repeatable = {
+                show_junk = {
                     type = "toggle",
-                    name = "Show repeatable",
-                    desc = "Show items which are repeatable? This generally means ones which have a daily tracking quest attached",
+                    name = "Junk",
+                    desc = "Show items which don't count for any achievement",
                     order = 40,
                 },
+                -- repeatable = {
+                --     type = "toggle",
+                --     name = "Show repeatable",
+                --     desc = "Show items which are repeatable? This generally means ones which have a daily tracking quest attached",
+                --     order = 40,
+                -- },
                 tooltip_questid = {
                     type = "toggle",
                     name = "Show quest ids",
@@ -159,9 +160,9 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
             return false
         end
     end
-    if (not ns.db.repeatable) and point.repeatable then
-        return false
-    end
+    -- if (not ns.db.repeatable) and point.repeatable then
+    --     return false
+    -- end
     if point.npc and not point.follower and not ns.db.show_npcs then
         return false
     end
