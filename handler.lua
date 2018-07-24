@@ -445,6 +445,9 @@ do
         currentLevel = level
         mapFile = string.gsub(mapFile, "_terrain%d+$", "")
         currentZone = mapFile
+        if (minimap and not ns.db.show_on_minimap) or (not minimap and not ns.db.show_on_world) then
+            return iter
+        end
         if minimap and ns.map_spellids[mapFile] then
             if ns.map_spellids[mapFile] == true then
                 return iter

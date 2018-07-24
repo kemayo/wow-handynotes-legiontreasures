@@ -3,6 +3,7 @@
 ## Changes in v14
 
 * Flagged all the non-achievement Argus treasure chests as junk, and hid them by default
+* New config options: show/hide icons on the world map or minimap, and show/hide treasure
 * Achievement criteria based labels display better
 * Fixed some world map tooltip issues
 * Fixed TomTom right click integration

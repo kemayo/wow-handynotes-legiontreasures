@@ -2,8 +2,11 @@ local myname, ns = ...
 
 ns.defaults = {
     profile = {
+        show_on_world = true,
+        show_on_minimap = true,
         show_junk = false,
         show_npcs = true,
+        show_treasure = true,
         found = false,
         repeatable = true,
         icon_scale = 1.0,
@@ -52,6 +55,18 @@ ns.options = {
                     min = 0, max = 1, step = 0.01,
                     order = 30,
                 },
+                show_on_world = {
+                    type = "toggle",
+                    name = "World Map",
+                    desc = "Show icons on world map",
+                    order = 40,
+                },
+                show_on_minimap = {
+                    type = "toggle",
+                    name = "Minimap",
+                    desc = "Show icons on the minimap",
+                    order = 50,
+                },
             },
         },
         display = {
@@ -81,6 +96,12 @@ ns.options = {
                     type = "toggle",
                     name = "Show NPCs",
                     desc = "Show rare NPCs to be killed, generally for items or achievements",
+                    order = 30,
+                },
+                show_treasure = {
+                    type = "toggle",
+                    name = "Show treasure",
+                    desc = "Show treasure that can be looted",
                     order = 30,
                 },
                 show_junk = {
@@ -163,9 +184,19 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
     -- if (not ns.db.repeatable) and point.repeatable then
     --     return false
     -- end
-    if point.npc and not point.follower and not ns.db.show_npcs then
-        return false
+    if not point.follower then
+        if point.npc then
+            if not ns.db.show_npcs then
+                return false
+            end
+        else
+            -- Not an NPC, not a follower, must be treasure
+            if not ns.db.show_treasure then
+                return false
+            end
+        end
     end
+
     if point.hide_before and not ns.db.upcoming and not IsQuestFlaggedCompleted(point.hide_before) then
         return false
     end
