@@ -140,6 +140,7 @@ ns.options = {
 }
 
 local player_faction = UnitFactionGroup("player")
+local player_name = UnitName("player")
 ns.should_show_point = function(coord, point, currentZone, currentLevel)
     if point.level and point.level ~= currentLevel then
         return false
@@ -172,6 +173,17 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
                 end
             elseif IsQuestFlaggedCompleted(point.quest) then
                 return false
+            end
+        elseif point.achievement then
+            local completedByMe = select(13, GetAchievementInfo(point.achievement))
+            if completedByMe then
+                return false
+            end
+            if point.criteria then
+                local _, _, completed, _, _, completedBy = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+                if completed and completedBy == player_name then
+                    return false
+                end
             end
         end
         if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
