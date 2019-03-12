@@ -517,6 +517,7 @@ ns.points = {
     },
     -- Small zones
     ["Dalaran70"] = {
+        [28466450] = {quest=41929, item=7676, label="Desmond's Lockbox", note="Locked", level=10},
         [47404120] = {quest=45365, item=143534, toy=true, note="On the table on the second floor of the Legerdemain Lounge", level=10},
         -- Dog pebble, questid is for showing Dog the pebble, not looting it
         [38102920] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
