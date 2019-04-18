@@ -67,12 +67,20 @@ local function work_out_label(point)
     if point.label then
         return point.label
     end
-    if point.achievement and point.criteria then
-        local criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
-        if criteria then
-            return criteria
+    if point.achievement then
+        if point.criteria then
+            local criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+            if criteria then
+                return criteria
+            end
+            fallback = 'achievement:'..point.achievement..'.'..point.criteria
+        else
+            local _, achievement = GetAchievementInfo(point.achievement)
+            if achievement then
+                return achievement
+            end
+            fallback = 'achievement:'..point.achievement
         end
-        fallback = 'achievement:'..point.achievement..'.'..point.criteria
     end
     if point.follower then
         local follower = C_Garrison.GetFollowerInfo(point.follower)
@@ -177,9 +185,8 @@ local get_point_info = function(point)
         return label, icon, category, point.quest, point.faction, point.scale, point.alpha or 1
     end
 end
-local get_point_info_by_coord = function(mapFile, coord)
-    mapFile = string.gsub(mapFile, "_terrain%d+$", "")
-    return get_point_info(ns.points[mapFile] and ns.points[mapFile][coord])
+local get_point_info_by_coord = function(uiMapID, coord)
+    return get_point_info(ns.points[uiMapID] and ns.points[uiMapID][coord])
 end
 
 local function handle_tooltip(tooltip, point)
@@ -288,9 +295,8 @@ local function handle_tooltip(tooltip, point)
     end
     tooltip:Show()
 end
-local handle_tooltip_by_coord = function(tooltip, mapFile, coord)
-    mapFile = string.gsub(mapFile, "_terrain%d+$", "")
-    return handle_tooltip(tooltip, ns.points[mapFile] and ns.points[mapFile][coord])
+local handle_tooltip_by_coord = function(tooltip, uiMapID, coord)
+    return handle_tooltip(tooltip, ns.points[uiMapID] and ns.points[uiMapID][coord])
 end
 
 ---------------------------------------------------------
@@ -298,22 +304,21 @@ end
 local HLHandler = {}
 local info = {}
 
-function HLHandler:OnEnter(mapFile, coord)
+function HLHandler:OnEnter(uiMapID, coord)
     local tooltip = GameTooltip
     if self:GetCenter() > UIParent:GetCenter() then -- compare X coordinate
         tooltip:SetOwner(self, "ANCHOR_LEFT")
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
     end
-    handle_tooltip_by_coord(tooltip, mapFile, coord)
+    handle_tooltip_by_coord(tooltip, uiMapID, coord)
 end
 
-local function createWaypoint(button, mapFile, coord)
+local function createWaypoint(button, uiMapID, coord)
     if TomTom then
-        local mapId = HandyNotes:GetMapFiletoMapID(mapFile)
         local x, y = HandyNotes:getXY(coord)
-        TomTom:AddWaypoint(mapId, x, y, {
-            title = get_point_info_by_coord(mapFile, coord),
+        TomTom:AddWaypoint(uiMapID, x, y, {
+            title = get_point_info_by_coord(uiMapID, coord),
             persistent = nil,
             minimap = true,
             world = true
@@ -321,8 +326,8 @@ local function createWaypoint(button, mapFile, coord)
     end
 end
 
-local function hideNode(button, mapFile, coord)
-    ns.hidden[mapFile][coord] = true
+local function hideNode(button, uiMapID, coord)
+    ns.hidden[uiMapID][coord] = true
     HL:Refresh()
 end
 
@@ -375,33 +380,18 @@ do
     HL_Dropdown.displayMode = "MENU"
     HL_Dropdown.initialize = generateMenu
 
-    function HLHandler:OnClick(button, down, mapFile, coord)
-        currentZone = string.gsub(mapFile, "_terrain%d+$", "")
+    function HLHandler:OnClick(button, down, uiMapID, coord)
+        currentZone = uiMapID
         currentCoord = coord
         -- given we're in a click handler, this really *should* exist, but just in case...
         local point = ns.points[currentZone] and ns.points[currentZone][currentCoord]
         if button == "RightButton" and not down then
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
-        elseif button == "LeftButton" and down and point.npc then
-            if InCombatLockdown() then
-                print("|cFF33FF99" .. myname .. "|r: Can't search in combat")
-            else
-                local name = mob_name(point.npc)
-                PVEFrame_ShowFrame("GroupFinderFrame", LFGListPVEStub)
-                local panel = LFGListFrame.CategorySelection
-                LFGListCategorySelection_SelectCategory(panel, 6, 0)
-                LFGListCategorySelection_StartFindGroup(panel, name)
-                -- LFGListEntryCreation_SetAutoCreateMode(panel:GetParent().EntryCreation, "quest", activityID, questID)
-
-                -- C_LFGList.Search(6, LFGListSearchPanel_ParseSearchTerms(npcName), 0, 4)
-                -- LFG_LIST_SEARCH_RESULTS_RECEIVED
-                -- local number, ids = C_LFGList.GetSearchResults()
-            end
         end
     end
 end
 
-function HLHandler:OnLeave(mapFile, coord)
+function HLHandler:OnLeave(uiMapID, coord)
     GameTooltip:Hide()
     ShoppingTooltip1:Hide()
 end
@@ -435,23 +425,19 @@ do
             end
         end
     end
-    function HLHandler:GetNodes(mapFile, minimap, level)
-        Debug("GetNodes", mapFile, minimap, level)
-        currentLevel = level
-        mapFile = string.gsub(mapFile, "_terrain%d+$", "")
-        currentZone = mapFile
-        if (minimap and not ns.db.show_on_minimap) or (not minimap and not ns.db.show_on_world) then
-            return iter
-        end
-        if minimap and ns.map_spellids[mapFile] then
-            if ns.map_spellids[mapFile] == true then
+    function HLHandler:GetNodes2(uiMapID, minimap)
+        Debug("GetNodes2", uiMapID, minimap)
+        currentZone = uiMapID
+        isMinimap = minimap
+        if minimap and ns.map_spellids[uiMapID] then
+            if ns.map_spellids[uiMapID] == true then
                 return iter
             end
-            if UnitHasBuff("player", ns.map_spellids[mapFile]) then
+            if UnitHasBuff("player", ns.map_spellids[uiMapID]) then
                 return iter
             end
         end
-        return iter, ns.points[mapFile], nil
+        return iter, ns.points[uiMapID], nil
     end
 end
 

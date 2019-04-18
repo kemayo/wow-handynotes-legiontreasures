@@ -30,14 +30,14 @@ end
 ns.grapple = grapple
 
 ns.map_spellids = {
-    ["Azsuna"] = 182958,
-    ["Highmountain"] = 188741,
-    ["Stormheim"] = 182957,
-    ["Suramar"] = 199416,
-    ["Valsharah"] = 185719,
-    ["ArgusMacAree"] = true,
-    ["ArgusCore"] = true,
-    ["ArgusSurface"] = true,
+    [630] = 182958, -- Azsuna
+    [650] = 188741, -- Highmountain
+    [634] = 182957, -- Stormheim
+    [680] = 199416, -- Suramar
+    [641] = 185719, -- Val'sharah
+    [882] = true, -- MacAree
+    [885] = true, -- Antoran Wastes
+    [830] = true, -- Krokuun
 }
 
 ns.points = {
@@ -55,7 +55,7 @@ ns.points = {
         },
     },
     --]]
-    ["Azsuna"] = {
+    [630] = { -- Azsuna
         [26254713] = {quest=44105, currency=ARTIFACT, label=CHEST_SM},
         [34583556] = {quest=44102, currency=ARTIFACT, label=CHEST_SM},
         [40575767] = {quest=38316, currency=ARTIFACT, label=CHEST},
@@ -109,7 +109,7 @@ ns.points = {
         [66064345] = {quest=40751, currency=ARTIFACT, label=CHEST_SM},
         [68872973] = {quest=44103, currency=ARTIFACT, label=CHEST_SM, note="Underwater cave, entrance is on east side of cliff"},
     },
-    ["Highmountain"] = {
+    [650] = { -- Highmountain
         [36616213] = {quest=40488, currency=ARTIFACT, label=CHEST},
         [37353381] = {quest=40477, currency=ARTIFACT, label=CHEST_SM},
         [39005450] = {quest=44731, currency=ARTIFACT, label=CHEST, note="Path up behind Nesingwary's camp"},
@@ -157,7 +157,7 @@ ns.points = {
         [48103390] = path({40496, 40497, 40406}, "Rockcrawler Chasm"),
         [32206680] = {achievement=10774, item=139773, toy=true}, -- Emerald Winds
     },
-    ["Stormheim"] = {
+    [634] = { -- Stormheim
         [27335749] = {quest=38529, currency=ARTIFACT, label=CHEST, note="Cave entrance @ 31.4, 57.1"},
         [31405710] = path(38529),
         [31105600] = {quest=38676, currency=ORDER, label=CHEST_SM},
@@ -234,7 +234,7 @@ ns.points = {
         [81876750] = {quest=40099, currency=ARTIFACT, label=CHEST},
         [82405451] = {quest=43191, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["Suramar"] = {
+    [680] = { -- Suramar
         [16602974] = {quest=43846, currency=ARTIFACT, label=CHEST_SM},
         [17275462] = {quest=43844, currency=ARTIFACT, label=CHEST},
         [19791604] = {quest=43845, currency=ARTIFACT, label=CHEST_SM, note="Cave entrance @ 19.4, 19.4"},
@@ -296,7 +296,7 @@ ns.points = {
         [83126933] = {quest=43863, currency=ARTIFACT, label=CHEST},
         [83975764] = {quest=43862, currency=ARTIFACT, label=CHEST},
     },
-    ["Valsharah"] = {
+    [641] = { -- Val'sharah
         [33815826] = {quest=39081, currency=ARTIFACT, label=CHEST},
         -- [37005734] = {quest=39083, currency=ARTIFACT, label=CHEST_SM},
         [38456530] = {quest=39080, currency=ARTIFACT, label=CHEST_SM, note="Basement; must have completed The Farmsteads"},
@@ -353,10 +353,10 @@ ns.points = {
         [69475999] = {quest=38781, currency=ARTIFACT, label=CHEST_SM},
         [70225704] = {quest=38783, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["BrokenShore"] = { -- Broken Shore
+    [646] = { -- Broken Shore
         -- TODO: are any treasures actually quest-gated?
     },
-    ["ArgusSurface"] = { -- Krokuun
+    [830] = { -- Krokuun
         [48505890] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37594}, -- Lost Krokul Chest
         [51257624] = {quest=48884, currency=ARGUNITE, achievement=12074, criteria=37592, note="Requires Lightforge Warframe. Jump on the rubble."}, -- Krokuul Emergency Cache
         [55907420] = {quest=49156, currency=ARGUNITE, achievement=12074, criteria=37959, note="Requires Shroud of Arcane Echoes"}, -- Precious Augari Keepsakes
@@ -404,7 +404,7 @@ ns.points = {
         [59377345] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
         [58607990] = {quest=47753, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
     },
-    ["ArgusCore"] = { -- Antoran Wastes
+    [885] = { -- Antoran Wastes
         [49135934] = {quest=49020, currency=ARGUNITE, achievement=12074, criteria=37698, note="Behind the waterfall"}, -- Legion Treasure Hoard
         [52102720] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37697, note="Requires Light's Judgement"}, -- Fel-Bound Chest
         [57346366] = {quest=nil, currency=ARGUNITE, achievement=12074, criteria=37960, note="Requires Shroud of Arcane Echoes"}, -- Missing Augari Chest
@@ -463,9 +463,9 @@ ns.points = {
         [52102720] = {quest=49019, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true},
         [65204060] = {quest=49018, currency=ARGUNITE, label=LEGION_SUPPLIES, junk=true, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
     },
-    ["ArgusCitadelSpire"] = { -- Nath'raxas Spire
+    [833] = { -- Nath'raxas Spire
     },
-    ["ArgusMacAree"] = { -- MacAree
+    [882] = { -- MacAree
         [27284015] = {quest=48750, achievement=12074, criteria=37601, currency=ARGUNITE, note="You will need a Glider, jump from 31.92, 45.19"}, -- Shattered House Chest
         [40275130] = {quest=48747, achievement=12074, criteria=37598, currency=ARGUNITE, note="Requires Lightforge Warframe. Jump on the rubble."}, -- Void-Tinged Chest
         [40896985] = {quest=49153, achievement=12074, criteria=37957, currency=ARGUNITE, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Augari Goods
@@ -516,92 +516,96 @@ ns.points = {
         [37102010] = {quest=49264, label="Void-Seeped Cache", junk=true, currency=ARGUNITE},
     },
     -- Small zones
-    ["Dalaran70"] = {
-        [28466450] = {quest=41929, item=7676, label="Desmond's Lockbox", note="Locked", level=10},
+    [627] = { -- Dalaran
+        [28466450] = {quest=41929, item=7676, label="Desmond's Lockbox", note="Locked"},
         [47404120] = {quest=45365, item=143534, toy=true, note="On the table on the second floor of the Legerdemain Lounge", level=10},
         -- Dog pebble, questid is for showing Dog the pebble, not looting it
-        [38102920] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [42104440] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [41005320] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [46205390] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [49406940] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [51706220] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [54505320] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [54304080] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [47702920] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
-        [44601820] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", level=10, hide_before=30526},
+        [38102920] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [42104440] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [41005320] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [46205390] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [49406940] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [51706220] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [54505320] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [54304080] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [47702920] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
+        [44601820] = {quest=46952, item=147420, note="Show to Dog in your Draenor garrison", hide_before=30526},
     },
-    ["Darkpens"] = { -- Val'sharah
+    [642] = { -- Darkpens, Val'sharah
         [42018849] = {quest=39085, currency=ARTIFACT, label=CHEST_SM, note="In water at bottom of stairs"},
         [50905168] = {quest=39086, currency=ARTIFACT, label=CHEST_GLIM},
     },
-    ["Helheim"] = { -- Stormheim
+    [649] = { -- Helheim in Stormheim
         [79842471] = {quest=38510, currency=ARTIFACT, label=CHEST_SM},
         [83322456] = {quest=38503, currency=ARTIFACT, label=CHEST, note="Underwater in a ship"},
         [19634698] = {quest=38516, currency=ARTIFACT, label=CHEST},
         [60845332] = {quest=38383, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["StormDrakeDen"] = { -- Stormheim
+    [636] = { -- Stormscale Cavern, Stormheim
         [20134125] = {quest=38529, currency=ARTIFACT, label=CHEST},
     },
-    ["NarthalasAcademy"] = { -- Azsuna
+    [631] = { -- NarthalasAcademy, Azsuna
         [53633986] = {quest=42284, currency=ARTIFACT, label=CHEST_SM},
         [71212211] = {quest=42285, currency=ARTIFACT, label=CHEST_SM, note="Door opens after you finish nearby quests"},
     },
-    ["TempleofaThousandLights"] = { -- Azsuna
+    [633] = { -- TempleofaThousandLights, Azsuna
     },
-    ["OceanusCove"] = { -- Azsuna
+    [632] = { -- OceanusCove, Azsuna
         [69294839] = {quest=37649, currency=ARTIFACT, label=CHEST_GLIM},
         [45346686] = {quest=42291, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["BitestoneEnclave"] = { -- Highmountain
+    [651] = { -- BitestoneEnclave, Highmountain
         [85213787] = {quest=40489, currency=ARTIFACT, label=CHEST},
     },
-    ["LifespringCavern"] = { -- Highmountain
-        [39505740] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM, level=20},
-        [61703450] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM, level=21},
+    [655] = { -- LifespringCavern, Lower, Highmountain
+        [39505740] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM},
     },
-    ["StonedarkGrotto"] = { -- Highmountain
+    [656] = { -- LifespringCavern, Upper, Highmountain
+        [61703450] = {quest=40476, currency=ARTIFACT, label=CHEST_GLIM},
+    },
+    [659] = { -- StonedarkGrotto, Highmountain
         [35987235] = {quest=40478, currency=ARTIFACT, label=CHEST},
     },
-    ["MucksnoutDen"] = { -- Highmountain
+    [654] = { -- MucksnoutDen, Highmountain
         [60592533] = {quest=40494, currency=ARTIFACT, label=CHEST},
     },
-    ["ThunderTotem"] = { -- Highmountain
+    [652] = { -- ThunderTotem, Highmountain
         [13715555] = {quest=40491, currency=ARTIFACT, label=CHEST_SM},
         [63435929] = {quest=39531, item=141322, label="A Steamy Jewelry Box"},
         [50667537] = {quest=40472, currency=ARTIFACT, label=CHEST_SM},
         [32354174] = {quest=40475, currency=ARTIFACT, label=CHEST_SM, note="On a boat"},
         [31843842] = {quest=44352, currency=ARTIFACT, label=CHEST, note="Underwater cave, below the boat"},
     },
-    ["ThunderTotemInterior"] = { -- Highmountain
+    [652] = { -- ThunderTotemInterior, Highmountain
         [62946793] = {quest=40471, currency=ARTIFACT, label=CHEST},
     },
-    ["NeltharionsVault"] = { -- Highmountain
+    [657] = { -- Path of Huln, floor 1, Highmountain
         [52002890] = path(39606, "Titan Waygate"),
-        [59304130] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing", note="Take the Waygate to get up, and use the brazier", level=29},
-        [40215031] = {quest=40509, currency=ARTIFACT, label=CHEST, level=29},
-        [60425458] = {quest=40508, currency=ARTIFACT, label=CHEST_SM, level=29},
+        [59304130] = {quest=39606, currency=ARTIFACT, label="Treasures of Deathwing", note="Take the Waygate to get up, and use the brazier"},
+        [40215031] = {quest=40509, currency=ARTIFACT, label=CHEST},
+        [60425458] = {quest=40508, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["SuramarLegionScar"] = { -- ...Suramar
+    [658] = { -- Path of Huln, floor 2, Highmountain
+    },
+    [682] = { -- Felsoul Hold, Suramar ("SuramarLegionScar")
         [40502903] = {quest=40902, currency=ARTIFACT, label=CHEST_SM},
         [54573780] = {quest=43835, currency=ARTIFACT, label=CHEST_SM},
     },
-    ["FalanaarTunnels"] = { -- Suramar
-        -- Tunnels
-        [58307020] = {quest=43840, currency=ARTIFACT, label=CHEST, level=33}, -- also triggered 43839
-        [35513253] = {quest=43747, item=141655, label="Shimmering Ancient Mana Cluster", level=33},
-        [48644258] = {quest=43839, currency=ARTIFACT, label=CHEST_SM, note="Climb spiderweb", level=33}, -- TODO: verify location
-        -- Temple of Fal'adora:
-        [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs", level=32},
-        [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs", level=32},
+    [684] = { -- Temple of Fal'adora, Suramar
+        [35525280] = {quest=43988, item=140328, label="Volatile Leyline Crystal", note="Downstairs"},
+        [38605414] = {quest=43838, currency=ARTIFACT, label=CHEST_SM, note="Downstairs"},
     },
-    ["LeylineMicro01"] = { -- Elor'shan
+    [685] = { -- Falanaar Tunnels, Suramar
+        [58307020] = {quest=43840, currency=ARTIFACT, label=CHEST}, -- also triggered 43839
+        [35513253] = {quest=43747, item=141655, label="Shimmering Ancient Mana Cluster"},
+        [48644258] = {quest=43839, currency=ARTIFACT, label=CHEST_SM, note="Climb spiderweb"}, -- TODO: verify location
+    },
+    [686] = { -- Elor'shan
         [49301730] = {quest=43743, item=141655, label="Shimmering Ancient Mana Cluster"},
     },
 
     -- DH starter
-    ["MardumtheShatteredAbyss"] = {
+    [672] = { -- Mardum the Shattered Abyss
         [23065389] = {quest=40797, item=129210, label=CHEST_SM, note="Cave entrance @ 23.6, 54.2"},
         [23605420] = path(40797),
         [34857020] = {quest=39970, item=129210, label=CHEST_SM},
@@ -609,6 +613,7 @@ ns.points = {
         [42194916] = {quest=40223, item=129210, label=CHEST_SM},
         [45017785] = {quest=39971, item=129192, label=CHEST_SM},
         [51135079] = {quest=40743, item=129210, label=CHEST_SM},
+        [63702360] = {quest=40772, item=129210, label=CHEST_SM}, -- in soul engine
         [66922767] = {quest=39974, item=129210, label=CHEST_SM},
         [69704240] = {quest=39976, item=129210, label=CHEST_SM},
         [73494892] = {quest=39975, item=129195, label=CHEST_SM},
@@ -618,21 +623,28 @@ ns.points = {
         [78755047] = {quest=40274, item=129210, label=CHEST_SM},
         [82075043] = {quest=40820, item=129196, label=CHEST_SM},
     },
-    ["CrypticHollow"] = {
+    [673] = { -- Cryptic Hollow, Mardum
         [48761530] = {quest=39972, item=129196, label=CHEST_SM},
         [54855845] = {quest=39973, item=128946, label=CHEST_SM},
     },
-    ["SoulEngine"] = {
-        [50304964] = {quest=40772, item=129210, label=CHEST_SM},
+    [674] = { -- Soul Engine, Lower, Mardum
+        [46803320] = {quest=40772, item=129210, label=CHEST_SM},
     },
-    ["VaultOfTheWardensDH"] = {
-        [58693475] = {quest=40909, item=129210, label=CHEST_SM, level=1},
-        [47325464] = {quest=38690, item=129210, label=CHEST_SM, level=1},
-        [32104817] = {quest=40911, item=129196, label=CHEST_SM, level=2},
-        [41506361] = {quest=40914, item=129196, label=CHEST_SM, level=2},
-        [56994013] = {quest=40913, item=129210, label=CHEST_SM, level=2},
-        [41413287] = {quest=40912, item=129210, label=CHEST_SM, level=2},
-        [24421005] = {quest=40915, item=129210, label=CHEST_SM, level=3},
-        [23268157] = {quest=40916, item=129210, label=CHEST_SM, level=3},
+    [675] = {-- Soul Engine, Upper, Mardum
+        [49844883] = {quest=40772, item=129210, label=CHEST_SM},
+    },
+    [677] = { -- Illidari Ward, Vault of the Wardens
+        [58693475] = {quest=40909, item=129210, label=CHEST_SM},
+        [47325464] = {quest=40910, item=129210, label=CHEST_SM},
+    },
+    [678] = { -- Vault of the Wardens
+        [32104817] = {quest=40911, item=129196, label=CHEST_SM},
+        [41506361] = {quest=40914, item=129196, label=CHEST_SM},
+        [56994013] = {quest=40913, item=129210, label=CHEST_SM},
+        [41413287] = {quest=40912, item=129210, label=CHEST_SM},
+    },
+    [679] = { -- Warden's Court, Vault of the Wardens
+        [24421005] = {quest=40915, item=129210, label=CHEST_SM},
+        [23268157] = {quest=40916, item=129210, label=CHEST_SM},
     },
 }

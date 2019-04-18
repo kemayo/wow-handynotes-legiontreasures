@@ -6,7 +6,7 @@ local merge = function(t1, t2)
     end
 end
 
-merge(ns.points["Azsuna"], {
+merge(ns.points[630], { -- Azsuna
     [29255365] = {quest=42417, npc=107327, item=129079}, -- Bilebrain
     [30784800] = {quest=42286, npc=107136, item=141873}, -- Houndmaster Stroxis
     [32302970] = {quest=38238, npc=91187, item=129067, note="Patrols the beach"}, -- Beacher
@@ -38,7 +38,7 @@ merge(ns.points["Azsuna"], {
     [65555680] = {quest=42221, npc=106990, item=129073}, -- Chief Bitterbrine
     [67105140] = {quest=37989, npc=90505, item=129064}, -- Syphonus
 })
-merge(ns.points["Highmountain"], {
+merge(ns.points[650], { -- Highmountain
     [36751635] = {quest=40084, npc=98299, item=131799}, -- Bodash the Hoarder
     [37704570] = {quest=40405, npc=97449, item=131761}, -- Bristlemaul
     [40955775] = {quest=39963, npc=97793, item=131773, note="Abandoned Fishing Pole"}, -- Flamescale
@@ -66,7 +66,7 @@ merge(ns.points["Highmountain"], {
     [56406050] = {quest=40347, npc=96590, item=131775, note="Wanders a bit"}, -- Gurbog da Basher
     [52405850] = {quest=40423, npc=109498, item=131767, note="Use the Seemingly Unguarded Treasure to summon the Unethical Adventurers"}, -- Unethical Adventurers
 })
-merge(ns.points["Stormheim"], {
+merge(ns.points[634], { -- Stormheim
     [36505250] = {quest=38472, npc=92152, item=138418}, -- Whitewater Typhoon
     [38454305] = {quest=38626, npc=92599, item=129101}, -- Bloodstalker Alpha
     [40657240] = {quest=38424, npc=91892, item=129113}, -- Thane Irglov the Merciless
@@ -91,7 +91,7 @@ merge(ns.points["Stormheim"], {
     [73906060] = {quest=43343, npc=94347, item=130134, faction="Alliance"}, -- Dread-Rider Cortis
     [78606115] = {quest=40113, npc=98503, item=138421}, -- Grrvrgull the Conqueror
 })
-merge(ns.points["Suramar"], {
+merge(ns.points[680], { -- Suramar
     --[67065161] = {quest=99999, npc=, item=1220, note="marked as rare but seems to have no questID yet"}, -- Broodmother Shu'malis
     [13555345] = {quest=44124, npc=112802, item=140949}, -- Mar'tura
     [16552655] = {quest=43996, npc=103841, item=140401}, -- Shadowquill
@@ -132,7 +132,7 @@ merge(ns.points["Suramar"], {
     [80157000] = {quest=40680, npc=103183, item=140019, note="Wanders along the underwater trench"}, -- Rok'nash
     [87856250] = {quest=41786, npc=103827, item=140384}, -- King Morgalash
 })
-merge(ns.points["Valsharah"], {
+merge(ns.points[641], { -- Val'sharah
     [34405830] = {quest=39121, npc=94414, item=141876}, -- Kiranys Duskwhisper
     [38055280] = {quest=38772, npc=92423, item=130136}, -- Theryssia
     [41657825] = {quest=38479, npc=92180, item=130171}, -- Seersei
@@ -152,19 +152,19 @@ merge(ns.points["Valsharah"], {
     [67156960] = {quest=43176, npc=109708, item=130133}, -- Undergrell Attack
     [67504510] = {quest=39130, npc=94485, item=130168}, -- Pollous the Fetid
 })
-merge(ns.points["Helheim"], {
+merge(ns.points[649], { -- Helheim
     [28156375] = {quest=39870, npc=97630, item=129188, pet=true}, -- Soulthirster
     [85105030] = {quest=38461, npc=92040, item=129044}, -- Fenri
 })
-merge(ns.points["TempleofaThousandLights"], {
+merge(ns.points[633], { -- TempleofaThousandLights
     [62303090] = {quest=42699, npc=108255, item=141877}, -- Coura, Mistress of Arcana
 })
-merge(ns.points["NeltharionsVault"], {
-    [54508400] = {quest=48381, npc=125951, item=141708, level=30}, -- Obsidian Deathwarder
+merge(ns.points[658], { -- Path of Huln, floor 2, Highmountain
+    [54508400] = {quest=48381, npc=125951, item=141708}, -- Obsidian Deathwarder
 })
 
 -- Broken Shore:
-merge(ns.points["BrokenShore"], {
+merge(ns.points[646], { -- Broken Shore
     [31315933] = {quest=47028, npc=121112}, -- Somber Dawn
     [39194241] = {quest=46095, npc=117091}, -- Felmaw Emberfiend
     [39553265] = {quest=46965, npc=121029, note="Inside Blood Nest", alpha=0.4}, -- Brood Mother Nix
@@ -195,7 +195,7 @@ merge(ns.points["BrokenShore"], {
 })
 
 -- Argus:
-merge(ns.points["ArgusSurface"], { -- Krokuun
+merge(ns.points[830], { -- Krokuun
     [33007600] = {quest=48562, npc=122912}, -- Commander Sathrenael
     [38145920] = {quest=48563, npc=122911, item=153299, note="Either go through the Xenedar, or climb up from 42, 57.1"}, -- Commander Vecaya
     [41707020] = {quest=48666, npc=125820}, -- Imp Mother Laglath
@@ -210,7 +210,7 @@ merge(ns.points["ArgusSurface"], { -- Krokuun
     [70503370] = {quest=48667, npc=126419, item=153190}, -- Naroua
 })
 
-merge(ns.points["ArgusCore"], { -- Antoran Wastes
+merge(ns.points[885], { -- Antoran Wastes
     [50905530] = {quest=48820, npc=127118}, -- Worldsplitter Skuul
     [52702950] = {quest=48822, npc=127291}, -- Watcher Aival
     [53103580] = {quest=48810, npc=126199, item=152903, mount=true}, -- Vrax'thul
@@ -233,11 +233,11 @@ merge(ns.points["ArgusCore"], { -- Antoran Wastes
     [73207080] = {quest=48817, npc=127090, item=153324}, -- Admiral Rel'var
     [75605650] = {quest=48818, npc=127096}, -- All-Seer Xanarian
 })
-merge(ns.points["ArgusCitadelSpire"], { -- Nath'raxas Spire
+merge(ns.points[833], { -- Nath'raxas Spire
     [38954032] = {quest=48561, npc=125824, item=153316}, -- Khazaduum
 })
 
-merge(ns.points["ArgusMacAree"], { -- MacAree
+merge(ns.points[882], { -- MacAree
     [27202980] = {quest=48707, npc=126869}, -- Captain Faruq
     [30304040] = {quest=48709, npc=127323, item=153056, pet=true}, -- Ataxon
     [33704750] = {quest=48705, npc=126867, item=152844, mount=true}, -- Venomtail Skyfin
@@ -266,16 +266,17 @@ merge(ns.points["ArgusMacAree"], { -- MacAree
 })
 
 -- DH starter:
-merge(ns.points["MardumtheShatteredAbyss"], {
+merge(ns.points[672], { -- MardumtheShatteredAbyss
+    [63502350] = {quest=40231, npc=97058, item=128948}, -- Count Nefarious
     [68852760] = {quest=40234, npc=82877, item=128947}, -- General Volroth
     [74455730] = {quest=40232, npc=97059, item=128944}, -- King Voras
     [81054125] = {quest=40233, npc=97057, item=133580}, -- Overseer Brutarg
 
 })
-merge(ns.points["SoulEngine"], {
+merge(ns.points[674], { -- SoulEngine
     [51255740] = {quest=40231, npc=97058, item=128948}, -- Count Nefarious
 })
-merge(ns.points["VaultOfTheWardensDH"], {
+merge(ns.points[677], { -- VaultOfTheWardensDH
     [49553285] = {quest=40251, npc=96997, item=128945}, -- Kethrazor
     [68753630] = {quest=40301, npc=97069, item=128958}, -- Wrath-Lord Lekos
 })

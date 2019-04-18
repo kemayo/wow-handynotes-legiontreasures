@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v16
+* Migrate to the new uiMapId system finally; fixes various areas which were showing icons on the wrong level of a map
+* Clean up some Demon Hunter starting experience treasures
+
+## Changes in v15
+* Updated for 8.1.5's tooltip changes.
+
 ## Changes in v14
 
 * Flagged all the non-achievement Argus treasure chests as junk, and hid them by default
