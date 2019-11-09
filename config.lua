@@ -139,6 +139,20 @@ ns.options = {
     },
 }
 
+local allQuestsComplete = function(quests)
+    if type(quests) == 'table' then
+        -- if it's a table, only count as complete if all quests are complete
+        for _, quest in ipairs(quests) do
+            if not IsQuestFlaggedCompleted(quest) then
+                return false
+            end
+        end
+        return true
+    elseif IsQuestFlaggedCompleted(quests) then
+        return true
+    end
+end
+
 local player_faction = UnitFactionGroup("player")
 local player_name = UnitName("player")
 ns.should_show_point = function(coord, point, currentZone, currentLevel)
@@ -159,19 +173,7 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
     end
     if (not ns.db.found) then
         if point.quest then
-            if type(point.quest) == 'table' then
-                -- if it's a table, only count as complete if all quests are complete
-                local complete = true
-                for _, quest in ipairs(point.quest) do
-                    if not IsQuestFlaggedCompleted(quest) then
-                        complete = false
-                        break
-                    end
-                end
-                if complete then
-                    return false
-                end
-            elseif IsQuestFlaggedCompleted(point.quest) then
+            if allQuestsComplete(point.quest) then
                 return false
             end
         elseif point.achievement then
@@ -208,8 +210,7 @@ ns.should_show_point = function(coord, point, currentZone, currentLevel)
             end
         end
     end
-
-    if point.hide_before and not ns.db.upcoming and not IsQuestFlaggedCompleted(point.hide_before) then
+    if point.hide_before and not ns.db.upcoming and not allQuestsComplete(point.hide_before) then
         return false
     end
     return true
