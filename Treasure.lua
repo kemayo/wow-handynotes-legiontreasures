@@ -569,7 +569,7 @@ ns.points = {
     [654] = { -- MucksnoutDen, Highmountain
         [60592533] = {quest=40494, currency=ARTIFACT, label=CHEST},
     },
-    [652] = { -- ThunderTotem, Highmountain
+    [750] = { -- ThunderTotem, Highmountain
         [13715555] = {quest=40491, currency=ARTIFACT, label=CHEST_SM},
         [63435929] = {quest=39531, item=141322, label="A Steamy Jewelry Box"},
         [50667537] = {quest=40472, currency=ARTIFACT, label=CHEST_SM},
