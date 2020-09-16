@@ -545,7 +545,7 @@ ns.points = {
         [20134125] = {quest=38529, currency=ARTIFACT, label=CHEST},
     },
     [631] = { -- NarthalasAcademy, Azsuna
-        [53633986] = {quest=42284, currency=ARTIFACT, label=CHEST_SM},
+        [62458451] = {quest=42284, currency=ARTIFACT, label=CHEST_SM},
         [71212211] = {quest=42285, currency=ARTIFACT, label=CHEST_SM, note="Door opens after you finish nearby quests"},
     },
     [633] = { -- TempleofaThousandLights, Azsuna
