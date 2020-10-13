@@ -143,22 +143,19 @@ local allQuestsComplete = function(quests)
     if type(quests) == 'table' then
         -- if it's a table, only count as complete if all quests are complete
         for _, quest in ipairs(quests) do
-            if not IsQuestFlaggedCompleted(quest) then
+            if not C_QuestLog.IsQuestFlaggedCompleted(quest) then
                 return false
             end
         end
         return true
-    elseif IsQuestFlaggedCompleted(quests) then
+    elseif C_QuestLog.IsQuestFlaggedCompleted(quests) then
         return true
     end
 end
 
 local player_faction = UnitFactionGroup("player")
 local player_name = UnitName("player")
-ns.should_show_point = function(coord, point, currentZone, currentLevel)
-    if point.level and point.level ~= currentLevel then
-        return false
-    end
+ns.should_show_point = function(coord, point, currentZone)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end

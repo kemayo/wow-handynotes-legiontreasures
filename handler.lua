@@ -15,7 +15,6 @@ local HandyNotes = HandyNotes
 local GetItemInfo = GetItemInfo
 local GetAchievementInfo = GetAchievementInfo
 local GetAchievementCriteriaInfo = GetAchievementCriteriaInfo
-local GetCurrencyInfo = GetCurrencyInfo
 
 local ARTIFACT_LABEL = '|cffff8000' .. ARTIFACT_POWER .. '|r'
 
@@ -52,13 +51,10 @@ local trimmed_icon = function(texture)
     return icon_cache[texture]
 end
 local atlas_texture = function(atlas, scale)
-    local texture, _, _, left, right, top, bottom = GetAtlasInfo(atlas)
+    atlas = C_Texture.GetAtlasInfo(atlas)
     return {
-        icon = texture,
-        tCoordLeft = left,
-        tCoordRight = right,
-        tCoordTop = top,
-        tCoordBottom = bottom,
+        icon = atlas.file,
+        tCoordLeft = atlas.leftTexCoord, tCoordRight = atlas.rightTexCoord, tCoordTop = atlas.topTexCoord, tCoordBottom = atlas.bottomTexCoord,
         scale = scale or 1,
     }
 end
@@ -107,9 +103,9 @@ local function work_out_label(point)
         if point.currency == 'ARTIFACT' then
             return ARTIFACT_LABEL
         end
-        local name, _, texture = GetCurrencyInfo(point.currency)
-        if name then
-            return name
+        local info = C_CurrencyInfo.GetCurrencyInfo(point.currency)
+        if info then
+            return info.name
         end
     end
     return fallback or UNKNOWN
@@ -135,9 +131,9 @@ local function work_out_texture(point)
                     return trimmed_icon(texture)
                 end
             else
-                local texture = select(3, GetCurrencyInfo(point.currency))
-                if texture then
-                    return trimmed_icon(texture)
+                local info = C_CurrencyInfo.GetCurrencyInfo(point.currency)
+                if info then
+                    return trimmed_icon(info.iconFileID)
                 end
             end
         end
@@ -209,7 +205,8 @@ local function handle_tooltip(tooltip, point)
             if point.currency == 'ARTIFACT' then
                 name = ARTIFACT_LABEL
             else
-                name = GetCurrencyInfo(point.currency)
+                local info = C_CurrencyInfo.GetCurrencyInfo(point.currency)
+                name = info and info.name
             end
             tooltip:AddDoubleLine(CURRENCY, name or point.currency)
         end
@@ -398,12 +395,12 @@ end
 
 do
     -- This is a custom iterator we use to iterate over every node in a given zone
-    local currentLevel, currentZone
+    local currentZone
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
-            if value and ns.should_show_point(state, value, currentZone, currentLevel) then
+            if value and ns.should_show_point(state, value, currentZone) then
                 local label, icon, _, _, _, scale, alpha = get_point_info(value)
                 scale = (scale or 1) * (icon and icon.scale or 1) * ns.db.icon_scale
                 return state, nil, icon, scale, ns.db.icon_alpha * alpha
