@@ -1,5 +1,8 @@
 # Changelog
 
+## Changes in v17
+* Updated for Shadowlands
+
 ## Changes in v16
 * Migrate to the new uiMapId system finally; fixes various areas which were showing icons on the wrong level of a map
 * Clean up some Demon Hunter starting experience treasures
