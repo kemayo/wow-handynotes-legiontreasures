@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in upcoming release
+* Options for showing/hiding points in particular zones
+* Optimize some checks by using GetPlayerAuraBySpellID
+
 ## Changes in v17
 * Updated for Shadowlands
 
