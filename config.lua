@@ -18,6 +18,7 @@ ns.defaults = {
         tooltip_questid = false,
         zonesHidden = {},
         achievementsHidden = {},
+        worldmapoverlay = true,
     },
     char = {
         hidden = {
@@ -32,7 +33,7 @@ ns.options = {
     get = function(info) return ns.db[info[#info]] end,
     set = function(info, v)
         ns.db[info[#info]] = v
-        ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+        ns.HL:Refresh()
     end,
     args = {
         icon = {
@@ -69,7 +70,7 @@ ns.options = {
                 show_on_minimap = {
                     type = "toggle",
                     name = "Minimap",
-                    desc = "Show icons on the minimap",
+                    desc = "Show all icons on the minimap",
                     order = 50,
                 },
                 default_icon = {
@@ -81,7 +82,17 @@ ns.options = {
                         Garr_TreasureIcon = CreateAtlasMarkup("Garr_TreasureIcon", 20, 20) .. " Shiny chest",
                     },
                     order = 60,
-                }
+                },
+                worldmapoverlay = {
+                    type = "toggle",
+                    name = "Add button to world map",
+                    desc = "Put a button on the world map for quick access to these options",
+                    set = function(info, v)
+                        ns.db[info[#info]] = v
+                        WorldMapFrame:RefreshOverlayFrames()
+                    end,
+                    order = 70,
+                },
             },
         },
         display = {
@@ -379,7 +390,7 @@ function ns.SetupMapOverlay()
         local uiMapID = self:GetParent():GetMapID()
         local info = C_Map.GetMapInfo(uiMapID)
         local parentMapID = info and info.parentMapID or 0
-        if ns.points[uiMapID] or ns.points[parentMapID] then
+        if ns.db.worldmapoverlay and (ns.points[uiMapID] or ns.points[parentMapID]) then
             self:Show()
         else
             self:Hide()
@@ -393,7 +404,6 @@ function ns.SetupMapOverlay()
         local info = UIDropDownMenu_CreateInfo()
         level = level or 1
         if level == 1 then
-
             info.isTitle = true
             info.notCheckable = true
             info.text = "HandyNotes - " .. myname:gsub("HandyNotes_", "")
@@ -420,7 +430,7 @@ function ns.SetupMapOverlay()
                 else
                     db[value] = checked
                 end
-                ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+                ns.HL:Refresh()
             end
 
             local sorted = {}
@@ -490,7 +500,7 @@ function ns.SetupMapOverlay()
                 local checked = button.checked
                 local value = button.value
                 ns.db[section][value] = not checked
-                ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+                ns.HL:Refresh()
             end
             if parent == "achievementsHidden" then
                 local values = {}
