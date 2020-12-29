@@ -8,12 +8,15 @@ ns.defaults = {
         show_junk = false,
         show_npcs = true,
         show_treasure = true,
+        show_routes = true,
         upcoming = true,
         found = false,
-        repeatable = true,
+        collectablefound = true,
+        achievedfound = false,
         icon_scale = 1.0,
         icon_alpha = 1.0,
         icon_item = false,
+        tooltip_pointanchor = false,
         tooltip_item = true,
         tooltip_questid = false,
         zonesHidden = {},
@@ -113,11 +116,29 @@ ns.options = {
                     desc = "Show the full tooltips for items",
                     order = 10,
                 },
+                tooltip_pointanchor = {
+                    type = "toggle",
+                    name = "Anchor tooltips to points",
+                    desc = "Whether to anchor the tooltips to the individual points or to the map",
+                    order = 15,
+                },
                 found = {
                     type = "toggle",
                     name = "Show found",
                     desc = "Show waypoints for items you've already found?",
                     order = 20,
+                },
+                achievedfound = {
+                    type = "toggle",
+                    name = "Count achievement-complete as found",
+                    desc = "For nodes which are repeatable on a daily quest *and* tied to an achievement, only consider the achievement",
+                    order = 21,
+                },
+                collectablefound = {
+                    type = "toggle",
+                    name = "Count collectables as found",
+                    desc = "For account-level items like mounts, pets, and toys, count them being known as this being found",
+                    order = 22,
                 },
                 upcoming = {
                     type = "toggle",
@@ -137,18 +158,19 @@ ns.options = {
                     desc = "Show treasure that can be looted",
                     order = 30,
                 },
+                show_routes = {
+                    type = "toggle",
+                    name = "Show routes",
+                    desc = "Show relevant routes between points ",
+                    disabled = function() return not ns.RouteWorldMapDataProvider end,
+                    order = 31,
+                },
                 show_junk = {
                     type = "toggle",
                     name = "Show non-achievement",
                     desc = "Show items which don't count for any achievement",
                     order = 40,
                 },
-                -- repeatable = {
-                --     type = "toggle",
-                --     name = "Show repeatable",
-                --     desc = "Show items which are repeatable? This generally means ones which have a daily tracking quest attached",
-                --     order = 40,
-                -- },
                 tooltip_questid = {
                     type = "toggle",
                     name = "Show quest ids",
@@ -223,41 +245,78 @@ ns.options = {
     },
 }
 
-local player_name = UnitName("player")
-local allQuestsComplete = function(quests)
-    if type(quests) == 'table' then
-        -- if it's a table, only count as complete if all quests are complete
-        for _, quest in ipairs(quests) do
-            if not C_QuestLog.IsQuestFlaggedCompleted(quest) then
-                return false
-            end
+local function doTestAll(test, input, ...)
+    for _, value in ipairs(input) do
+        if not test(value, ...) then
+            return false
         end
-        return true
-    elseif C_QuestLog.IsQuestFlaggedCompleted(quests) then
-        return true
-    end
-end
-ns.allQuestsComplete = allQuestsComplete
-local criteriaComplete = function(achievement, criteria)
-    local _, _, completed, _, _, completedBy = GetAchievementCriteriaInfoByID(achievement, criteria)
-    if not (completed and (not completedBy or completedBy == player_name)) then
-        return false
     end
     return true
 end
-local allCriteriaComplete = function(achievement, criteria)
-    if type(criteria) == "table" then
-        -- if it's a table, only count as complete if all criteria are complete
-        for _, criteriaa in ipairs(criteria) do
-            if not criteriaComplete(achievement, criteriaa) then
-                return false
-            end
+local function doTestAny(test, input, ...)
+    for _, value in ipairs(input) do
+        if test(value, ...) then
+            return true
         end
-        return true
-    elseif criteriaComplete(achievement, criteria) then
-        return true
+    end
+    return false
+end
+local function doTest(test, input, ...)
+    if type(input) == "table" then
+        if input.any then
+            return doTestAny(test, input, ...)
+        end
+        return doTestAll(test, input, ...)
+    else
+        return test(input, ...)
     end
 end
+local function testMaker(test, override)
+    return function(...)
+        return (override or doTest)(test, ...)
+    end
+end
+
+local itemInBags = testMaker(function(item) return GetItemCount(item, true) > 0 end)
+local allQuestsComplete = testMaker(function(quest) return C_QuestLog.IsQuestFlaggedCompleted(quest) end)
+ns.allQuestsComplete = allQuestsComplete
+
+local allCriteriaComplete = testMaker(function(criteria, achievement)
+    local _, _, completed, _, _, completedBy = (criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(achievement, criteria)
+    if not (completed and (not completedBy or completedBy == ns.playerName)) then
+        return false
+    end
+    return true
+end)
+
+local hasKnowableLoot = testMaker(function(item)
+    return type(item) == "table" and (item.toy or item.mount or item.pet)
+end, doTestAny)
+local function PlayerHasMount(mountid)
+    return (select(11, C_MountJournal.GetMountInfoByID(mountid)))
+end
+local function PlayerHasPet(petid)
+    return (C_PetJournal.GetNumCollectedInfo(petid) > 0)
+end
+local allLootKnown = testMaker(function(item)
+    -- This returns true if all loot is known-or-unknowable
+    -- If the "no knowable loot" case matters this should be gated behind hasKnowableLoot
+    -- TODO: could arguably do transmog here, too. Since we're mostly
+    -- considering soulbound things, the restrictions on seeing appearances
+    -- known cross-armor-type wouldn't really matter...
+    if type(item) == "table" then
+        if item.toy and not PlayerHasToy(item[1]) then
+            return false
+        end
+        if item.mount and not PlayerHasMount(item.mount) then
+            return false
+        end
+        if item.pet and not PlayerHasPet(item.pet) then
+            return false
+        end
+    end
+    return true
+end)
 
 local zoneHidden
 zoneHidden = function(uiMapID)
@@ -275,7 +334,37 @@ local achievementHidden = function(achievement)
     return ns.db.achievementsHidden[achievement]
 end
 
-local player_faction = UnitFactionGroup("player")
+local checkPois
+do
+    local poi_expirations = {}
+    local poi_zone_expirations = {}
+    local pois_byzone = {}
+    local function refreshPois(zone)
+        local now = time()
+        if not poi_zone_expirations[zone] or now > poi_zone_expirations[zone] then
+            pois_byzone[zone] = wipe(pois_byzone[zone] or {})
+            for _, poi in ipairs(C_AreaPoiInfo.GetAreaPOIForMap(zone)) do
+                pois_byzone[zone][poi] = true
+                poi_expirations[poi] = now + (C_AreaPoiInfo.GetAreaPOISecondsLeft(poi) or 60)
+            end
+            poi_zone_expirations[zone] = now + 1
+        end
+    end
+    function checkPois(pois)
+        for _, data in ipairs(pois) do
+            local zone, poi = unpack(data)
+            local now = time()
+            if now > (poi_expirations[poi] or 0) then
+                refreshPois(zone)
+                poi_expirations[poi] = poi_expirations[poi] or (now + 60)
+            end
+            if pois_byzone[zone][poi] then
+                return true
+            end
+        end
+    end
+end
+
 ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if isMinimap and not ns.db.show_on_minimap and not point.minimap then
         return false
@@ -297,17 +386,20 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.art and point.art ~= C_Map.GetMapArtID(currentZone) then
         return false
     end
-    if ns.map_questids[currentZone] and not (point.junk or point.npc or point.follower) and C_QuestLog.IsQuestFlaggedCompleted(ns.map_questids[currentZone]) then
+    if point.poi and not checkPois(point.poi) then
         return false
     end
     if point.junk and not ns.db.show_junk then
         return false
     end
-    if point.faction and point.faction ~= player_faction then
+    if point.faction and point.faction ~= ns.playerFaction then
         return false
     end
-    if (not ns.db.found) then
-        if point.quest then
+    if not ns.db.found and (not point.always) then
+        if ns.db.collectablefound and point.loot and hasKnowableLoot(point.loot) and allLootKnown(point.loot) then
+            return false
+        end
+        if point.quest and (not point.achievement or not ns.db.achievedfound) then
             if allQuestsComplete(point.quest) then
                 return false
             end
@@ -316,20 +408,30 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
             if completedByMe then
                 return false
             end
-            if point.criteria and allCriteriaComplete(point.achievement, point.criteria) then
+            if point.criteria and allCriteriaComplete(point.criteria, point.achievement) then
                 return false
             end
         end
         if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
             return false
         end
+        -- todo: clean this one up once all the data is updated:
         if point.toy and point.item and PlayerHasToy(point.item) then
             return false
         end
+        if point.inbag and itemInBags(point.inbag) then
+            return false
+        end
+        if point.onquest and C_QuestLog.IsOnQuest(point.onquest) then
+            return false
+        end
+        if point.hide_quest and C_QuestLog.IsQuestFlaggedCompleted(point.hide_quest) then
+            -- This is distinct from point.quest as it's supposed to be for
+            -- other trackers that make the point not _complete_ but still
+            -- hidden (Draenor treasure maps, so far):
+            return false
+        end
     end
-    -- if (not ns.db.repeatable) and point.repeatable then
-    --     return false
-    -- end
     if not point.follower then
         if point.npc then
             if not ns.db.show_npcs then
@@ -348,11 +450,23 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.requires_no_buff and GetPlayerAuraBySpellID(point.requires_no_buff) then
         return false
     end
+    if point.requires_item and not itemInBags(point.requires_item) then
+        return false
+    end
+    if point.requires_worldquest and not C_TaskQuest.IsActive(point.requires_worldquest) then
+        return false
+    end
+    if point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() then
+        return false
+    end
     if not ns.db.upcoming or point.upcoming == false then
         if point.level and point.level > UnitLevel("player") then
             return false
         end
         if point.active and point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
+            return false
+        end
+        if point.active and point.active.notquest and C_QuestLog.IsQuestFlaggedCompleted(point.active.notquest) then
             return false
         end
         if point.hide_before and not allQuestsComplete(point.hide_before) then
@@ -451,6 +565,11 @@ function ns.SetupMapOverlay()
                 elseif option.type == "execute" then
                     info.notCheckable = true
                     info.checked = nil
+                end
+                if option.disabled then
+                    info.disabled = option.disabled()
+                else
+                    info.disabled = nil
                 end
                 UIDropDownMenu_AddButton(info, level)
             end
