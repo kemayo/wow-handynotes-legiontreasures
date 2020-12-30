@@ -12,5 +12,18 @@
 
 handler.lua
 config.lua
-Treasure.lua
-Rares.lua
+
+zones\BrokenIsles.lua
+zones\Dalaran.lua
+zones\Azsuna.lua
+zones\Highmountain.lua
+zones\Stormheim.lua
+zones\Valsharah.lua
+zones\Suramar.lua
+zones\BrokenShore.lua
+
+zones\AntoranWastes.lua
+zones\Krokuun.lua
+zones\MacAree.lua
+
+zones\Mardum.lua
