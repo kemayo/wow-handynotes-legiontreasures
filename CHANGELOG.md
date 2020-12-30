@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v21
+* Added a bunch of missing achievement data, mostly around rares
+* Pick up fixes and improvements from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
+    * Treasures/Rares which drop collectable loot can be told to count as complete if you've got their drop
+    * Treasures/Rares which are part of an achievement can be told to count as complete if you've got the achievement, regardless of their quest status
+    * Changed how tooltips anchor on the map
+
 ## Changes in v20
 * Made dog's pebble in Dalaran less obtrusive
 * Pick up fixes and improvements from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
