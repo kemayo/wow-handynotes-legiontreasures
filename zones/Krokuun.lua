@@ -66,7 +66,7 @@ ns.RegisterPoints(830, { -- Krokuun
     [41707020] = {quest=48666, npc=125820, criteria=37650}, -- Imp Mother Laglath
     [50301730] = {quest=48561, npc=125824, criteria=37646, loot={153316}}, -- Khazaduum
     [44505870] = {quest=48564, npc=124775, criteria=37642, loot={153255}}, -- Commander Endaxis
-    [53403090] = {quest=48565, npc=123464, criteria=37641, loot={{153124,toy=true}}}, -- Sister Subversia
+    [53403090] = {quest=48565, npc=123464, criteria=37641, loot={{153124, toy=true}}}, -- Sister Subversia
     [55508020] = {quest=48628, npc=123689, criteria=37655, loot={153329}}, -- Talestra the Vile
     [58007480] = {quest=48627, npc=120393, criteria=37659}, -- Siegemaster Voraan
     [60802080] = {quest=48629, npc=125388, criteria=37652, loot={153114}}, -- Vagath the Betrayed

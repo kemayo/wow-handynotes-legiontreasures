@@ -99,7 +99,7 @@ ns.RegisterPoints(680, { -- Suramar
     [24554740] = {quest=43449, npc=110577, criteria=33357, loot={140388}}, -- Oreth the Vile
     [26104075] = {quest=42831, npc=109054, criteria=33352, loot={139926}}, -- Shal'an
     [27756545] = {quest=43992, npc=110832, criteria=33361, loot={121747}, note="Portal Key"}, -- Gorgroth
-    [33705125] = {quest=43954, npc=111197, criteria=33365, loot={140934}}, -- Anax
+    [33705125] = {quest=43954, npc=111197, criteria=33365, loot={{140934, pet=1934}}}, -- Anax
     [33801510] = {quest=43717, npc=106351, criteria=33350, loot={140372}}, -- Artificer Lothaire
     [34156100] = {quest=43351, npc=110024, criteria=33354, loot={140386}}, -- Mal'Dreth the Corruptor
     [36203380] = {quest=43718, npc=111329, criteria=33366, loot={140390}}, -- Matron Hagatha
@@ -127,7 +127,6 @@ ns.RegisterPoints(680, { -- Suramar
 }, {achievement=11265})
 
 ns.RegisterPoints(680, { -- Suramar
-    --[67065161] = {quest=99999, npc=, loot={1220}, note="marked as rare but seems to have no questID yet"}, -- Broodmother Shu'malis
     [35256725] = {quest=44675, npc=106526, criteria=333, loot={141866}}, -- Lady Rivantas
     [29405330] = {quest=44676, npc=113368, criteria=333, loot={138839}, note="Cave entrance @ 29.3, 50.7"}, -- Llorian
     [29305070] = ns.path{quest=44676},

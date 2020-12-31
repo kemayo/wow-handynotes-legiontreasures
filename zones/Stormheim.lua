@@ -100,15 +100,15 @@ ns.RegisterPoints(636, { -- Stormscale Cavern, Stormheim
 ns.RegisterPoints(634, { -- Stormheim
     [36505250] = {quest=38472, npc=92152, criteria=33299, loot={138418}}, -- Whitewater Typhoon
     [38454305] = {quest=38626, npc=92599, criteria=33300, loot={129101}}, -- Bloodstalker Alpha
-    [40657240] = {quest=38424, npc=91892, criteria=33297, loot={129113}}, -- Thane Irglov the Merciless
+    [40657240] = {quest=38424, npc=91892, criteria=33297, loot={{129113, toy=true}}}, -- Thane Irglov the Merciless
     [41456700] = {quest=38333, npc=91529, criteria=33293, loot={129291}}, -- Glimar Ironfist
     [41753410] = {quest=40068, npc=98188, criteria=33311, loot={132898}, note="Cave under the statue's axe"}, -- Egyl the Enduring
-    [44202280] = {quest=38627, npc=92604, criteria=9, faction="Horde", loot={129264}}, -- Worgen Stalkers
-    [44202281] = {quest=38630, npc=92631, criteria=9, faction="Alliance", loot={129266}}, -- Forsaken Death Squad
+    [44202280] = {quest=38627, npc=92604, criteria=9, loot={129264}, faction="Horde"}, -- Worgen Stalkers
+    [44202281] = {quest=38630, npc=92631, criteria=9, loot={129266}, faction="Alliance"}, -- Forsaken Death Squad
     [45857735] = {quest=38431, npc=91874, criteria=33296, loot={129048}}, -- Bladesquall
     [46808405] = {quest=38425, npc=91803, criteria=33295, loot={129206}}, -- Fathnyr
     [47154985] = {quest=38774, npc=93166, criteria=33306, loot={129163}}, -- Tiptog the Lost
-    [49507175] = {quest=38423, npc=91795, criteria=33294, loot={129208}}, -- Stormdrake Matriarch
+    [49507175] = {quest=38423, npc=91795, criteria=33294, loot={{129208, pet=1721}}}, -- Stormdrake Matriarch
     [51607465] = {quest=42591, npc=107926, criteria=33315, loot={138417}}, -- Hannval the Butcher
     [58004515] = {quest=38642, npc=92685, criteria=33303, loot={129123}}, -- Captain Brvet (Helmouth Raiders)
     [58353390] = {quest=43342, npc=110363, criteria=33316, loot={139387}}, -- Roteye
@@ -123,7 +123,7 @@ ns.RegisterPoints(634, { -- Stormheim
     [78606115] = {quest=40113, npc=98503, criteria=33314, loot={138421}}, -- Grrvrgull the Conqueror
 }, {achievement=11263})
 ns.RegisterPoints(649, { -- Helheim
-    [28156375] = {quest=39870, npc=97630, criteria=33310, loot={{129188,pet=1753}}}, -- Soulthirster
+    [28156375] = {quest=39870, npc=97630, criteria=33310, loot={{129188, pet=1753}}}, -- Soulthirster
     [85105030] = {quest=38461, npc=92040, criteria=33298, loot={129044}}, -- Fenri
 }, {achievement=11263})
 

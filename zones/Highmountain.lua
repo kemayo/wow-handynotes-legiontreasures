@@ -88,13 +88,13 @@ ns.RegisterPoints(650, { -- Highmountain
     [36751635] = {quest=40084, npc=98299, criteria=33375, loot={131799}}, -- Bodash the Hoarder
     [37704570] = {quest=40405, npc=97449, criteria=33328, loot={131761}}, -- Bristlemaul
     [41503185] = {quest=40175, npc=98890, criteria=33335, loot={131921}}, -- Slumber
-    [41954150] = {quest=39782, npc=97203, criteria=33323, loot={129175}, note="Abandoned Fishing Pole"}, -- Tenpak Flametotem
+    [41954150] = {quest=39782, npc=97203, criteria=33323, loot={{129175, pet=1752}}, note="Abandoned Fishing Pole"}, -- Tenpak Flametotem
     [43164800] = {quest=40413, npc=100230, criteria=33336, loot={131781}, note="Loot chest afterwards"}, -- Amateur hunters (100230, 100231, 100232)
     [44201210] = {quest=39994, npc=97933, criteria=33331, loot={131798}, note="Wanders a bit"}, -- Crab Rider Grmlrml
     [45705500] = {quest=40681, npc=101077, criteria=33338, loot={131730}}, -- Sekhan
     [46500745] = {quest=40096, npc=98311, criteria=33333, loot={131797}}, -- Mrrklr (captured survivor)
-    [47803200] = {quest=39646, npc=96410, criteria=33319, loot={131900}, note="Wanders a bit"}, -- Majestic Elderhorn
-    [48404015] = {quest=39806, npc=97345, criteria=33326, loot={131809,toy=true}, note="1/4 of slow fall toy",}, -- Crawshuk the Hungry
+    [47803200] = {quest=39646, npc=96410, criteria=33319, loot={{131900, toy=true}}, note="Wanders a bit"}, -- Majestic Elderhorn
+    [48404015] = {quest=39806, npc=97345, criteria=33326, loot={{131809, toy=true}}, note="1/4 of slow fall toy"}, -- Crawshuk the Hungry
     [48605000] = {quest=39784, npc=97215, criteria=33324, loot={131756}, note="Help him tame Arru, loot inside the cave afterwards"}, -- Beastmaster Pao'lek
     [49202710] = {quest=40242, npc=96621, criteria=33321, loot={131808}}, -- Mellok, Son of Torok 
     [50803460] = {quest=40406, npc=98024, criteria=33332, loot={131776}, note="In cave"}, -- Luggut the Eggeater
@@ -107,7 +107,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [54504060] = {quest=39866, npc=97593, criteria=33329, loot={131792}, note="Top of mountain"}, -- Mynta Talonscreech (Scout Harefoot)
     [56406050] = {quest=40347, npc=96590, criteria=33320, loot={131775}, note="Wanders a bit"}, -- Gurbog da Basher
     [52405850] = {quest=40423, npc=109498, criteria=33340, loot={131767}, note="Use the Seemingly Unguarded Treasure to summon the Unethical Adventurers"}, -- Unethical Adventurers
-    [52305141] = {quest=39766, loot={131802}, criteria=33334}, -- Totally Safe Treasure Chest
+    [52305141] = {quest=39766, criteria=33334, loot={131802}}, -- Totally Safe Treasure Chest
 }, {achievement=11264})
 
 ns.RegisterPoints(650, { -- Highmountain
