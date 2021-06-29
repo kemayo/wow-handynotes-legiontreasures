@@ -15,7 +15,7 @@ ns.map_spellids = {
 
 ns.currencies = {
     ANIMA = {
-        name = '|cffff8000' .. ANIMA .. '|r',
+        name = '|cffff8000' .. POWER_TYPE_ANIMA .. '|r',
         texture = select(10, GetAchievementInfo(14339)),
     },
     ARTIFACT = {
@@ -385,6 +385,7 @@ local get_point_info = function(point, isMinimap)
             category = "junk"
         end
         if not isMinimap then
+            cache_string(point.label)
             cache_string(point.note)
             cache_loot(point.loot)
         end
@@ -465,7 +466,12 @@ local function handle_tooltip(tooltip, point)
             for _, item in ipairs(point.loot) do
                 local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(ns.lootitem(item))
                 if link then
+                    local label = ENCOUNTER_JOURNAL_ITEM
                     if type(item) == "table" then
+                        if item.mount then label = MOUNT
+                        elseif item.toy then label = TOY
+                        elseif item.pet then label = TOOLTIP_BATTLE_PET
+                        end
                         -- todo: faction?
                         if item.covenant then
                             local data = C_Covenants.GetCovenantData(item.covenant)
@@ -477,12 +483,12 @@ local function handle_tooltip(tooltip, point)
                         if item.class then
                             link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, RAID_CLASS_COLORS[item.class]:WrapTextInColorCode(LOCALIZED_CLASS_NAMES_FEMALE[item.class]))
                         end
-                        local known = ns.itemIsKnown(item)
-                        if known ~= nil then
-                            link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
-                        end
                     end
-                    tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, quick_texture_markup(icon) .. link)
+                    local known = ns.itemIsKnown(item)
+                    if known ~= nil and (known == true or not ns.itemRestricted(item)) then
+                        link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
+                    end
+                    tooltip:AddDoubleLine(label, quick_texture_markup(icon) .. link)
                 else
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, SEARCH_LOADING_TEXT,
                         NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b,
