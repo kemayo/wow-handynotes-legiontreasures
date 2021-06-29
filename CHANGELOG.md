@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in v22
+* Update for 9.1
+* Datamined for missing drops
+
 ## Changes in v21
 * Added a bunch of missing achievement data, mostly around rares
 * Pick up fixes and improvements from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
