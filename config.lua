@@ -12,7 +12,8 @@ ns.defaults = {
         upcoming = true,
         found = false,
         collectablefound = true,
-        achievedfound = false,
+        achievedfound = true,
+        questfound = true,
         icon_scale = 1.0,
         icon_alpha = 1.0,
         icon_item = false,
@@ -122,6 +123,7 @@ ns.options = {
                     desc = "Whether to anchor the tooltips to the individual points or to the map",
                     order = 15,
                 },
+                -- the "found" cluster
                 found = {
                     type = "toggle",
                     name = "Show found",
@@ -139,6 +141,12 @@ ns.options = {
                     name = "Count collectables as found",
                     desc = "For account-level items like mounts, pets, and toys, count them being known as this being found",
                     order = 22,
+                },
+                questfound = {
+                    type = "toggle",
+                    name = "Count tracking quest as found",
+                    desc = "Lots of things have a hidden quest that tracks whether you've looted them this day / week /ever and thus whether you can loot them again",
+                    order = 23,
                 },
                 upcoming = {
                     type = "toggle",
@@ -289,14 +297,105 @@ local allCriteriaComplete = testMaker(function(criteria, achievement)
     return true
 end)
 
+local brokenItems = {
+    -- itemid : {appearanceid, sourceid}
+    [153268] = {25124, 90807}, -- Enclave Aspirant's Axe
+}
+local function GetAppearanceAndSource(itemLinkOrID)
+    local itemID = GetItemInfoInstant(itemLinkOrID)
+    if not itemID then return end
+    local appearanceID, sourceID = C_TransmogCollection.GetItemInfo(itemLinkOrID)
+    if not appearanceID then
+        -- sometimes the link won't actually give us an appearance, but itemID will
+        -- e.g. mythic Drape of Iron Sutures from Shadowmoon Burial Grounds
+        appearanceID, sourceID = C_TransmogCollection.GetItemInfo(itemID)
+    end
+    if not appearanceID and brokenItems[itemID] then
+        -- ...and there's a few that just need to be hardcoded
+        appearanceID, sourceID = unpack(brokenItems[itemID])
+    end
+    return appearanceID, sourceID
+end
+local canLearnCache = {}
+local function CanLearnAppearance(itemLinkOrID)
+    local itemID = GetItemInfoInstant(itemLinkOrID)
+    if not itemID then return end
+    if canLearnCache[itemID] then
+        return canLearnCache[itemID]
+    end
+    -- First, is this a valid source at all?
+    local canBeChanged, noChangeReason, canBeSource, noSourceReason = C_Transmog.CanTransmogItem(itemID)
+    if not canBeSource then
+        canLearnCache[itemID] = false
+        return false
+    end
+    local appearanceID = GetAppearanceAndSource(itemLinkOrID)
+    if not appearanceID then
+        canLearnCache[itemID] = false
+        return false
+    end
+    if not C_TransmogCollection.GetAppearanceSources(appearanceID) then
+        -- This returns nil for inappropriate appearances
+        canLearnCache[itemID] = false
+        return false
+    end
+    canLearnCache[itemID] = true
+    return true
+end
+local hasAppearanceCache = {}
+local function HasAppearance(itemLinkOrID)
+    local itemID = GetItemInfoInstant(itemLinkOrID)
+    if not itemID then
+        return
+    end
+    if hasAppearanceCache[itemID] ~= nil then
+        return hasAppearanceCache[itemID]
+    end
+    local appearanceID, sourceID = GetAppearanceAndSource(itemLinkOrID)
+    if not appearanceID then
+        hasAppearanceCache[itemID] = false
+        return false
+    end
+    local _, _, _, _, sourceKnown = C_TransmogCollection.GetAppearanceSourceInfo(sourceID)
+    if sourceKnown then
+        hasAppearanceCache[itemID] = true
+        return true
+    end
+    local sources = C_TransmogCollection.GetAppearanceSources(appearanceID)
+    if not sources then
+        hasAppearanceCache[itemID] = false
+        return false
+    end
+    for _, source in pairs(sources) do
+        if source.isCollected == true then
+            hasAppearanceCache[itemID] = true
+            return true
+        end
+    end
+    return false
+end
+
 local function PlayerHasMount(mountid)
     return (select(11, C_MountJournal.GetMountInfoByID(mountid)))
 end
 local function PlayerHasPet(petid)
     return (C_PetJournal.GetNumCollectedInfo(petid) > 0)
 end
+ns.itemRestricted = function(item)
+    if type(item) ~= "table" then return false end
+    if item.covenant and item.covenant ~= C_Covenants.GetActiveCovenantID() then
+        return true
+    end
+    if item.class and ns.playerClass ~= item.class then
+        return true
+    end
+    return false
+end
 ns.itemIsKnowable = function(item)
-    return type(item) == "table" and (item.toy or item.mount or item.pet)
+    if type(item) == "table" then
+        return (item.toy or item.mount or item.pet or item.quest or CanLearnAppearance(item[1])) and not ns.itemRestricted(item)
+    end
+    return CanLearnAppearance(item)
 end
 ns.itemIsKnown = function(item)
     -- returns true/false/nil for yes/no/not-knowable
@@ -307,6 +406,10 @@ ns.itemIsKnown = function(item)
         if item.toy then return PlayerHasToy(item[1]) end
         if item.mount then return PlayerHasMount(item.mount) end
         if item.pet then return PlayerHasPet(item.pet) end
+        if item.quest then return C_QuestLog.IsQuestFlaggedCompleted(item.quest) or C_QuestLog.IsOnQuest(item.quest) end
+        if CanLearnAppearance(item[1]) then return HasAppearance(item[1]) end
+    elseif CanLearnAppearance(item) then
+        return HasAppearance(item)
     end
 end
 local hasKnowableLoot = testMaker(ns.itemIsKnowable, doTestAny)
@@ -319,6 +422,36 @@ local allLootKnown = testMaker(function(item)
     end
     return known
 end)
+
+local function everythingFound(point)
+    local ret
+    if ns.db.collectablefound and point.loot and hasKnowableLoot(point.loot) then
+        if not allLootKnown(point.loot) then
+            return false
+        end
+        ret = true
+    end
+    if ns.db.achievedfound and point.achievement then
+        if point.criteria then
+            if not allCriteriaComplete(point.criteria, point.achievement) then
+                return false
+            end
+        else
+            local completedByMe = select(13, GetAchievementInfo(point.achievement))
+            if not completedByMe then
+                return false
+            end
+        end
+        ret = true
+    end
+    if point.follower then
+        if not C_Garrison.IsFollowerCollected(point.follower) then
+            return false
+        end
+        ret = true
+    end
+    return ret
+end
 
 local zoneHidden
 zoneHidden = function(uiMapID)
@@ -382,6 +515,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end
+    if point.ShouldShow and not point:ShouldShow() then
+        return false
+    end
     if point.outdoors_only and IsIndoors() then
         return false
     end
@@ -397,30 +533,14 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.faction and point.faction ~= ns.playerFaction then
         return false
     end
-    if not ns.db.found and (not point.always) then
-        if ns.db.collectablefound and point.loot and hasKnowableLoot(point.loot) and allLootKnown(point.loot) then
+    if not ns.db.found and not point.always then
+        if everythingFound(point) == true then
             return false
         end
-        if point.quest and (not point.achievement or not ns.db.achievedfound) then
-            if allQuestsComplete(point.quest) then
-                return false
-            end
-        elseif point.achievement then
-            local completedByMe = select(13, GetAchievementInfo(point.achievement))
-            if completedByMe then
-                return false
-            end
-            if point.criteria and allCriteriaComplete(point.criteria, point.achievement) then
-                return false
-            end
-        end
-        if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
+        if ns.db.questfound and point.quest and allQuestsComplete(point.quest) then
             return false
         end
-        -- todo: clean this one up once all the data is updated:
-        if point.toy and point.item and PlayerHasToy(point.item) then
-            return false
-        end
+        -- the rest are proxies for the actual "found" status:
         if point.inbag and itemInBags(point.inbag) then
             return false
         end
