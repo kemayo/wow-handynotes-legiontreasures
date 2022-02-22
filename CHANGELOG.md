@@ -1,5 +1,8 @@
 # Changelog
 
+## Changes in v23
+* Update for 9.2
+
 ## Changes in v22
 * Update for 9.1
 * Datamined for missing drops
