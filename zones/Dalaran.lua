@@ -1,6 +1,14 @@
 local myname, ns = ...
 
-local pebble = {quest=46952, loot={147420}, note="Show to Dog in your Draenor garrison", hide_before=30526, upcoming=false, atlas="islands-azeritechest",scale=1.2,}
+local pebble = {
+    quest=46952,
+    loot={147420},
+    inbag=147420,
+    note="Show to Dog in your Draenor garrison",
+    hide_before=ns.conditions.QuestComplete(30526),
+    upcoming=false,
+    atlas="islands-azeritechest",scale=1.2,
+}
 ns.RegisterPoints(627, { -- Dalaran
     [28466450] = {quest=41929, loot={7676}, label="Desmond's Lockbox", note="Locked"},
     [47404120] = {quest=45365, loot={143534}, toy=true, note="On the table on the second floor of the Legerdemain Lounge", level=10},

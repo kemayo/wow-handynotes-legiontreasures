@@ -11,8 +11,11 @@
 ## SavedVariables: HandyNotes_LegionTreasuresDB
 ## RequiredDeps: HandyNotes
 
-handler.lua
-config.lua
+handler\class.lua
+handler\conditions.lua
+handler\handler.lua
+handler\config.lua
+handler\overlay.lua
 
 zones\BrokenIsles.lua
 zones\Dalaran.lua

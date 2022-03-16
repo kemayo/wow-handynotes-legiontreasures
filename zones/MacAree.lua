@@ -56,7 +56,7 @@ ns.RegisterPoints(882, { -- MacAree
     [37583619] = {quest=49264, label="Void-Seeped Cache"},
     [37102010] = {quest=49264, label="Void-Seeped Cache"},
 }, {
-    junk = true,
+    group="junk",
 })
 
 -- Rares

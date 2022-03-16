@@ -66,7 +66,7 @@ ns.RegisterPoints(885, { -- Antoran Wastes
     [65204060] = {quest=49018, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
 }, {
     label="Legion War Supplies",
-    junk=true,
+    group="junk",
 })
 
 -- Rares

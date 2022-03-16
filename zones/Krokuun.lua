@@ -35,9 +35,9 @@ ns.RegisterPoints(830, { -- Krokuun
     [46508520] = {quest=47997, label="Eredar War Supplies"},
     [40617531] = {quest=47997, label=LEGION_SUPPLIES},
 
-    [64203910] = {quest=48885, label=LEGION_SUPPLIES, note="Requires Light's Judgement. Blow the pile of ruble with the ability"},
+    [64203910] = {quest=48885, label=LEGION_SUPPLIES, note="Requires Light's Judgement. Blow the pile of rubble with the ability"},
 
-    [47705940] = {quest=48886, label=LEGION_SUPPLIES, note="Requires Light's Judgement. Blow the pile of ruble with the ability"},
+    [47705940] = {quest=48886, label=LEGION_SUPPLIES, note="Requires Light's Judgement. Blow the pile of rubble with the ability"},
 
     [32047451] = {quest=48336, label=LEGION_SUPPLIES},
     [35475618] = {quest=48336, label=LEGION_SUPPLIES},
@@ -55,7 +55,7 @@ ns.RegisterPoints(830, { -- Krokuun
     [59377345] = {quest=47753, label=LEGION_SUPPLIES},
     [58607990] = {quest=47753, label=LEGION_SUPPLIES},
 }, {
-    junk = true,
+    group="junk",
 })
 
 -- Rares
