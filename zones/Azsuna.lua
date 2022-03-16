@@ -76,8 +76,8 @@ ns.RegisterPoints(630, { -- Azsuna
     [35305030] = {quest=38037, npc=90803, criteria=33264, loot={129083}, note="Cache of Infernals"}, -- Infernal Lord
     [37404320] = {quest=42280, npc=107113, criteria=33374, loot={141875}}, -- Vorthax
     [41054180] = {quest=37537, npc=89016, criteria=33377, loot={129080}}, -- Ravyn-Drath
-    [43152815] = {quest=38352, npc=91579, criteria=33402, loot={129056}}, -- Doomlord Kazrok
-    [43532458] = {quest=42069, npc=105938, criteria=33401, loot={129087}}, -- Felwing
+    [43152815] = {quest=38352, npc=91579, criteria=32402, loot={129056}}, -- Doomlord Kazrok
+    [43532458] = {quest=42069, npc=105938, criteria=32401, loot={129087}}, -- Felwing
     [45305780] = {quest=37824, npc=89884, criteria=33258, loot={129090}}, -- Flog the Captain-Eater
     [47203420] = {quest=37726, npc=89650, criteria=33248, loot={129082}}, -- Valiyaka the Stormbringer
     [49105520] = {quest=37909, npc=90164, criteria=33260, loot={129069}, note="Patrols the road"}, -- Warbringer Mox'na (seek and destroy squad)
