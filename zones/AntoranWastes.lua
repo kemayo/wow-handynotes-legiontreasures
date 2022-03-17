@@ -93,6 +93,25 @@ ns.RegisterPoints(885, { -- Antoran Wastes
     [73207080] = {quest=48817, npc=127090, criteria=37611, loot={153324}}, -- Admiral Rel'var
     [75605650] = {quest=48818, npc=127096, criteria=37609}, -- All-Seer Xanarian
     [82656580] = {quest=48816, npc=127084, criteria=37610, note="Use the portal slightly west from him at 80, 62.4"}, -- Commander Texlaz
+    [84408100] = { -- Squadron Commander Vishax
+        quest=48967,
+        npc=127700,
+        criteria=37662,
+        loot={
+            {153253,toy=true,}, -- S.F.E. Interceptor
+        },
+        note="Get {item:152890:Smashed Portal Generator} from {npc:127598:Immortal Netherwalker}. Once you have it you can get {item:152941:Conductive Sheath}, {item:152940:Arc Circuit}, and {item:152891:Power Cell} from {npc:127597:Eredar War-Mind} and {npc:127596:Felsworn Myrmidon} on the docks. Combine them, then use the portal.",
+        active={
+            ns.conditions.QuestComplete(48984), -- hidden quest for completing the portal generator, 49007 is for actually activating it
+            ns.conditions.Item(152965),
+            any=true
+        },
+        path={
+            77407490,
+            label="Portal to {npc:127700:Squadron Commander Vishax}",
+            atlas="mageportalalliance",
+        }
+    },
 }, {
     achievement=12078,
 })
@@ -100,4 +119,26 @@ ns.RegisterPoints(833, { -- Nath'raxas Spire
     [38954032] = {quest=48561, npc=125824, criteria=37646, loot={153316}}, -- Khazaduum
 }, {
     achievement=12078,
+})
+
+ns.RegisterPoints(885, { -- Antoran Wastes
+    [65408140] = { -- Rezira the Seer
+        quest=nil,
+        npc=127706,
+        loot={
+            {153293,toy=true,}, -- Sightless Eye
+        },
+        active=ns.conditions.Item(153226),
+        note="Use {item:153226:Observer's Locus Resonator} bought from {npc:128134:Orix the All-Seer} to reach here",
+    },
+    [60204540] = {
+        label="{npc:128134:Orix the All-Seer}",
+        loot={
+            {153204, toy=true, note="1000x"}, -- All-Seer's Eye
+            {153026, pet=2115, note="1000x"}, -- Cross Gazer
+            {153226, note="500x"}, -- Observer's Locus Resonator
+        },
+        note="Become an agent of Orix to loot {item:153021:Intact Demon Eye}, which can be used to buy things from Orix",
+        atlas="vehicle-templeofkotmogu-cyanball",
+    },
 })
