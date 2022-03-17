@@ -1,5 +1,11 @@
 # Changelog
 
+## Changes in v24
+* Pull in a lot of handler changes from ShadowlandsTreasures
+* Add missed loot and fix a few loot errors (mostly legendaries that had crept in)
+* Add some missed rares to Antoran Wastes, and mark Orix the All-Seer
+* Two of the Marius and Tehd encounters in Azsuna had the wrong achievement criteria
+
 ## Changes in v23
 * Update for 9.2
 
