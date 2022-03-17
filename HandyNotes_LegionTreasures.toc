@@ -16,6 +16,7 @@ handler\conditions.lua
 handler\handler.lua
 handler\config.lua
 handler\overlay.lua
+handler\routes.xml
 
 zones\BrokenIsles.lua
 zones\Dalaran.lua
