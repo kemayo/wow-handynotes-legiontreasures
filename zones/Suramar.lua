@@ -117,7 +117,7 @@ ns.RegisterPoints(680, { -- Suramar
     [62506370] = {quest=43793, npc=111653, criteria=33369, loot={121810}}, -- Miasu
     [62554810] = {quest=43495, npc=110726, criteria=33359, loot={139969}}, -- Cadraeus
     [65555915] = {quest=43481, npc=110656, criteria=33358, loot={140403}}, -- Arcanist Lylandre
-    [66656715] = {quest=43968, npc=107846, criteria=33351, loot={{140314, toy=true}}}, -- Pinchshank
+    [66656715] = {quest=43968, npc=107846, criteria=33351, loot={140402,{140314, toy=true}}}, -- Pinchshank
     [67657105] = {quest=41136, npc=103214, criteria=33345, loot={140381}, note="Cave entrance @ 72.4, 68.1"}, -- Har'kess the Insatiable
     [72406810] = ns.path{quest=41136},
     [68155895] = {quest=41135, npc=100864, criteria=33343, loot={139952}, note="Cave entrance @ 69.9, 57.0"}, -- Cora'Kar

@@ -67,26 +67,26 @@ ns.RegisterPoints(882, { -- MacAree
     [33704750] = {quest=48705, npc=126867, criteria=37633, loot={{152844, mount=973}}}, -- Venomtail Skyfin
     [35203720] = {quest=48708, npc=126885, criteria=37630}, -- Umbraliss
     [35505870] = {quest=48711, npc=126896, criteria=37627, note="On the 2nd floor."}, -- Herald of Chaos
-    [36302360] = {quest=48703, npc=126865, criteria=37635}, -- Vigilant Thanos
-    [38705580] = {quest=48697, npc=126860, criteria=37638, loot={153190}}, -- Kaara the Pale
-    [39716420] = {quest=48706, npc=126868, criteria=37632, note="Inside the building"}, -- Turek the Lucid
+    [36302360] = {quest=48703, npc=126865, criteria=37635, loot={{153183,toy=true},153322}}, -- Vigilant Thanos
+    [38705580] = {quest=48697, npc=126860, criteria=37638}, -- Kaara the Pale
+    [39716420] = {quest=48706, npc=126868, criteria=37632, loot={153306}, note="Inside the building"}, -- Turek the Lucid
     [41301160] = {quest=48702, npc=126864, criteria=37636, loot={152998}}, -- Feasel the Muffin Thief
     [43806020] = {quest=48700, npc=126862, criteria=37637, loot={{153193, toy=true}}}, -- Baruut the Bloodthirsty
     [44204980] = {quest=48712, npc=126898, criteria=37626, loot={153190}}, -- Sabuul
-    [44607160] = {quest=48692, npc=122838, criteria=37654}, -- Shadowcaster Voruun
-    [48504090] = {quest=48713, npc=126899, criteria=37625}, -- Jed'hin Champion Vorusk
+    [44607160] = {quest=48692, npc=122838, criteria=37654, loot={153296}}, -- Shadowcaster Voruun
+    [48504090] = {quest=48713, npc=126899, criteria=37625, loot={153302}}, -- Jed'hin Champion Vorusk
     [49505280] = {quest=48935, npc=126913, criteria=37617, loot={153203}}, -- Slithon the Last
     [49700990] = {quest=48721, npc=126912, criteria=37618, loot={{152904, mount=980}}}, -- Skreeg the Devourer
-    [55705990] = {quest=48695, npc=126852, criteria=37639, loot={{152814, mount=970}}}, -- Wrangler Kravos
+    [55705990] = {quest=48695, npc=126852, criteria=37639, loot={{152814, mount=970}, 144432, 153269}}, -- Wrangler Kravos
     [56801450] = {quest=48720, npc=126910, criteria=37619}, -- Commander Xethgar
-    [58003090] = {quest=48716, npc=125497, criteria=37623}, -- Overseer Y'Sorna
-    [59203770] = {quest=48714, npc=124440, criteria=37624}, -- Overseer Y'Beda
-    [60402970] = {quest=48717, npc=125498, criteria=37622}, -- Overseer Y'Morna
-    [61405020] = {quest=48718, npc=126900, criteria=37621, loot={{153179, toy=true}, {153180, toy=true}, {153181, toy=true}}}, -- Instructor Tarahna
-    [63806460] = {quest=48704, npc=126866, criteria=37634}, -- Vigilant Kuro
+    [58003090] = {quest=48716, npc=125497, criteria=37623, loot={153268}}, -- Overseer Y'Sorna
+    [59203770] = {quest=48714, npc=124440, criteria=37624, loot={153315}}, -- Overseer Y'Beda
+    [60402970] = {quest=48717, npc=125498, criteria=37622, loot={153257}}, -- Overseer Y'Morna
+    [61405020] = {quest=48718, npc=126900, criteria=37621, loot={{153179, toy=true}, {153180, toy=true}, {153181, toy=true}, 153309}}, -- Instructor Tarahna
+    [63806460] = {quest=48704, npc=126866, criteria=37634, loot={{153183,toy=true}, 153323}}, -- Vigilant Kuro
     [64002950] = {quest=48719, npc=126908, criteria=37620}, -- Zul'tan the Numerous
     [52796704] = {quest=48693, npc=126815, criteria=37640}, -- Soultwisted Monstrosity
-    [70404670] = {quest=48710, npc=126889, criteria=37628}, -- Sorolis the Ill-Fated
+    [70404670] = {quest=48710, npc=126889, criteria=37628, loot={153292}}, -- Sorolis the Ill-Fated
 }, {
     achievement=12078,
 })

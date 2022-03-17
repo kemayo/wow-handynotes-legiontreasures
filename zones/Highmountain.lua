@@ -99,7 +99,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [49202710] = {quest=40242, npc=96621, criteria=33321, loot={131808}}, -- Mellok, Son of Torok 
     [50803460] = {quest=40406, npc=98024, criteria=33332, loot={131776}, note="In cave"}, -- Luggut the Eggeater
     [51052570] = {quest=39762, npc=97093, criteria=33322, loot={131791}}, -- Shara Felbreath
-    [51054825] = {quest=39802, npc=97326, criteria=33325, loot={138783}}, -- Hartli the Snatcher
+    [51054825] = {quest=39802, npc=97326, criteria=33325, loot={129190}}, -- Hartli the Snatcher
     [51453190] = {quest=39465, npc=95872, criteria=33318, loot={131769}}, -- Skullhat (Skywhisker Taskmaster)
     [53755125] = {quest=39872, npc=97653, criteria=33330, loot={131800}, note="Loot chest afterwards"}, -- Taurson (Beastly Boxer)
     [54404110] = {quest=40414, npc=100495, criteria=33337, loot={131780}, note="Cave entrance @ 55.1, 44.3. Blow out candles."}, -- Devouring Darkness
@@ -112,7 +112,7 @@ ns.RegisterPoints(650, { -- Highmountain
 
 ns.RegisterPoints(650, { -- Highmountain
     [40955775] = {quest=39963, npc=97793, criteria=333, loot={131773}, note="Abandoned Fishing Pole"}, -- Flamescale
-    [54447454] = {quest=40773, npc=101649, criteria=333, loot={1220}}, -- Frostshard
+    [54447454] = {quest=40773, npc=101649, criteria=333}, -- Frostshard
     [56357250] = {quest=39235, npc=94877, criteria=333, loot={138396}}, -- Brogrul the Mighty
 })
 ns.RegisterPoints(658, { -- Path of Huln, floor 2, Highmountain

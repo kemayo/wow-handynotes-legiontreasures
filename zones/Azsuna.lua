@@ -89,7 +89,7 @@ ns.RegisterPoints(630, { -- Azsuna
     [56102905] = {quest=38061, npc=90901, criteria=33265, loot={138395}}, -- Pridelord Meowl
     [59304630] = {quest=38212, npc=91100, criteria=33403, loot={129068}, note="Top of the mountain"}, -- Brogozog
     [59601230] = {quest=37932, npc=90244, criteria=33262, loot={129085}, note="Unbound rift"}, -- Arcavellus
-    [59705520] = {quest=37822, npc=89850, criteria=33251, loot={129065}}, -- The Oracle
+    [59705520] = {quest=37822, npc=89850, criteria=33251, loot={129065,136833}}, -- The Oracle
     [61306200] = {quest=38217, npc=91113, criteria=33267, loot={129062}}, -- Tide Behemoth
     [65164000] = {quest=37820, npc=89816, criteria=33249, loot={129091}, note="Horn of the Siren"}, -- Golza the Iron Fin
     [65555680] = {quest=42221, npc=106990, criteria=33269, loot={129073}}, -- Chief Bitterbrine
