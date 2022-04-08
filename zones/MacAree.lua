@@ -3,15 +3,25 @@ local myname, ns = ...
 ns.map_spellids[882] = true
 
 ns.RegisterPoints(882, { -- MacAree
-    [27284015] = {quest=48750, criteria=37601, note="You will need a Glider, jump from 31.92, 45.19"}, -- Shattered House Chest
-    [40275130] = {quest=48747, criteria=37598, note="Requires Lightforge Warframe. Jump on the rubble."}, -- Void-Tinged Chest
+    [27284015] = {quest=48750, criteria=37601, note="You will need a Glider", path=31924519}, -- Shattered House Chest
+    [39605060] = { -- Void-Tinged Chest
+        quest=48747, -- 48746 for breaking the rubble
+        criteria=37598,
+        note="Requires Lightforge Warframe. Jump on the rubble.",
+        minimap=true,
+    },
     [40896985] = {quest=49153, criteria=37957, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Augari Goods
-    [42900550] = {quest=48743, criteria=37595, note="Requires Lightforged Warframe."}, -- Eredar Treasure Cache
+    [42900550] = { -- Eredar Treasure Cache
+        quest=48743, -- 48613 for breaking the rubble, vignette=2254
+        criteria=37595,
+        note="Requires Lightforged Warframe.",
+        minimap=true,
+    },
     [43445440] = {quest=48751, criteria=37602, note="You will need a Glider"}, -- Doomseeker's Treasure
     [50693851] = {quest=48744, criteria=37596}, -- Chest of Ill-Gotten Gains
     [57097677] = {quest=48346, criteria=37600, note="Climb from 59.67, 76.40"}, -- Desperate Eredar's Cache
     [62152241] = {quest=49151, criteria=37956, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Secret Augari Chest
-    [62207120] = {quest=48745, criteria=37597, note="Requires Light's Judgement'."}, -- Student's Surprising Surplus
+    [62207120] = {quest=48745, criteria=37597, note="Requires Light's Judgement."}, -- Student's Surprising Surplus
     [70245976] = {quest=48748, criteria=37599}, -- Augari Secret Stash
     [70602730] = {quest=49129, criteria=37955, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Augari-Runed Chest
 }, {
@@ -45,7 +55,7 @@ ns.RegisterPoints(882, { -- MacAree
 
     [62013276] = {quest=48362, label="Ancient Eredar Cache"},
 
-    [43776836] = {quest=48371, label="Ancient Eredar Cache"},
+    [43776837] = {quest=48371, label="Ancient Eredar Cache"},
     [48704980] = {quest=48371, label="Ancient Eredar Cache"},
     [25263016] = {quest=48371, label="Ancient Eredar Cache"},
     [50605600] = {quest=48371, loot={153334}, label="Ancient Eredar Cache"},
