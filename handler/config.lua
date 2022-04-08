@@ -383,11 +383,15 @@ local canLearnCache = {}
 local function CanLearnAppearance(itemLinkOrID)
     local itemID = GetItemInfoInstant(itemLinkOrID)
     if not itemID then return end
-    if canLearnCache[itemID] then
+    if canLearnCache[itemID] ~= nil then
         return canLearnCache[itemID]
     end
     -- First, is this a valid source at all?
     local canBeChanged, noChangeReason, canBeSource, noSourceReason = C_Transmog.CanTransmogItem(itemID)
+    if canBeSource == nil or noSourceReason == 'NO_ITEM' then
+        -- data loading, don't cache this
+        return
+    end
     if not canBeSource then
         canLearnCache[itemID] = false
         return false
@@ -564,10 +568,24 @@ do
     end
 end
 
+local function showOnMapType(point, uiMapID, isMinimap)
+    -- nil means to respect the preferences, but points can override
+    if isMinimap then
+        if point.minimap ~= nil then return point.minimap end
+        if ns.map_spellids[uiMapID] then
+            if ns.map_spellids[uiMapID] == true or GetPlayerAuraBySpellID(ns.map_spellids[uiMapID]) then
+                return false
+            end
+        end
+        return ns.db.show_on_minimap
+    end
+    if point.worldmap ~= nil then return point.worldmap end
+    return ns.db.show_on_world
+end
+
 ns.should_show_point = function(coord, point, currentZone, isMinimap)
-    if isMinimap and not ns.db.show_on_minimap and not point.minimap then
-        return false
-    elseif not isMinimap and not ns.db.show_on_world then
+    if not coord or coord < 0 then return false end
+    if not showOnMapType(point, currentZone, isMinimap) then
         return false
     end
     if zoneHidden(currentZone) then
@@ -646,6 +664,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         return false
     end
     if point.requires_worldquest and not C_TaskQuest.IsActive(point.requires_worldquest) then
+        return false
+    end
+    if point.requires and not ns.conditions.check(point.requires) then
         return false
     end
     if not ns.db.upcoming or point.upcoming == false then
