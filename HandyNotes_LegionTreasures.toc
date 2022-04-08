@@ -18,6 +18,8 @@ handler\config.lua
 handler\overlay.lua
 handler\routes.xml
 
+legion.lua
+
 zones\BrokenIsles.lua
 zones\Dalaran.lua
 zones\Azsuna.lua
