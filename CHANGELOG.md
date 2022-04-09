@@ -1,7 +1,14 @@
 # Changelog
 
+## Changes in v25
+* Fixed a few Argus points, made them show on the minimap
+* Bring in updates to the handler code from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
+    * Paths will now highlight their associated route when you mouse over them
+    * Minor performance improvement: code checking whether you could learn an appearance from an item wasn't caching negative results and so was running more than it needed to
+    * You can hide all points related to an achievement from the right-click menu
+
 ## Changes in v24
-* Pull in a lot of handler changes from ShadowlandsTreasures
+* Pull in a lot of handler changes from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures)
 * Add missed loot and fix a few loot errors (mostly legendaries that had crept in)
 * Add some missed rares to Antoran Wastes, and mark Orix the All-Seer
 * Two of the Marius and Tehd encounters in Azsuna had the wrong achievement criteria
