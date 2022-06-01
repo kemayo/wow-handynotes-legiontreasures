@@ -11,12 +11,7 @@
 ## SavedVariables: HandyNotes_LegionTreasuresDB
 ## RequiredDeps: HandyNotes
 
-handler\class.lua
-handler\conditions.lua
-handler\handler.lua
-handler\config.lua
-handler\overlay.lua
-handler\routes.xml
+handler\handler.xml
 
 legion.lua
 
