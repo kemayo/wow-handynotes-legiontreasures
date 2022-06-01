@@ -12,8 +12,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [39704830] = {quest=39494, loot={131763}, label="Floating Treasure", note="On river surface, moves"},
     [42203482] = {quest=40480, label=ns.CHEST_SM},
     [42212730] = {quest=40479, label=ns.CHEST},
-    [43582510] = {quest=40478, label=ns.CHEST, note="Cave entrance @ 42.5, 25.4"},
-    [42502540] = ns.path{quest=40478},
+    [43582510] = {quest=40478, label=ns.CHEST, note="Cave entrance @ 42.5, 25.4", path=42502540},
     [43757275] = {quest=40510, label=ns.CHEST_SM},
     [45192746] = {quest=44279, label=ns.CHEST_SM, note="Underwater cave"},
     [45573462] = {quest=40481, label=ns.CHEST_SM},
@@ -29,16 +28,13 @@ ns.RegisterPoints(650, { -- Highmountain
     [50983647] = {quest=40496, label=ns.CHEST, note="Cave @ 51.6, 37.4"},
     [50983880] = {quest=40498, label=ns.CHEST},
     [52023241] = {quest=40505, label=ns.CHEST},
-    [53035224] = {quest=40493, label=ns.CHEST_SM},
-    [49905380] = ns.path{quest=40493, label="Crystal Fissure"},
-    [51175305] = {quest=39471, label=ns.CHEST_GLIM, note="Path past the Skyhorn"},
+    [53035224] = {quest=40493, label=ns.CHEST_SM, path={49905380, label="Crystal Fissure"}},
+    [51175305] = {quest=39471, label=ns.CHEST_GLIM, note="Path past the Skyhorn", path={53004830, label="Path to Reflection Peak"}},
     [52566637] = {quest=42453, label=ns.CHEST, note="Only after Battle of Snowblind Mesa quests are done?"},
-    [53004830] = ns.path{quest=39471, label="Path to Reflection Peak"},
     [53063946] = {quest=40499, label=ns.CHEST_SM},
     [53414868] = {quest=40500, label=ns.CHEST_SM},
     [53454352] = {quest=40484, label=ns.CHEST_SM, note="Cave entrance @ 55.1, 44.3"},
-    [53615103] = {quest=39824, loot={131810}, label=ns.CHEST, note="1/4 of slow fall toy; on ledge, path to southeast", toy=true},
-    [55405270] = ns.path{quest=39824, label="Path to Derelict Skyhorn Kite"},
+    [53615103] = {quest=39824, loot={131810}, label=ns.CHEST, note="1/4 of slow fall toy; on ledge, path to southeast", toy=true, path={55405270, label="Path to Derelict Skyhorn Kite"}},
     [54174159] = {quest=40483, label=ns.CHEST_GLIM, note="Cave entrance @ 55.1, 44.3"},
     [55104430] = ns.path{quest={40483, 40484, 40414}, label="Candle Rock"},
     [55134965] = {quest=40487, label=ns.CHEST_SM},
@@ -47,7 +43,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [44707230] = ns.path{quest={39606, 40508, 40509, 48381}, label="Neltharion's Vault"},
     [51603740] = ns.path{quest={40496, 40497, 40406}, label="Rockcrawler Chasm"},
     [48103390] = ns.path{quest={40496, 40497, 40406}, label="Rockcrawler Chasm"},
-    [32206680] = {achievement=10774, loot={139773}, toy=true}, -- Emerald Winds
+    [32206680] = {achievement=10774, loot={{139773, toy=true}}}, -- Emerald Winds
 }, {achievement=11257})
 ns.RegisterPoints(651, { -- BitestoneEnclave, Highmountain
     [85213787] = {quest=40489, label=ns.CHEST},

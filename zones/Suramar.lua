@@ -9,8 +9,7 @@ local grapple = ns.nodeMaker{
 ns.RegisterPoints(680, { -- Suramar
     [16602974] = {quest=43846, label=ns.CHEST_SM},
     [17275462] = {quest=43844, label=ns.CHEST},
-    [19791604] = {quest=43845, label=ns.CHEST_SM, note="Cave entrance @ 19.4, 19.4"},
-    [19401940] = ns.path{quest=43845},
+    [19791604] = {quest=43845, label=ns.CHEST_SM, note="Cave entrance @ 19.4, 19.4", path=19401940},
     [20605040] = ns.path{quest={43839, 43840, 43747}, label="Falanaar Tunnels"},
     [21425446] = {quest=42842, loot={136269}, label="Kel'danath's Manaflask"},
     [22863574] = ns.path{quest={43838, 43988}, label="Temple of Fal'adora"},
@@ -18,33 +17,28 @@ ns.RegisterPoints(680, { -- Suramar
     [25958548] = {quest=43831, label=ns.CHEST_SM},
     [26354127] = {quest=42827, loot={139890}, label="Ancient Mana Chunk"},
     [26831696] = {quest=43847, label=ns.CHEST_SM},
-    [26877073] = {quest=43987, loot={140327}, label="Kyrtos's Research Notes", note="Cave entrance @ 27.3, 72.9"},
-    [27307290] = ns.path{quest=43987},
+    [26877073] = {quest=43987, loot={140327}, label="Kyrtos's Research Notes", note="Cave entrance @ 27.3, 72.9", path=27307290},
     [29271622] = {quest=43848, label=ns.CHEST},
     [29768817] = {quest=43748, loot={141655}, label="Shimmering Ancient Mana Cluster"},
     [31956249] = {quest=43831, label=ns.CHEST_SM},
-    [32317708] = {quest=43834, label=ns.CHEST_SM, note="Inside the Lightbreaker, after quests; portal @ 31.0, 85.1"},
-    [31008510] = ns.path{quest=43834},
+    [32317708] = {quest=43834, label=ns.CHEST_SM, note="Inside the Lightbreaker, after quests; portal @ 31.0, 85.1", path=31008510},
     [35561209] = {quest=43989, loot={140329}, label="Arcane Power Unit"},
     [38138712] = {quest=43830, label=ns.CHEST_SM},
     [41961919] = {quest=43746, loot={139786}, label="Shimmering Ancient Mana Cluster"},
     [42051968] = {quest=43849, loot={139786}, label=ns.CHEST_GLIM},
     [42577668] = {quest=43870, label=ns.CHEST_SM, note="Upstairs"},
-    [44053194] = {quest=43856, loot={139786}, label=ns.CHEST_GLIM, note="Cave entrance behind waterfall @ 42.2, 30.0"},
-    [42203000] = ns.path{quest=43856},
+    [44053194] = {quest=43856, loot={139786}, label=ns.CHEST_GLIM, note="Cave entrance behind waterfall @ 42.2, 30.0", path=42203000},
     [44302289] = {quest=43850, label=ns.CHEST},
     [44387587] = {quest=43869, label=ns.CHEST_SM},
     [44803100] = {quest=43986, loot={140326}, label="Enchanted Burial Urn", note="Doesn't stand out much; by the bench, upper level"},
     [46552599] = {quest=43744, loot={141655}, label="Shimmering Ancient Mana Cluster"},
     [48117321] = {quest=43865, label=ns.CHEST_SM, note="Grapple to it"},
     [48143399] = {quest=43853, label=ns.CHEST_SM},
-    [48288261] = {quest=43866, label=ns.CHEST_SM, note="Grapple from 48.4, 82.2"},
-    [48408220] = grapple{quest=43866},
+    [48288261] = {quest=43866, label=ns.CHEST_SM, note="Grapple from 48.4, 82.2", path=grapple{48408220}},
     [48297121] = {quest=44324, label=ns.CHEST, note="Upstairs"},
     [48587217] = {quest=44323, label=ns.CHEST, note="Upstairs"},
     [48957379] = {quest=43867, label=ns.CHEST, note="Upstairs"},
-    [49988493] = {quest=43864, label=ns.CHEST_SM, note="Grapple from 50.0, 84.5"},
-    [50008450] = grapple{quest=43864},
+    [49988493] = {quest=43864, label=ns.CHEST_SM, note="Grapple from 50.0, 84.5", path=grapple{50008450}},
     [50068061] = {quest=44325, label=ns.CHEST, note="Upstairs"},
     [51503859] = {quest=43855, label=ns.CHEST_SM},
     [51908214] = {quest=43868, label=ns.CHEST},
@@ -63,8 +57,7 @@ ns.RegisterPoints(680, { -- Suramar
     [71464975] = {quest=43859, label=ns.CHEST_SM},
     [76886150] = {quest=43860, label=ns.CHEST_SM, note="Underwater, in a sunken ship"},
     [79647289] = {quest=43741, loot={141655}, label="Shimmering Ancient Mana Cluster"},
-    [81965745] = {quest=43861, label=ns.CHEST_SM, note="Entrance @ 79.3, 57.4"},
-    [79305740] = ns.path{quest=43861},
+    [81965745] = {quest=43861, label=ns.CHEST_SM, note="Entrance @ 79.3, 57.4", path=79305740},
     [83126933] = {quest=43863, label=ns.CHEST},
     [83975764] = {quest=43862, label=ns.CHEST},
 }, {achievement=11260})
@@ -118,17 +111,14 @@ ns.RegisterPoints(680, { -- Suramar
     [62554810] = {quest=43495, npc=110726, criteria=33359, loot={139969}}, -- Cadraeus
     [65555915] = {quest=43481, npc=110656, criteria=33358, loot={140403}}, -- Arcanist Lylandre
     [66656715] = {quest=43968, npc=107846, criteria=33351, loot={140402,{140314, toy=true}}}, -- Pinchshank
-    [67657105] = {quest=41136, npc=103214, criteria=33345, loot={140381}, note="Cave entrance @ 72.4, 68.1"}, -- Har'kess the Insatiable
-    [72406810] = ns.path{quest=41136},
-    [68155895] = {quest=41135, npc=100864, criteria=33343, loot={139952}, note="Cave entrance @ 69.9, 57.0"}, -- Cora'Kar
-    [69905700] = ns.path{quest=41135},
+    [67657105] = {quest=41136, npc=103214, criteria=33345, loot={140381}, note="Cave entrance @ 72.4, 68.1", path=72406810}, -- Har'kess the Insatiable
+    [68155895] = {quest=41135, npc=100864, criteria=33343, loot={139952}, note="Cave entrance @ 69.9, 57.0", path=69905700}, -- Cora'Kar
     [75505730] = {quest=44003, npc=103575, criteria=33347, loot={121801}}, -- Reef Lord Raj'his
     [80157000] = {quest=40680, npc=103183, criteria=33344, loot={140019}, note="Wanders along the underwater trench"}, -- Rok'nash
 }, {achievement=11265})
 
 ns.RegisterPoints(680, { -- Suramar
     [35256725] = {quest=44675, npc=106526, criteria=333, loot={141866}}, -- Lady Rivantas
-    [29405330] = {quest=44676, npc=113368, criteria=333, loot={138839}, note="Cave entrance @ 29.3, 50.7"}, -- Llorian
-    [29305070] = ns.path{quest=44676},
+    [29405330] = {quest=44676, npc=113368, criteria=333, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070}, -- Llorian
     [87856250] = {quest=41786, npc=103827, criteria=333, loot={140384}}, -- King Morgalash
 })

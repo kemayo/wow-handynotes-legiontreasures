@@ -15,11 +15,9 @@ ns.RegisterPoints(630, { -- Azsuna
     [49415800] = {quest=38370, loot={141882}, label=ns.CHEST},
     [49653448] = {quest=37831, label=ns.CHEST_SM},
     [50215029] = {quest=42290, label=ns.CHEST_SM},
-    [51502430] = {quest=42289, label=ns.CHEST, note="Leyhollow cave entrance @ 47.8, 23.7"},
-    [47802370] = ns.path{quest=42289},
+    [51502430] = {quest=42289, label=ns.CHEST, note="Leyhollow cave entrance @ 47.8, 23.7", path=47802370},
     [52004210] = {quest=42281, label=ns.CHEST_SM},
-    [52842059] = {quest=42339, label=ns.CHEST, note="Cave entrance @ 53.9, 22.4; don't wake up the bears"},
-    [53902240] = ns.path{quest=42339},
+    [52842059] = {quest=42339, label=ns.CHEST, note="Cave entrance @ 53.9, 22.4; don't wake up the bears", path=53902240},
     [53033726] = {quest=37596, label=ns.CHEST_SM},
     [53176444] = {quest=37829, label=ns.CHEST},
     [53504545] = {quest=42283, label=ns.CHEST_SM},
@@ -34,19 +32,16 @@ ns.RegisterPoints(630, { -- Azsuna
     [55621855] = {quest=40711, label=ns.CHEST, note="Ley Portal inside tower"},
     [55905690] = {quest=38365, label="Disputed Treasure"},
     [56443481] = {quest=38251, loot={132950}, label=ns.CHEST},
-    [56892499] = {quest=42338, label=ns.CHEST_SM, note="Cave entrance @ 55.7, 25.4"},
-    [55702540] = ns.path{quest=42338},
+    [56892499] = {quest=42338, label=ns.CHEST_SM, note="Cave entrance @ 55.7, 25.4", path=55702540},
     [57153106] = {quest=38419, label=ns.CHEST},
     [57901220] = {quest=37958, label=ns.CHEST},
     [58364378] = {quest=37830, label=ns.CHEST_GLIM},
-    [58381229] = {quest=37980, label=ns.CHEST, note="Ley Portal @ 58.7, 14.1"},
-    [58701410] = ns.path{quest=37980, label="Ley Portal", atlas="MagePortalAlliance"},
+    [58381229] = {quest=37980, label=ns.CHEST, note="Ley Portal @ 58.7, 14.1", path={58701410, label="Ley Portal", atlas="MagePortalAlliance"}},
     [58645340] = {quest=40752, label=ns.CHEST_SM},
     [59876316] = {quest=42272, label=ns.CHEST_SM},
     [62405840] = {quest=42273, label=ns.CHEST_SM},
     [62814479] = {quest=42294, label=ns.CHEST_SM},
-    [63005420] = {quest=42278, label=ns.CHEST_SM, note="Cave entrance @ 64.0, 52.9"},
-    [64005290] = ns.path{quest=42278},
+    [63005420] = {quest=42278, label=ns.CHEST_SM, note="Cave entrance @ 64.0, 52.9", path=64005290},
     [63231521] = {quest=37832, label=ns.CHEST},
     [63653919] = {quest=42293, label=ns.CHEST_SM},
     [65066978] = {quest=38239, loot={129070}, label="Seemingly Unguarded Treasure", note="Seemingly..."},
@@ -87,15 +82,14 @@ ns.RegisterPoints(630, { -- Azsuna
     [53404400] = {quest=37821, npc=89846, criteria=33250, loot={129066}}, -- Captain Volo'ren
     [55104590] = {quest=42450, npc=107127, criteria=33270, loot={129086}}, -- Brawlgoth
     [56102905] = {quest=38061, npc=90901, criteria=33265, loot={138395}}, -- Pridelord Meowl
-    [59304630] = {quest=38212, npc=91100, criteria=33403, loot={129068}, note="Top of the mountain"}, -- Brogozog
+    [59304630] = {quest=38212, npc=91100, criteria=32403, loot={129068}, note="Top of the mountain"}, -- Brogozog
     [59601230] = {quest=37932, npc=90244, criteria=33262, loot={129085}, note="Unbound rift"}, -- Arcavellus
     [59705520] = {quest=37822, npc=89850, criteria=33251, loot={129065,136833}}, -- The Oracle
     [61306200] = {quest=38217, npc=91113, criteria=33267, loot={129062}}, -- Tide Behemoth
     [65164000] = {quest=37820, npc=89816, criteria=33249, loot={129091}, note="Horn of the Siren"}, -- Golza the Iron Fin
     [65555680] = {quest=42221, npc=106990, criteria=33269, loot={129073}}, -- Chief Bitterbrine
     [67105140] = {quest=37989, npc=90505, criteria=33263, loot={129064}}, -- Syphonus
-    [50465211] = {quest=44081, npc=112636, criteria=33272, loot={140685}, note="Ley Portal @ 60.3, 46.3; kill the stallions"},
-    [60304630] = ns.path{quest=44081, criteria=33272, label="Ley Portal", atlas="MagePortalAlliance"},
+    [50465211] = {quest=44081, npc=112636, criteria=33272, loot={140685}, note="Ley Portal @ 60.3, 46.3; kill the stallions", path={60304630, label="Ley Portal", atlas="MagePortalAlliance"}},
 }, {achievement=11261})
 
 ns.RegisterPoints(630, { -- Azsuna
