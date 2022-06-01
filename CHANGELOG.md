@@ -1,5 +1,14 @@
 # Changelog
 
+## Changes in v26
+* Updated for 9.2.5, fixing errors about C_TransmogCollection
+* Bring in updates to the handler code from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
+    * Better labels for tooltip loot, showing item types
+    * Option for loot only for your current character
+    * Show more information about loading-items in tooltips if possible
+    * Register the overlay in Krowi_WorldMapButtons-1.3 if it's present
+    * Include Taintless
+
 ## Changes in v25
 * Fixed a few Argus points, made them show on the minimap
 * Bring in updates to the handler code from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
