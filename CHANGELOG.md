@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in v27
+
+* Some cosmetic items were incorrectly saying they wouldn't drop for anyone
+
 ## Changes in v26
 * Updated for 9.2.5, fixing errors about C_TransmogCollection
 * Bring in updates to the handler code from [HandyNotes: Shadowlands Treasures](https://www.curseforge.com/wow/addons/handynotes-shadowlands-treasures):
