@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in v28
+
+* Updated for 9.2.7
+
 ## Changes in v27
 
 * Some cosmetic items were incorrectly saying they wouldn't drop for anyone
