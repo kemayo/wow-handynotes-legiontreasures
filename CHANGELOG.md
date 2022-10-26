@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in v30
+
+* Updated for 10.0.0
+
 ## Changes in v29
 
 * Use LibUIDropDownMenu-4.0 to avoid the taint mess of UIDropDownMenu
