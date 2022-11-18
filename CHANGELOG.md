@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in v31
+
+* Updated for 10.0.2
+
 ## Changes in v30.1
 
 * Fix an error with GetPlayerAuraBySpellID
