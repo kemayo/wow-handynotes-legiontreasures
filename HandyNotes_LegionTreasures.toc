@@ -1,5 +1,5 @@
 ## Interface: 100002
-## Title: HandyNotes_LegionTreasures
+## Title: HandyNotes: Legion Treasures
 ## Notes: Where are the hidden treasures in Legion?
 ## Author: Kemayo
 ## Version: @project-version@
