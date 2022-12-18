@@ -33,4 +33,6 @@ zones\AntoranWastes.lua
 zones\Krokuun.lua
 zones\Eredath.lua
 
+achievements\AnomalousAnimals.lua
+
 zones\Mardum.lua
