@@ -31,6 +31,6 @@ zones\BrokenShore.lua
 
 zones\AntoranWastes.lua
 zones\Krokuun.lua
-zones\MacAree.lua
+zones\Eredath.lua
 
 zones\Mardum.lua

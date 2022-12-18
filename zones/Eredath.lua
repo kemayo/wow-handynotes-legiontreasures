@@ -2,7 +2,7 @@ local myname, ns = ...
 
 ns.map_spellids[882] = true
 
-ns.RegisterPoints(882, { -- MacAree
+ns.RegisterPoints(882, { -- Eredath
     [27284015] = {quest=48750, criteria=37601, note="You will need a Glider", path=31924519}, -- Shattered House Chest
     [39605060] = { -- Void-Tinged Chest
         quest=48747, -- 48746 for breaking the rubble
@@ -29,7 +29,7 @@ ns.RegisterPoints(882, { -- MacAree
 })
 
 -- Junk:
-ns.RegisterPoints(882, { -- MacAree
+ns.RegisterPoints(882, { -- Eredath
     [53228020] = {quest=48346, label="Legion War Supplies"},
     [54825759] = {quest=48346, label="Ancient Eredar Cache"},
     [54806700] = {quest=48346, label="Ancient Eredar Cache"},
@@ -71,7 +71,7 @@ ns.RegisterPoints(882, { -- MacAree
 
 -- Rares
 
-ns.RegisterPoints(882, { -- MacAree
+ns.RegisterPoints(882, { -- Eredath
     [27202980] = {quest=48707, npc=126869, criteria=37631}, -- Captain Faruq
     [30304040] = {quest=48709, npc=127323, criteria=37629, loot={{153056, pet=2120}}}, -- Ataxon
     [33704750] = {quest=48705, npc=126867, criteria=37633, loot={{152844, mount=973}}}, -- Venomtail Skyfin
