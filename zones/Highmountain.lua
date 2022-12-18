@@ -98,8 +98,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [51054825] = {quest=39802, npc=97326, criteria=33325, loot={129190}}, -- Hartli the Snatcher
     [51453190] = {quest=39465, npc=95872, criteria=33318, loot={131769}}, -- Skullhat (Skywhisker Taskmaster)
     [53755125] = {quest=39872, npc=97653, criteria=33330, loot={131800}, note="Loot chest afterwards"}, -- Taurson (Beastly Boxer)
-    [54404110] = {quest=40414, npc=100495, criteria=33337, loot={131780}, note="Cave entrance @ 55.1, 44.3. Blow out candles."}, -- Devouring Darkness
-    [55104430] = ns.path{quest=40414, criteria=33337},
+    [54404110] = {quest=40414, npc=100495, criteria=33337, loot={131780}, path=55114431, note="Blow out candles."}, -- Devouring Darkness
     [54504060] = {quest=39866, npc=97593, criteria=33329, loot={131792}, note="Top of mountain"}, -- Mynta Talonscreech (Scout Harefoot)
     [56406050] = {quest=40347, npc=96590, criteria=33320, loot={131775}, note="Wanders a bit"}, -- Gurbog da Basher
     [52405850] = {quest=40423, npc=109498, criteria=33340, loot={131767}, note="Use the Seemingly Unguarded Treasure to summon the Unethical Adventurers"}, -- Unethical Adventurers

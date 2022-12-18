@@ -62,7 +62,7 @@ ns.RegisterPoints(885, { -- Antoran Wastes
     [69785509] = {quest=48391},
     [63075799] = {quest=48391, note="In the cave"},
 
-    [52102720] = {quest=49019},
+    [52102721] = {quest=49019},
     [65204060] = {quest=49018, note="Requires Light's Judgement to be equipped in the Vindicaar Matrix. Blow the pile of ruble with the ability"},
 }, {
     label="Legion War Supplies",
