@@ -1,6 +1,8 @@
 ## Interface: 100002
 ## Title: HandyNotes: Legion Treasures
+## Title-ruRU: HandyNotes: Сокровища Легиона
 ## Notes: Where are the hidden treasures in Legion?
+## Notes-ruRU: Показывает на карте, где спрятаны сокровища Легиона
 ## Author: Kemayo
 ## Version: @project-version@
 ## DefaultState: enabled
