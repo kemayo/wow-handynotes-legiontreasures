@@ -29,6 +29,7 @@ zones\Valsharah.lua
 zones\Suramar.lua
 zones\BrokenShore.lua
 
+zones\Argus.lua
 zones\AntoranWastes.lua
 zones\Krokuun.lua
 zones\Eredath.lua
