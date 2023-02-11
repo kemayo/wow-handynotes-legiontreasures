@@ -10,7 +10,7 @@ local pebble = {
     atlas="islands-azeritechest",scale=1.2,
 }
 ns.RegisterPoints(627, { -- Dalaran
-    [28466450] = {quest=41929, loot={7676}, label="Desmond's Lockbox", note="Locked"},
+    [28466450] = {quest=41929, loot={7676}, label="Desmond's Lockbox", note="Locked", requires=ns.conditions.Class("ROGUE")},
     [47404120] = {quest=45365, loot={{143534, toy=true}}, note="On the table on the second floor of the Legerdemain Lounge", level=10},
     -- Dog pebble, questid is for showing Dog the pebble, not looting it
     [38102920] = pebble,
