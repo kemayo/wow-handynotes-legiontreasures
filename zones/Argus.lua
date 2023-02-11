@@ -2,7 +2,7 @@ local myname, ns = ...
 
 ns.RegisterVignettes(905, { -- Argus
     [2284] = { -- Matron Folnuna
-        areaPoi=5375,
+        areaPoi=5381,
         quest=nil,
         npc=124514,
         loot={
