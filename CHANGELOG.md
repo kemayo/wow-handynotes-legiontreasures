@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v33
+
+* Update for 10.0.5
+* Add the Argus world bosses
+* Desmond's Lockbox in Dalaran should be restricted to Rogues
+* Prevent errors from incompletely-updated tooltip addons
+
 ## Changes in v32
 
 * Add the locations for the Anomalous Animals of Argus achievement
