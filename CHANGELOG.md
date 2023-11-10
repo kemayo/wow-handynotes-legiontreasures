@@ -1,5 +1,14 @@
 # Changelog
 
+## Changes in v34
+
+* Update for 10.2.0
+* Fix Matron Foluna's areaPOI
+* Bring in updates to the handler code from [HandyNotes: Dragonflight Treasures](https://www.curseforge.com/wow/addons/handynotes-dragonflight-treasures):
+    * Avoid some possible tooltip errors with other addons
+    * Minimap routes should respect display settings
+    * New config "only show notable NPCs": enable and rares will only be shown if they've got something for you (achievements or transmogs)
+
 ## Changes in v33
 
 * Update for 10.0.5
