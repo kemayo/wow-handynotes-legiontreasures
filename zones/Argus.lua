@@ -1,9 +1,15 @@
 local myname, ns = ...
 
+--[[
+invasion point: Val, poi 5360, quest 49210
+invasion point: Sangua, poi 5369, quest 49212
+--]]
+
 ns.RegisterVignettes(905, { -- Argus
     [2284] = { -- Matron Folnuna
         areaPoi=5381,
         quest=nil,
+        criteria=37452,
         npc=124514,
         loot={
             152053, -- Essence of the Burgeoning Brood
@@ -25,6 +31,7 @@ ns.RegisterVignettes(905, { -- Argus
     [2287] = { -- Mistress Alluradel
         areaPoi=5375,
         quest=nil,
+        criteria=37454,
         npc=124625,
         loot={
             152030, -- Scourge of Perverse Desire
@@ -46,6 +53,7 @@ ns.RegisterVignettes(905, { -- Argus
     [2286] = { -- Inquisitor Meto
         areaPoi=5379,
         quest=nil,
+        criteria=37453,
         npc=124592,
         loot={
             152290, -- Censer of Dark Intent
@@ -67,6 +75,7 @@ ns.RegisterVignettes(905, { -- Argus
     [2283] = { -- Occularus
         areaPoi=5376,
         quest=nil,
+        criteria=37450,
         npc=124492,
         loot={
             152347, -- Occularus' Unblemished Lens
@@ -86,6 +95,7 @@ ns.RegisterVignettes(905, { -- Argus
     [2285] = { -- Sotanathor
         areaPoi=5380,
         quest=nil,
+        criteria=37451,
         npc=124555,
         loot={
             152292, -- Spike of Immortal Command
@@ -106,7 +116,8 @@ ns.RegisterVignettes(905, { -- Argus
     },
     [2288] = { -- Pit Lord Vilemus
         areaPoi=5377,
-        quest=nil,
+        quest=49168,
+        criteria=37455,
         npc=124719,
         loot={
             152345, -- Vilemus' Bile
@@ -124,4 +135,6 @@ ns.RegisterVignettes(905, { -- Argus
             152378, -- Breastplate of Terminal End
         },
     },
+}, {
+    achievement=12026, -- Invasion Obliteration
 })
