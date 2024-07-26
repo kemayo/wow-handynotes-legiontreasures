@@ -1,5 +1,10 @@
 # Changelog
 
+## Changes in v35
+
+* Update for 11.0.0
+* Minor data improvements on Argus
+
 ## Changes in v34
 
 * Update for 10.2.0
