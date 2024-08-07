@@ -19,3 +19,4 @@ ns.defaultsOverride = {
 
 ns.groups["junk"] = "Junk"
 ns.groups["hippogryph"] = "{spell:215159:Long Forgotten Hippogryph}"
+ns.groups["withered"] = "{questname:43943:Withered Army Training}"

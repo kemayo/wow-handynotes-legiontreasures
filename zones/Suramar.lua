@@ -194,3 +194,25 @@ ns.RegisterPoints(684, { -- Fal'adore
 ns.RegisterPoints(682, { -- The Fel Breach
     [53403680] = Portal(41575, "{area:7844:Felsoul Hold}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Felsoul Hold
 })
+
+-- Withered Army Training
+
+ns.RegisterPoints(692, { -- upper level
+    [29804260]={ quest=43149, loot={139010}, label="Treasure Chest", note="+25% HP. Requires 5 withered.", },
+    [30007000]={ quest=43146, loot={140451}, label="Glimmering Treasure Chest", note="Withered Mana-Rager. Requires 10 withered.", },
+    [38805350]={ quest=43140, loot={140778}, label="Treasure Chest", note="Bank in Shal'aran. Under stairs. Requires 5 withered.", },
+    [40801350]={ quest=43071, loot={139011}, label="Glimmering Treasure Chest", note="Withered Berserker. Requires 10 withered.", },
+    [75902840]={ quest=43120, loot={139018}, label="Treasure Chest", note="Withered more efficiently focus their attacks. Requires 5 withered.", },
+}, {group="withered"})
+ns.RegisterPoints(693, { -- lower level
+    [32506440]={ quest=43145, loot={140450}, label="Glimmering Treasure Chest", note="Withered Berserker. Requires 10 withered.", },
+    [36603240]={ quest=43135, loot={139028}, label="Glimmering Treasure Chest", note="Withered Starcaller. Requires 10 withered.", },
+    [44205350]={ quest=43134, loot={139027}, label="Glimmering Treasure Chest", note="Withered Spellseer. Requires 10 withered.", },
+    [45704610]={ quest=43143, loot={141313}, label="Treasure Chest", note="Artifact power. Requires 5 withered.", },
+    [48707980]={ quest=43141, loot={136914}, label="Treasure Chest", note="Pet. Requires 5 withered.", },
+    [51802930]={ quest=43111, loot={139017}, label="Treasure Chest", note="Reduces fear rate. Requires 5 withered.", },
+    [60507310]={ quest=43148, loot={140448}, label="Treasure Chest", note="+25% damage. Requires 5 withered.", },
+    [62206200]={ quest=43128, loot={139019}, label="Glimmering Treasure Chest", note="Withered Mana-Rager. Requires 10 withered.", },
+    [62409010]={ quest=43142, loot={141314}, label="Treasure Chest", note="Artifact power. Requires 5 withered.", },
+    [67305140]={ quest=43144, loot={141296}, label="Treasure Chest", note="Toy. Requires 5 withered.", },
+}, {group="withered"})
