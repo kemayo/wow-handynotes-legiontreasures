@@ -122,3 +122,37 @@ ns.RegisterPoints(680, { -- Suramar
     [29405330] = {quest=44676, npc=113368, criteria=333, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070}, -- Llorian
     [87856250] = {quest=41786, npc=103827, criteria=333, loot={140384}}, -- King Morgalash
 })
+
+-- Leylines!
+
+local LEYLINES = {
+    achievement=10756,
+    atlas="worldquest-questmarker-abilityhighlight",
+    hide_before=ns.conditions.QuestComplete(41138), -- Feeding Shal'Aran
+}
+ns.RegisterPoints(680, { -- Suramar
+    [41703890] = {criteria=31056, quest=41028}, -- Anora Hollow (the prerequisite!)
+    [29008480] = {criteria=31918, quest=43594}, -- Soul Vaults (Halls of the Eclipse)
+    [59304280] = {criteria=31914, quest=43588}, -- Kel'balor
+    [65804190] = {criteria=31913, quest=43587}, -- Elor'shan
+    [20405040] = {criteria=31917, quest=43593}, -- Falanaar South
+    [21404330] = {criteria=31916, quest=43592}, -- Falanaar North
+    [24301940] = {criteria=31919, quest=43591}, -- Moon Guard
+    [35702410] = {criteria=31915, quest=43590}, -- Moonwhisper Gulch
+}, LEYLINES)
+ns.RegisterPoints(685, { -- Falanaar Tunnels
+    [65105210] = {criteria=31916, quest=43592}, -- Falanaar North
+    [58107520] = {criteria=31917, quest=43593}, -- Falanaar South
+}, LEYLINES)
+ns.RegisterPoints(686, { -- Elor'shan
+    [46704720] = {criteria=31913, quest=43587},
+}, LEYLINES)
+ns.RegisterPoints(687, { -- Kel'balor
+    [52304490] = {criteria=31914, quest=43588},
+}, LEYLINES)
+ns.RegisterPoints(689, { -- Ley Station Moonfall, Moonwhisper Gulch
+    [54004470] = {criteria=31915, quest=43590},
+}, LEYLINES)
+ns.RegisterPoints(690, { -- Ley Station Aethenar, Moon Guard
+    [48704870] = {criteria=31919, quest=43591},
+}, LEYLINES)
