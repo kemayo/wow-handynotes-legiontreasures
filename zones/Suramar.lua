@@ -156,3 +156,41 @@ ns.RegisterPoints(689, { -- Ley Station Moonfall, Moonwhisper Gulch
 ns.RegisterPoints(690, { -- Ley Station Aethenar, Moon Guard
     [48704870] = {criteria=31919, quest=43591},
 }, LEYLINES)
+
+-- Telemancy!
+
+local Portal = ns.Class{
+    Initialize=function(self, questid, label, data)
+        self._questid = questid
+        self.label = label
+        MergeTable(self, data)
+    end,
+    group="{achievementname:11125:Now You're Thinking With Portals}",
+    __get={
+        atlas=function(self)
+            return C_QuestLog.IsQuestFlaggedCompleted(self._questid) and "MagePortalAlliance" or "MagePortalHorde"
+        end,
+    },
+}
+
+ns.RegisterPoints(680, { -- Suramar
+    -- These crop up at points in the storyline
+    [36204710] = Portal(40956, "{area:8173:Ruins of Elune'eth}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Ruins of Elune'eth, storyline: Survey Says...
+    [22903580] = Portal(42230, "{area:7843:Falanaar}", {hide_before=ns.conditions.QuestComplete(42228)}), -- Falanaar, storyline: Valewalker's Burden, hidden until Hidden City
+    [47508200] = Portal(42487, "{area:8382:Waning Crescent}", {require=ns.conditions.QuestIncomplete(43569), hide_before=ns.conditions.QuestComplete(42486), }), --Waning Crescent, storyline: Friends on the Outside, hidden until Little One Lost, hidden after Arluin's Request
+    [64006040] = Portal(44084, "{area:8149:Twilight Vineyards}", {hide_before=ns.conditions.QuestComplete(42838)}), -- Twilight Vineyards, storyline: Vengeance for Margaux, hidden until Reversal
+    [52007800] = Portal(42889, "{area:8487:Evermoon Terrace}", {hide_before=ns.conditions.QuestComplete(43569)}), -- Evermoon Terrace, storyline: The Way Back Home, hidden until 38694
+    [54496943] = Portal(44740, "{area:8395:Astravar Harbor}", {hide_before=ns.conditions.QuestComplete(44738)}), -- Astravar Harbor, storyline: Staging Point, hidden until Full Might of the Elves
+    -- These ones are general-access after Ruins is opened via Survey Says:
+    [30801090] = Portal(43808, "{area:7842:Moon Guard Stronghold}", {hide_before=ns.conditions.QuestComplete(40956), path={27802230, atlas="map-icon-SuramarDoor.tga"}}), -- Moon Guard Stronghold
+    [42203540] = Portal(43809, "{area:7841:Tel'anor}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Tel'anor
+    [43406070] = Portal(43813, "{area:8431:Sanctum of Order}", {hide_before=ns.conditions.QuestComplete(40956), path={42606170, atlas="map-icon-SuramarDoor.tga"}}), -- Sanctum of Order
+    [43607910] = Portal(43811, "{area:8021:Lunastre Estate}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Lunastre Estate
+    [35808210] = Portal(41575, "{area:7844:Felsoul Hold}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Felsoul Hold
+})
+ns.RegisterPoints(684, { -- Fal'adore
+    [40901350] = Portal(42230, "{area:7843:Falanaar}", {hide_before=ns.conditions.QuestComplete(42228)}), -- Falanaar
+})
+ns.RegisterPoints(682, { -- The Fel Breach
+    [53403680] = Portal(41575, "{area:7844:Felsoul Hold}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Felsoul Hold
+})
