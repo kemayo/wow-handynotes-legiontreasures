@@ -1,5 +1,15 @@
 # Changelog
 
+## Changes in v36
+
+Consolidate data from my other Legion-related HandyNotes plugins to here:
+* Higher Dimensional Learning
+* Kosumoth
+* Long Forgotten Hippogryph
+* Suramar Leylines
+* Suramar Telemancy
+* Withered Army Training
+
 ## Changes in v35
 
 * Update for 11.0.0
