@@ -92,7 +92,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [47803200] = {quest=39646, npc=96410, criteria=33319, loot={{131900, toy=true}}, note="Wanders a bit"}, -- Majestic Elderhorn
     [48404015] = {quest=39806, npc=97345, criteria=33326, loot={{131809, toy=true}}, note="1/4 of slow fall toy"}, -- Crawshuk the Hungry
     [48605000] = {quest=39784, npc=97215, criteria=33324, loot={131756}, note="Help him tame Arru, loot inside the cave afterwards"}, -- Beastmaster Pao'lek
-    [49202710] = {quest=40242, npc=96621, criteria=33321, loot={131808}}, -- Mellok, Son of Torok 
+    [49202710] = {quest=40242, npc=96621, criteria=33321, loot={131808}}, -- Mellok, Son of Torok
     [50803460] = {quest=40406, npc=98024, criteria=33332, loot={131776}, note="In cave"}, -- Luggut the Eggeater
     [51052570] = {quest=39762, npc=97093, criteria=33322, loot={131791}}, -- Shara Felbreath
     [51054825] = {quest=39802, npc=97326, criteria=33325, loot={129190}}, -- Hartli the Snatcher
