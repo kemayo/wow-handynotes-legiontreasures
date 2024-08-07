@@ -34,6 +34,9 @@ zones\AntoranWastes.lua
 zones\Krokuun.lua
 zones\Eredath.lua
 
+zones\Mardum.lua
+
 achievements\AnomalousAnimals.lua
 
-zones\Mardum.lua
+shared\Kosumoth.lua
+
