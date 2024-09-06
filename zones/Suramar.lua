@@ -159,19 +159,16 @@ ns.RegisterPoints(690, { -- Ley Station Aethenar, Moon Guard
 
 -- Telemancy!
 
-local Portal = ns.Class{
-    Initialize=function(self, questid, label, data)
-        self._questid = questid
-        self.label = label
-        MergeTable(self, data)
-    end,
+local Portal = function(questid, label, data) return ns.Getterize(ns.merge({
+    _questid = questid,
+    label = label,
     group="{achievementname:11125:Now You're Thinking With Portals}",
     __get={
         atlas=function(self)
             return C_QuestLog.IsQuestFlaggedCompleted(self._questid) and "MagePortalAlliance" or "MagePortalHorde"
         end,
     },
-}
+}, data)) end
 
 ns.RegisterPoints(680, { -- Suramar
     -- These crop up at points in the storyline
