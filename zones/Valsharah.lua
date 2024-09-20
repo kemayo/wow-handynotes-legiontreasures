@@ -68,7 +68,7 @@ ns.RegisterPoints(641, { -- Val'sharah
     [47205800] = {quest=39357, npc=95221, criteria=33285, loot={{130214, toy=true}}}, -- Mad Henryk (Old Bear Trap)
     [48904690] = {quest=44070, npc=93679, criteria=32406, loot={132359}}, -- Gathenak (Marius and Tehd vs a Satyr)
     [52808750] = {quest=38889, npc=93686, criteria=332, loot={{128690, pet=1706}}, note="Shivering Ashmaw Cub"}, -- Jinikki the Puncturer
-    [55557762] = {quest=38466, loot={130147,toy=true}, note="Unguarded..."}, -- Unguarded Thistleleaf Treasure npc:92104
+    [55557762] = {quest=38466, loot={{130147,toy=true}}, note="Unguarded..."}, -- Unguarded Thistleleaf Treasure npc:92104
     [58753400] = {quest=40080, npc=93030, criteria=33277, loot={130126}}, -- Ironbranch
     [59757745] = {quest=38468, npc=92117, criteria=33273, loot={{130154, pet=1907}}, note="Talk to Lorel Sagefeather"}, -- Gorebeak
     [60304425] = {quest=39858, npc=97517, criteria=33288, loot={130125}}, -- Dreadbog
