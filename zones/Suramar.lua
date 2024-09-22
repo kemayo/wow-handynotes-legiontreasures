@@ -100,7 +100,7 @@ ns.RegisterPoints(680, { -- Suramar
     [40953280] = {quest=43358, npc=110340, criteria=33355, loot={121739}}, -- Myonix
     [42058005] = {quest=43348, npc=109954, criteria=33353, loot={140405}}, -- Magister Phaedris
     [42155640] = {quest=43580, npc=110870, criteria=33362, loot={121754}}, -- Apothecary Faldren
-    [48055635] = {quest=40905, npc=102303, criteria=33372, loot={121735}}, -- Lieutenant Strathmar
+    [48055635] = {quest=40905, npc=102303, criteria=33376, loot={121735}}, -- Lieutenant Strathmar
     [49607900] = {quest=43603, npc=111007, criteria=33364, loot={140396}}, -- Randril
     [53203020] = {quest=40897, npc=99610, criteria=33341, loot={121755}}, -- Garvrulg
     [54455610] = {quest=43792, npc=111651, criteria=33368, loot={121808}}, -- Degren
