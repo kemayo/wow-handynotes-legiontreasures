@@ -12,7 +12,7 @@ ns.RegisterPoints(680, { -- Suramar
     [17275462] = {quest=43844, label=ns.CHEST},
     [19791604] = {quest=43845, label=ns.CHEST_SM, note="Cave entrance @ 19.4, 19.4", path=19401940},
     [20605040] = ns.path{quest={43839, 43840, 43747}, label="Falanaar Tunnels"},
-    [21425446] = {quest=42842, loot={136269}, label="Kel'danath's Manaflask"},
+    [21425446] = {quest=42842, loot={136269}, atlas="VignetteLootElite"}, -- Kel'danath's Manaflask
     [22863574] = ns.path{quest={43838, 43988}, label="Temple of Fal'adora"},
     [23414880] = {quest=43842, label=ns.CHEST_SM},
     [25958548] = {quest=43831, label=ns.CHEST_SM,  path=29018481},
@@ -68,12 +68,12 @@ ns.RegisterPoints(682, { -- Felsoul Hold, Suramar ("SuramarLegionScar")
     [54573780] = {quest=43835, label=ns.CHEST_SM},
 }, {achievement=11260})
 ns.RegisterPoints(684, { -- Temple of Fal'adora, Suramar
-    [35525280] = {quest=43988, loot={140328}, label="Volatile Leyline Crystal", note="Downstairs"},
+    [35525280] = {quest=43988, loot={140328}, label="Volatile Leyline Crystal", note="Downstairs", atlas="VignetteLootElite"},
     [38605414] = {quest=43838, label=ns.CHEST_SM, note="Downstairs"},
 }, {achievement=11260})
 ns.RegisterPoints(685, { -- Falanaar Tunnels, Suramar
     [58307020] = {quest=43840, label=ns.CHEST}, -- also triggered 43839
-    [35513253] = {quest=43747, loot={141655}, label="Shimmering Ancient Mana Cluster"},
+    [35433240] = {quest=43747, loot={141655}, label="Shimmering Ancient Mana Cluster", vignette=1556},
     [48644258] = {quest=43839, label=ns.CHEST_SM, note="Climb spiderweb"}, -- TODO: verify location
 }, {achievement=11260})
 ns.RegisterPoints(686, { -- Elor'shan
@@ -84,28 +84,28 @@ ns.RegisterPoints(686, { -- Elor'shan
 
 -- Adventurer
 ns.RegisterPoints(680, { -- Suramar
-    [13555345] = {quest=44124, npc=112802, criteria=33371, loot={140949}}, -- Mar'tura
+    [13515344] = {quest=44124, npc=112802, criteria=33371, loot={140949}, vignette=1642}, -- Mar'tura
     [16552655] = {quest=43996, npc=103841, criteria=33348, loot={140401}}, -- Shadowquill
-    [18606105] = {quest=43542, npc=110824, criteria=33360, loot={140399}}, -- Tideclaw
-    [22155180] = {quest=41319, npc=99792, criteria=33342, loot={121806}}, -- Elfbane
-    [24052540] = {quest=43484, npc=105547, criteria=33349, loot={121759}}, -- Rauren
-    [24403515] = {quest=44071, npc=112497, criteria=33370, loot={139897}}, -- Maia the White Wolf
-    [24554740] = {quest=43449, npc=110577, criteria=33357, loot={140388}}, -- Oreth the Vile
-    [26104075] = {quest=42831, npc=109054, criteria=33352, loot={139926}}, -- Shal'an
+    [18686106] = {quest=43542, npc=110824, criteria=33360, loot={140399}, vignette=1510}, -- Tideclaw
+    [22165179] = {quest=41319, npc=99792, criteria=33342, loot={121806}, vignette=1263}, -- Elfbane
+    [23982553] = {quest=43484, npc=105547, criteria=33349, loot={121759}, vignette=1508}, -- Rauren
+    [24413517] = {quest=44071, npc=112497, criteria=33370, loot={139897}, vignette=1617}, -- Maia the White
+    [24494727] = {quest=43449, npc=110577, criteria=33357, loot={140388}, vignette=1505}, -- Oreth the Vile
+    [26254120] = {quest=42831, npc=109054, criteria=33352, loot={139926}, vignette=1442}, -- Shal'an
     [27756545] = {quest=43992, npc=110832, criteria=33361, loot={121747}, note="Portal Key"}, -- Gorgroth
-    [33705125] = {quest=43954, npc=111197, criteria=33365, loot={{140934, pet=1934}}}, -- Anax
+    [33665177] = {quest=43954, npc=111197, criteria=33365, loot={{140934, pet=1934}}, vignette=1541}, -- Anax
     [33801510] = {quest=43717, npc=106351, criteria=33350, loot={140372}}, -- Artificer Lothaire
-    [34156100] = {quest=43351, npc=110024, criteria=33354, loot={140386}}, -- Mal'Dreth the Corruptor
-    [36203380] = {quest=43718, npc=111329, criteria=33366, loot={140390}}, -- Matron Hagatha
-    [38052280] = {quest=43369, npc=110438, criteria=33356, loot={140406}}, -- Siegemaster Aedrin
-    [40953280] = {quest=43358, npc=110340, criteria=33355, loot={121739}}, -- Myonix
-    [42058005] = {quest=43348, npc=109954, criteria=33353, loot={140405}}, -- Magister Phaedris
-    [42155640] = {quest=43580, npc=110870, criteria=33362, loot={121754}}, -- Apothecary Faldren
-    [48055635] = {quest=40905, npc=102303, criteria=33376, loot={121735}}, -- Lieutenant Strathmar
+    [34156099] = {quest=43351, npc=110024, criteria=33354, loot={140386}}, -- Mal'Dreth the Corruptor
+    [36183384] = {quest=43718, npc=111329, criteria=33366, loot={140390}, vignette=1548}, -- Matron Hagatha
+    [36972110] = {quest=43369, npc=110438, criteria=33356, loot={140406}, vignette=1500}, -- Siegemaster Aedrin
+    [40953280] = {quest=43358, npc=110340, criteria=33355, loot={ns.rewards.Recipe(133816, 201500), 121739}}, -- Myonix
+    [42068013] = {quest=43348, npc=109954, criteria=33353, loot={140405}}, -- Magister Phaedris
+    [42255658] = {quest=43580, npc=110870, criteria=33362, loot={121754}, vignette=1511}, -- Apothecary Faldren
+    [48535666] = {quest=40905, npc=102303, criteria=33376, loot={121735}, vignette=1684}, -- Lieutenant Strathmar
     [49607900] = {quest=43603, npc=111007, criteria=33364, loot={140396}}, -- Randril
     [53203020] = {quest=40897, npc=99610, criteria=33341, loot={121755}}, -- Garvrulg
-    [54455610] = {quest=43792, npc=111651, criteria=33368, loot={121808}}, -- Degren
-    [54806375] = {quest=43794, npc=111649, criteria=33367, loot={139918}}, -- Ambassador D'vwinn
+    [54425612] = {quest=43792, npc=111651, criteria=33368, loot={121808}, vignette=1558}, -- Degren (Noble Blademaster)
+    [54576371] = {quest=43794, npc=111649, criteria=33367, loot={139918}, vignette=1560}, -- Ambassador D'vwinn
     [61005300] = {quest=43597, npc=110944, criteria=33363, loot={140404}, note="Wanders a bit"}, -- Guardian Thor'el
     [61653960] = {quest=43993, npc=103223, criteria=33346, loot={121737}}, -- Hertha Grimdottir
     [62506370] = {quest=43793, npc=111653, criteria=33369, loot={121810}}, -- Miasu
@@ -119,9 +119,10 @@ ns.RegisterPoints(680, { -- Suramar
 }, {achievement=11265})
 
 ns.RegisterPoints(680, { -- Suramar
-    [35256725] = {quest=44675, npc=106526, criteria=333, loot={141866}}, -- Lady Rivantas
-    [29405330] = {quest=44676, npc=113368, criteria=333, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070}, -- Llorian
-    [87856250] = {quest=41786, npc=103827, criteria=333, loot={140384}}, -- King Morgalash
+    [35386700] = {quest=44675, npc=106526, loot={141866}, vignette=1691}, -- Lady Rivantas
+    [29455333] = {quest=44676, npc=113368, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070, vignette=1692}, -- Llorian
+    [87856250] = {quest=41786, npc=103827, loot={140384}}, -- King Morgalash
+    [37987039] = {quest=44569, npc=106532, loot={}, vignette=1685}, -- Inquisitor Volitix
 })
 
 -- Leylines!
