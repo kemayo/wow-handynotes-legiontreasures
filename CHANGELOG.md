@@ -1,5 +1,10 @@
 # Changelog
 
+## Changes in v39
+
+* A few minor Suramar data improvements
+* Don't error when drawing an impossibly short route segment on the minimap, as could happen with some grapple points
+
 ## Changes in v38
 
 * Bring in systems improvements from [my War Within plugin](https://www.curseforge.com/wow/addons/handynotes-war-within), notably:
