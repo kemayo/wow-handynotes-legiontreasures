@@ -5,6 +5,7 @@ ns.map_spellids[680] = 199416
 local grapple = ns.nodeMaker{
     label="Grapple start point",
     atlas="MiniMap-DeadArrow", scale=1.2,
+    worldmap=false,
 }
 ns.RegisterPoints(680, { -- Suramar
     [16602974] = {quest=43846, label=ns.CHEST_SM},
