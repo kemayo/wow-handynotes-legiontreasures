@@ -104,22 +104,6 @@ ns.RegisterPoints(633, { -- TempleofaThousandLights
     [62303090] = {quest=42699, npc=108255, loot={141877}}, -- Coura, Mistress of Arcana
 })
 
--- Higher Dimensional Learning
-
-ns.RegisterPoints(630, { -- Azsuna
-    [68115116] = { criteria=32196, hide_before=ns.conditions.DayOfWeek(0), }, -- ch 1, Sunday
-    [55257153] = { criteria=32197, hide_before=ns.conditions.DayOfWeek(1), note="On top of the tower, have fun with that", }, -- ch 2, Monday
-    [33371118] = { criteria=32198, hide_before=ns.conditions.DayOfWeek(2), }, -- ch 3, Tuesday
-    [58351229] = { criteria=32199, hide_before=ns.conditions.DayOfWeek(3), note="Portal @ 58.72, 14.17", }, -- ch 4, Wednesday
-    [53142199] = { criteria=32200, hide_before=ns.conditions.DayOfWeek(4), note="Path @ 52.00, 17.63", }, -- ch 5, Thursday
-    [61114626] = { criteria=32201, hide_before=ns.conditions.DayOfWeek(5), }, -- ch 6, Friday
-    [55674820] = { criteria=32202, hide_before=ns.conditions.DayOfWeek(6), note="On top of the tower, have fun with that", }, -- ch 7, Saturday
-}, {
-    achievement=11175,
-    atlas="minortalents-icon-book",
-    scale=1.2,
-})
-
 -- The Long Forgotten Hippogriff
 
 local EPHEMERAL = {

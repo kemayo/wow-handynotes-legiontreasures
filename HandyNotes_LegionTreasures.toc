@@ -39,4 +39,4 @@ zones\Mardum.lua
 achievements\AnomalousAnimals.lua
 
 shared\Kosumoth.lua
-
+shared\DimensionalRifting.lua
