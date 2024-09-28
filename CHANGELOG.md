@@ -1,5 +1,9 @@
 # Changelog
 
+## Changes in v40
+
+* Show where using the Adept's Guide to Dimensional Rifting will take you each day
+
 ## Changes in v39
 
 * A few minor Suramar data improvements
