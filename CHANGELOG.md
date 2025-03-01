@@ -1,5 +1,10 @@
 # Changelog
 
+## Changes in v41
+
+* Updated for 11.1.0
+* Bring in systems improvements from [my War Within plugin](https://www.curseforge.com/wow/addons/handynotes-war-within)
+
 ## Changes in v40
 
 * Show where using the Adept's Guide to Dimensional Rifting will take you each day
