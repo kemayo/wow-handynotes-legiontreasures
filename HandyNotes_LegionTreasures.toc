@@ -33,6 +33,7 @@ zones\Eredath.lua
 zones\Mardum.lua
 
 achievements\AnomalousAnimals.lua
+achievements\SpheresOfInfluence.lua
 
 shared\Kosumoth.lua
 shared\DimensionalRifting.lua
