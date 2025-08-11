@@ -27,7 +27,7 @@ local RIFT = {
 }
 
 ns.RegisterPoints(ns.ANTORANWASTES, {
-    [65314323] = { hide_before=ns.conditions.DayOfWeek(0), }, -- Sunday
+    [65314323] = { hide_before=ns.conditions.DayOfWeek(0), translate={[ns.BROKENISLES]=true} }, -- Sunday
 }, RIFT)
 ns.RegisterPoints(ns.VALSHARAH, {
     [59205382] = { hide_before=ns.conditions.DayOfWeek(1), }, -- Monday

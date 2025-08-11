@@ -1,5 +1,6 @@
 local myname, ns = ...
 
+ns.BROKENISLES = 619
 ns.DALARAN = 627
 ns.AZSUNA = 630
 ns.STORMHEIM = 634
