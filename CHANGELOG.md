@@ -1,5 +1,13 @@
 # Changelog
 
+## Changes in v44
+
+* Updated for 11.2.0
+* Dimensional Rifting: show the Antoran Wastes point on Broken Isles, and fix a bug that was stopping it showing on Argus
+* Dalaran: show Pepe spawn points
+* Antorus: show the orbs for Spheres of Influence
+* Bring in systems improvements from [my War Within plugin](https://www.curseforge.com/wow/addons/handynotes-war-within)
+
 ## Changes in v43
 
 * Updated for 11.1.7
