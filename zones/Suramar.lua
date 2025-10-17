@@ -12,18 +12,15 @@ ns.RegisterPoints(680, { -- Suramar
     [17275462] = {quest=43844, label=ns.CHEST},
     [19791604] = {quest=43845, label=ns.CHEST_SM, note="Cave entrance @ 19.4, 19.4", path=19401940},
     [20605040] = ns.path{quest={43839, 43840, 43747}, label="Falanaar Tunnels"},
-    [21425446] = {quest=42842, loot={136269}, atlas="VignetteLootElite"}, -- Kel'danath's Manaflask
     [22863574] = ns.path{quest={43838, 43988}, label="Temple of Fal'adora"},
     [23414880] = {quest=43842, label=ns.CHEST_SM},
     [25958548] = {quest=43831, label=ns.CHEST_SM,  path=29018481},
     [26354127] = {quest=42827, loot={139890}, label="Ancient Mana Chunk"},
     [26831696] = {quest=43847, label=ns.CHEST_SM},
-    [26877073] = {quest=43987, loot={140327}, label="Kyrtos's Research Notes", note="Cave entrance @ 27.3, 72.9", path=27307290},
     [29271622] = {quest=43848, label=ns.CHEST},
     [29768799] = {quest=43748, loot={141655}, label="Shimmering Ancient Mana Cluster", path=29008481, vignette=1557},
     [31956249] = {quest=43831, label=ns.CHEST_SM},
     [32317708] = {quest=43834, label=ns.CHEST_SM, note="Inside the Lightbreaker, after quests; portal @ 31.0, 85.1", path=31008510},
-    [35561209] = {quest=43989, loot={140329}, label="Arcane Power Unit"},
     [38138712] = {quest=43830, label=ns.CHEST_SM},
     [41961919] = {quest=43746, loot={139786}, label="Shimmering Ancient Mana Cluster"},
     [42051968] = {quest=43849, loot={139786}, label=ns.CHEST_GLIM},
@@ -31,8 +28,7 @@ ns.RegisterPoints(680, { -- Suramar
     [44053194] = {quest=43856, loot={139786}, label=ns.CHEST_GLIM, note="Cave entrance behind waterfall @ 42.2, 30.0", path=42203000},
     [44302289] = {quest=43850, label=ns.CHEST},
     [44387587] = {quest=43869, label=ns.CHEST_SM},
-    [44803100] = {quest=43986, loot={140326}, label="Enchanted Burial Urn", note="Doesn't stand out much; by the bench, upper level"},
-    [46552599] = {quest=43744, loot={141655}, label="Shimmering Ancient Mana Cluster"},
+    [46552599] = {quest=43744, loot={141655}, label="Shimmering Ancient Mana Cluster", vignette=1554},
     [48117321] = {quest=43865, label=ns.CHEST_SM, note="Grapple to it"},
     [48143399] = {quest=43853, label=ns.CHEST_SM},
     [48288261] = {quest=43866, label=ns.CHEST_SM, note="Grapple from 48.4, 82.2", path=grapple{48408220}},
@@ -68,7 +64,6 @@ ns.RegisterPoints(682, { -- Felsoul Hold, Suramar ("SuramarLegionScar")
     [54573780] = {quest=43835, label=ns.CHEST_SM},
 }, {achievement=11260})
 ns.RegisterPoints(684, { -- Temple of Fal'adora, Suramar
-    [35525280] = {quest=43988, loot={140328}, label="Volatile Leyline Crystal", note="Downstairs", atlas="VignetteLootElite"},
     [38605414] = {quest=43838, label=ns.CHEST_SM, note="Downstairs"},
 }, {achievement=11260})
 ns.RegisterPoints(685, { -- Falanaar Tunnels, Suramar
@@ -79,6 +74,22 @@ ns.RegisterPoints(685, { -- Falanaar Tunnels, Suramar
 ns.RegisterPoints(686, { -- Elor'shan
     [49301730] = {quest=43743, loot={141655}, label="Shimmering Ancient Mana Cluster"},
 }, {achievement=11260})
+
+-- Why Can't I Hold All This Mana?
+
+local MANA = {
+    achievement=11133,
+    atlas="VignetteLootElite", scale=1.2,
+}
+ns.RegisterPoints(680, { -- Suramar
+    [21425446] = {quest=42842, loot={{136269, quest=42842}},}, -- Kel'danath's Manaflask
+    [26877073] = {quest=43987, loot={{140327, quest=43987}}, note="Cave entrance @ 27.3, 72.9", path=27307290}, -- Kyrtos's Research Notes
+    [35561209] = {quest=43989, loot={{140329, quest=43989}}, label="Arcane Power Unit"}, -- Infinite Stone
+    [44803100] = {quest=43986, loot={{140326, quest=43986}}, note="Doesn't stand out much; by the bench, upper level"}, -- Enchanted Burial Urn
+}, MANA)
+ns.RegisterPoints(684, { -- Temple of Fal'adora, Suramar
+    [35525280] = {quest=43988, loot={{140328, quest=43988}}, label="Volatile Leyline Crystal", note="Downstairs",},
+}, MANA)
 
 -- Rares
 
