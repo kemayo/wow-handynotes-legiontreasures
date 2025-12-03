@@ -49,7 +49,7 @@ ns.RegisterPoints(680, { -- Suramar
     [60356851] = {quest=43876, loot={139786}, label=ns.CHEST_GLIM},
     [61365550] = {quest=43872, label=ns.CHEST},
     [63654911] = {quest=43857, label=ns.CHEST_SM},
-    [65814191] = {quest=43743, loot={141655}, label="Shimmering Ancient Mana Cluster", note="At the back of the leyline cave"},
+    [65814191] = {quest=43743, loot={141655}, label="Shimmering Ancient Mana Cluster", note="At the back of the leyline cave", vignette=1554},
     [67315511] = {quest=43858, label=ns.CHEST},
     [71464975] = {quest=43859, label=ns.CHEST_SM},
     [76886150] = {quest=43860, label=ns.CHEST_SM, note="Underwater, in a sunken ship"},
