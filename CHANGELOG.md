@@ -1,5 +1,10 @@
 # Changelog
 
+## Changes in v46
+
+* Updated for 11.2.7
+* Suramar: flag the Why Can't I Hold All This Mana? nodes much better
+
 ## Changes in v45
 
 * Updated for 11.2.5
