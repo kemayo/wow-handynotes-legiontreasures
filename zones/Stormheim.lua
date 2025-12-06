@@ -120,3 +120,6 @@ ns.RegisterPoints(634, { -- Stormheim
     [54802940] = {quest=42437, npc=107487, loot={130132}}, -- Starbuck
     [73906060] = {quest=43343, npc=94347, loot={130134}, faction="Alliance"}, -- Dread-Rider Cortis
 })
+ns.RegisterPoints(649, { -- Helheim
+    [27204220] = {quest=46949, npc=115732, path=33154312}, -- Jorvild the Trusted
+})
