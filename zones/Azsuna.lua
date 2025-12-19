@@ -141,7 +141,7 @@ ns.RegisterPoints(630, {
     [42200850] = {note="On the hillside"},
     [42661806] = {note="Inside Runa’s Hovel Cave, on rock between spine and skull"},
     [42206230] = {note="On the hill near the Cove Skrog"},
-    [43002800] = {note="Behind tree, next to Doomlord Kazrok"},
+    [43002889] = {note="Behind tree, next to Doomlord Kazrok"},
     [44105980] = {note="On the small hill next to the ship"},
     [45501720] = {note="Next to the lake, where the river begins"},
     [45424542] = {note="Next to a tree"},
