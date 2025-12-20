@@ -1,4 +1,4 @@
-## Interface: 110207
+## Interface: 120001, 120000, 110207
 ## Title: HandyNotes: Legion Treasures and Rares
 ## Notes: Where are the hidden treasures in Legion?
 ## Author: Kemayo
