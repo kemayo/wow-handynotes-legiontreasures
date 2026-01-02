@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v47
+
+* Ready for Midnight
+* Add loot for the world bosses
+* Helheim: add Jorvild the Trusted
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+
 ## Changes in v46
 
 * Updated for 11.2.7
