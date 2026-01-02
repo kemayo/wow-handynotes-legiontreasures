@@ -37,3 +37,4 @@ achievements\SpheresOfInfluence.lua
 
 shared\Kosumoth.lua
 shared\DimensionalRifting.lua
+shared\WorldBosses.lua

@@ -30,3 +30,4 @@ ns.groups["hippogryph"] = "{spell:215159:Long Forgotten Hippogryph}"
 ns.groups["withered"] = "{questname:43943:Withered Army Training}"
 ns.groups["kosumoth"] = "{npc:111573:Kosumoth}"
 ns.groups["riftportals"] = "{spell:223805:Advanced Dimensional Rifting}"
+ns.groups["worldboss"] = MAP_LEGEND_WORLDBOSS

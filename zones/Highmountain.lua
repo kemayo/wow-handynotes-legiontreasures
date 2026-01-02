@@ -2,6 +2,8 @@ local myname, ns = ...
 
 ns.map_spellids[650] = 188741
 
+-- skyhold unlock: 41359 @ thunder totem 750 39564199
+
 ns.RegisterPoints(650, { -- Highmountain
     [36616213] = {quest=40488, label=ns.CHEST},
     [37353381] = {quest=40477, label=ns.CHEST_SM},
