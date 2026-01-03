@@ -84,33 +84,34 @@ ns.RegisterPoints(657, { -- Path of Huln, floor 1, Highmountain
 -- Adventurer
 ns.RegisterPoints(650, { -- Highmountain
     [36751635] = {quest=40084, npc=98299, criteria=33375, loot={131799}}, -- Bodash the Hoarder
-    [37704570] = {quest=40405, npc=97449, criteria=33328, loot={131761}}, -- Bristlemaul
-    [41503185] = {quest=40175, npc=98890, criteria=33335, loot={131921}}, -- Slumber
-    [41954150] = {quest=39782, npc=97203, criteria=33323, loot={{129175, pet=1752}}, note="Abandoned Fishing Pole"}, -- Tenpak Flametotem
+    [38084557] = {quest=40405, npc=97449, criteria=33328, loot={131761}, vignette=1148}, -- Bristlemaul
+    [41483177] = {quest=40175, npc=98890, criteria=33335, loot={131921}, vignette=1106}, -- Slumber
+    [41964161] = {quest=39782, npc=97203, criteria=33323, loot={{129175, pet=1752}}, vignette=1001, note="The Exiled Shaman"}, -- Tenpak Flametotem
     [43384725] = {quest=40413, npc=100230, criteria=33336, loot={131781}, vignette=1150, note="Loot chest afterwards"}, -- Amateur hunters (100230, 100231, 100232)
     [44201210] = {quest=39994, npc=97933, criteria=33331, loot={131798}, note="Wanders a bit"}, -- Crab Rider Grmlrml
     [45705500] = {quest=40681, npc=101077, criteria=33338, loot={131730}}, -- Sekhan
     [46500745] = {quest=40096, npc=98311, criteria=33333, loot={131797}}, -- Mrrklr (captured survivor)
-    [47803200] = {quest=39646, npc=96410, criteria=33319, loot={{131900, toy=true}}, note="Wanders a bit"}, -- Majestic Elderhorn
-    [48404015] = {quest=39806, npc=97345, criteria=33326, loot={{131809, toy=true}}, note="1/4 of slow fall toy"}, -- Crawshuk the Hungry
+    [47803200] = {quest=39646, npc=96410, criteria=33319, loot={{131900, toy=true}}, vignette=995, note="Wanders a bit"}, -- Majestic Elderhorn
+    [48394019] = {quest=39806, npc=97345, criteria=33326, loot={{131809, toy=true}}, vignette=1006, note="1/4 of slow fall toy"}, -- Crawshuk the Hungry
     [48605000] = {quest=39784, npc=97215, criteria=33324, loot={131756}, note="Help him tame Arru, loot inside the cave afterwards"}, -- Beastmaster Pao'lek
     [49202710] = {quest=40242, npc=96621, criteria=33321, loot={131808}}, -- Mellok, Son of Torok
     [50803460] = {quest=40406, npc=98024, criteria=33332, loot={131776}, note="In cave"}, -- Luggut the Eggeater
     [51052570] = {quest=39762, npc=97093, criteria=33322, loot={131791}}, -- Shara Felbreath
-    [51054825] = {quest=39802, npc=97326, criteria=33325, loot={129190}}, -- Hartli the Snatcher
+    [51074823] = {quest=39802, npc=97326, criteria=33325, loot={129190}, vignette=1004}, -- Hartli the Snatcher
     [51453190] = {quest=39465, npc=95872, criteria=33318, loot={131769}}, -- Skullhat (Skywhisker Taskmaster)
-    [53755125] = {quest=39872, npc=97653, criteria=33330, loot={131800}, note="Loot chest afterwards"}, -- Taurson (Beastly Boxer)
+    [53715128] = {quest=39872, npc=97653, criteria=33330, loot={131800}, vignette=1043, note="Loot chest afterwards"}, -- Taurson (Beastly Boxer)
     [54404110] = {quest=40414, npc=100495, criteria=33337, loot={131780}, path=55114431, note="Blow out candles."}, -- Devouring Darkness
     [54504060] = {quest=39866, npc=97593, criteria=33329, loot={131792}, note="Top of mountain"}, -- Mynta Talonscreech (Scout Harefoot)
-    [56406050] = {quest=40347, npc=96590, criteria=33320, loot={131775}, note="Wanders a bit"}, -- Gurbog da Basher
+    [56786126] = {quest=40347, npc=96590, criteria=33320, loot={131775}, vignette=1126, note="Wanders a bit"}, -- Gurbog da Basher
     [52405850] = {quest=40423, npc=109498, criteria=33340, loot={131767}, note="Use the Seemingly Unguarded Treasure to summon the Unethical Adventurers"}, -- Unethical Adventurers
-    [52305141] = {quest=39766, criteria=33334, loot={131802}}, -- Totally Safe Treasure Chest
+    [52335138] = {quest=39766, criteria=33334, loot={131802}, vignette=1000}, -- Totally Safe Treasure Chest, Ram'pag
 }, {achievement=11264})
 
 ns.RegisterPoints(650, { -- Highmountain
-    [40955775] = {quest=39963, npc=97793, criteria=333, loot={131773}, note="Abandoned Fishing Pole", vignette=1047}, -- Flamescale (93195? bugged?)
-    [54447454] = {quest=40773, npc=101649, criteria=333}, -- Frostshard
-    [56357250] = {quest=39235, npc=94877, criteria=333, loot={138396}}, -- Brogrul the Mighty
+    [40955775] = {quest=39963, npc=97793, loot={131773}, note="Abandoned Fishing Pole", vignette=1047}, -- Flamescale (93195? bugged?)
+    [54447454] = {quest=40773, npc=101649,}, -- Frostshard
+    [56357250] = {quest=39235, npc=94877, loot={138396}}, -- Brogrul the Mighty
+    [56694870] = {quest=45513, npc=104513, vignette=1837}, -- Defilia
 })
 ns.RegisterPoints(658, { -- Path of Huln, floor 2, Highmountain
     [54508400] = {quest=48381, npc=125951, loot={141708}}, -- Obsidian Deathwarder
