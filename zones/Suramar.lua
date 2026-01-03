@@ -101,12 +101,12 @@ ns.RegisterPoints(680, { -- Suramar
     [22165179] = {quest=41319, npc=99792, criteria=33342, loot={121806}, vignette=1263}, -- Elfbane
     [23982553] = {quest=43484, npc=105547, criteria=33349, loot={121759}, vignette=1508}, -- Rauren
     [24413517] = {quest=44071, npc=112497, criteria=33370, loot={139897}, vignette=1617}, -- Maia the White
-    [24494727] = {quest=43449, npc=110577, criteria=33357, loot={140388}, vignette=1505}, -- Oreth the Vile
+    [24604744] = {quest=43449, npc=110577, criteria=33357, loot={140388}, vignette=1505}, -- Oreth the Vile
     [26254120] = {quest=42831, npc=109054, criteria=33352, loot={139926}, vignette=1442}, -- Shal'an
     [27756545] = {quest=43992, npc=110832, criteria=33361, loot={121747}, note="Portal Key"}, -- Gorgroth
     [33665177] = {quest=43954, npc=111197, criteria=33365, loot={{140934, pet=1934}}, vignette=1541}, -- Anax
-    [33801510] = {quest=43717, npc=106351, criteria=33350, loot={140372}}, -- Artificer Lothaire
-    [34156099] = {quest=43351, npc=110024, criteria=33354, loot={140386}}, -- Mal'Dreth the Corruptor
+    [33591495] = {quest=43717, npc=106351, criteria=33350, loot={140372}, vignette=1547}, -- Artificer Lothaire
+    [34156099] = {quest=43351, npc=110024, criteria=33354, loot={140386}, vignette=1498}, -- Mal'Dreth the Corruptor
     [36183384] = {quest=43718, npc=111329, criteria=33366, loot={140390}, vignette=1548}, -- Matron Hagatha
     [36972110] = {quest=43369, npc=110438, criteria=33356, loot={140406}, vignette=1500}, -- Siegemaster Aedrin
     [40953280] = {quest=43358, npc=110340, criteria=33355, loot={ns.rewards.Recipe(133816, 201500), 121739}}, -- Myonix

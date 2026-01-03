@@ -1,5 +1,7 @@
 local myname, ns = ...
 
+-- 39357 seems to trip the first time you kill a rare daily?
+
 ns.BROKENISLES = 619
 ns.DALARAN = 627
 ns.AZSUNA = 630

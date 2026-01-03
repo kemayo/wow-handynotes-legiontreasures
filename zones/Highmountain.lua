@@ -87,7 +87,7 @@ ns.RegisterPoints(650, { -- Highmountain
     [37704570] = {quest=40405, npc=97449, criteria=33328, loot={131761}}, -- Bristlemaul
     [41503185] = {quest=40175, npc=98890, criteria=33335, loot={131921}}, -- Slumber
     [41954150] = {quest=39782, npc=97203, criteria=33323, loot={{129175, pet=1752}}, note="Abandoned Fishing Pole"}, -- Tenpak Flametotem
-    [43164800] = {quest=40413, npc=100230, criteria=33336, loot={131781}, note="Loot chest afterwards"}, -- Amateur hunters (100230, 100231, 100232)
+    [43384725] = {quest=40413, npc=100230, criteria=33336, loot={131781}, vignette=1150, note="Loot chest afterwards"}, -- Amateur hunters (100230, 100231, 100232)
     [44201210] = {quest=39994, npc=97933, criteria=33331, loot={131798}, note="Wanders a bit"}, -- Crab Rider Grmlrml
     [45705500] = {quest=40681, npc=101077, criteria=33338, loot={131730}}, -- Sekhan
     [46500745] = {quest=40096, npc=98311, criteria=33333, loot={131797}}, -- Mrrklr (captured survivor)
@@ -108,7 +108,7 @@ ns.RegisterPoints(650, { -- Highmountain
 }, {achievement=11264})
 
 ns.RegisterPoints(650, { -- Highmountain
-    [40955775] = {quest=39963, npc=97793, criteria=333, loot={131773}, note="Abandoned Fishing Pole"}, -- Flamescale
+    [40955775] = {quest=39963, npc=97793, criteria=333, loot={131773}, note="Abandoned Fishing Pole", vignette=1047}, -- Flamescale (93195? bugged?)
     [54447454] = {quest=40773, npc=101649, criteria=333}, -- Frostshard
     [56357250] = {quest=39235, npc=94877, criteria=333, loot={138396}}, -- Brogrul the Mighty
 })

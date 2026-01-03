@@ -65,7 +65,7 @@ ns.RegisterPoints(641, { -- Val'sharah
     [41657825] = {quest=38479, npc=92180, criteria=33274, loot={{130171, toy=true}}}, -- Seersei
     [44155210] = {quest=38767, npc=92965, criteria=33276, loot={{130166, pet=1804}}, note="Bottom floor"}, -- Darkshade
     [45608880] = {quest=43446, npc=110562, criteria=33291, loot={130135}}, -- Bahagar
-    [47205800] = {quest=39357, npc=95221, criteria=33285, loot={{130214, toy=true}}}, -- Mad Henryk (Old Bear Trap)
+    [47205800] = {quest=39357, npc=95221, criteria=33285, loot={{130214, toy=true}}, vignette=967}, -- Mad Henryk (Old Bear Trap)
     [48904690] = {quest=44070, npc=93679, criteria=32406, loot={132359}}, -- Gathenak (Marius and Tehd vs a Satyr)
     [52808750] = {quest=38889, npc=93686, criteria=332, loot={{128690, pet=1706}}, note="Shivering Ashmaw Cub"}, -- Jinikki the Puncturer
     [55557762] = {quest=38466, loot={{130147,toy=true}}, note="Unguarded..."}, -- Unguarded Thistleleaf Treasure npc:92104
