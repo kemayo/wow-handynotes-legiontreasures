@@ -2,11 +2,13 @@ local myname, ns = ...
 
 local boss = {
     group="worldboss",
+    achievement=11160, -- Unleashed Monstrosities
 }
 
 ns.RegisterPoints(ns.SURAMAR, {
     [31006580] = { -- Ana-Mouz
-        quest=nil,
+        criteria=32100, 
+        quest=44501,
         worldquest=43512,
         npc=109943,
         loot={
@@ -22,6 +24,7 @@ ns.RegisterPoints(ns.SURAMAR, {
 }, boss)
 ns.RegisterPoints(685, { -- Falanaar Tunnels, Suramar
     [36606700] = { -- Na'zak the Fiend
+        criteria=32097,
         quest=nil,
         worldquest=43513,
         npc=110321,
@@ -41,7 +44,8 @@ ns.RegisterPoints(685, { -- Falanaar Tunnels, Suramar
 
 ns.RegisterPoints(ns.STORMHEIM, {
     [46603000] = { -- Nithogg
-        quest=nil,
+        criteria=32096,
+        qquest=44508,
         worldquest=42270, -- Scourge of the Skies
         npc=107544,
         loot={
@@ -56,6 +60,7 @@ ns.RegisterPoints(ns.STORMHEIM, {
         },
     },
     [77800780] = { -- Soultrapper Mevra, Soultakers
+        criteria=8,
         quest=nil,
         worldquest=42269, -- The Soultakers
         npc=106984,
@@ -74,6 +79,7 @@ ns.RegisterPoints(ns.STORMHEIM, {
 
 ns.RegisterPoints(ns.AZSUNA, {
     [38008440] = { -- Calamir (also 56606660?)
+        criteria=32101,
         quest=nil,
         worldquest=43193, -- Calamitous Intent
         npc=109331,
@@ -89,6 +95,7 @@ ns.RegisterPoints(ns.AZSUNA, {
         },
     },
     [43006740] = { -- Levantus
+        criteria=32102,
         quest=nil,
         worldquest=43192, -- Terror of the Deep
         npc=108829,
@@ -105,6 +112,7 @@ ns.RegisterPoints(ns.AZSUNA, {
         },
     },
     [52408040] = { -- Withered J'im
+        criteria=35022,
         quest=nil,
         worldquest=44287, -- DEADLY: Withered J'im
         npc=112350,
@@ -122,7 +130,8 @@ ns.RegisterPoints(ns.AZSUNA, {
 
 ns.RegisterPoints(ns.HIGHMOUNTAIN, {
     [58207140] = { -- Drugon the Frostblood
-        quest=nil,
+        criteria=32094,
+        quest=44503,
         worldquest=43448, -- The Frozen King
         npc=110378,
         loot={
@@ -137,7 +146,8 @@ ns.RegisterPoints(ns.HIGHMOUNTAIN, {
         },
     },
     [49200740] = { -- Flotsam
-        quest=nil,
+        criteria=32095,
+        quest=41126,
         worldquest=43985, -- A Dark Tide
         npc=99929,
         loot={
@@ -155,7 +165,8 @@ ns.RegisterPoints(ns.HIGHMOUNTAIN, {
 
 ns.RegisterPoints(ns.VALSHARAH, {
     [24406940] = { -- Humongris
-        quest=nil,
+        criteria=32099,
+        quest=42819,
         worldquest=42819, -- Pocket Wizard
         npc=108879,
         loot={
@@ -170,6 +181,7 @@ ns.RegisterPoints(ns.VALSHARAH, {
         },
     },
     [55404240] = { -- Shar'thos
+        criteria=32098,
         quest=nil,
         worldquest=42779,
         npc=108678,
