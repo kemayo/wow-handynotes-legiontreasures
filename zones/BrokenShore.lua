@@ -1,5 +1,7 @@
 local myname, ns = ...
 
+-- skyhold unlock: 47699 or 47661 @ 44796133
+
 ns.RegisterPoints(646, { -- Broken Shore
     [31315933] = {quest=47028, npc=121112}, -- Somber Dawn
     [39194241] = {quest=46095, npc=117091}, -- Felmaw Emberfiend

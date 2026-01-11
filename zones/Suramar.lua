@@ -1,5 +1,7 @@
 local myname, ns = ...
 
+-- skyhold unlock: 44062 or 43954 @33094821
+
 ns.map_spellids[680] = 199416
 
 local grapple = ns.nodeMaker{
@@ -75,6 +77,10 @@ ns.RegisterPoints(686, { -- Elor'shan
     [49301730] = {quest=43743, loot={141655}, label="Shimmering Ancient Mana Cluster"},
 }, {achievement=11260})
 
+ns.RegisterPoints(ns.SURAMAR, {
+    [58653375] = {quest=40692, label="Warp Cache", loot={139890,139786,138783}, note="In the cave high up, accessible via flight or Telemancy to \"Storage\""},
+})
+
 -- Why Can't I Hold All This Mana?
 
 local MANA = {
@@ -82,7 +88,7 @@ local MANA = {
     atlas="VignetteLootElite", scale=1.2,
 }
 ns.RegisterPoints(680, { -- Suramar
-    [21425446] = {quest=42842, loot={{136269, quest=42842}},}, -- Kel'danath's Manaflask
+    [21425446] = {quest=42842, loot={{136269, quest=42842}},}, -- Kel'danath's Manaflask (hide before 41212 maybe? Or 40326 scattered memories)
     [26877073] = {quest=43987, loot={{140327, quest=43987}}, note="Cave entrance @ 27.3, 72.9", path=27307290}, -- Kyrtos's Research Notes
     [35561209] = {quest=43989, loot={{140329, quest=43989}}, label="Arcane Power Unit"}, -- Infinite Stone
     [44803100] = {quest=43986, loot={{140326, quest=43986}}, note="Doesn't stand out much; by the bench, upper level"}, -- Enchanted Burial Urn
@@ -96,7 +102,7 @@ ns.RegisterPoints(684, { -- Temple of Fal'adora, Suramar
 -- Adventurer
 ns.RegisterPoints(680, { -- Suramar
     [13515344] = {quest=44124, npc=112802, criteria=33371, loot={140949}, vignette=1642}, -- Mar'tura
-    [16552655] = {quest=43996, npc=103841, criteria=33348, loot={140401}}, -- Shadowquill
+    [16472666] = {quest=43996, npc=103841, criteria=33348, loot={140401}, vignette=1610}, -- Shadowquill
     [18686106] = {quest=43542, npc=110824, criteria=33360, loot={140399}, vignette=1510}, -- Tideclaw
     [22165179] = {quest=41319, npc=99792, criteria=33342, loot={121806}, vignette=1263}, -- Elfbane
     [23982553] = {quest=43484, npc=105547, criteria=33349, loot={121759}, vignette=1508}, -- Rauren
@@ -118,21 +124,21 @@ ns.RegisterPoints(680, { -- Suramar
     [54425612] = {quest=43792, npc=111651, criteria=33368, loot={121808}, vignette=1558}, -- Degren (Noble Blademaster)
     [54576371] = {quest=43794, npc=111649, criteria=33367, loot={139918}, vignette=1560}, -- Ambassador D'vwinn
     [61005300] = {quest=43597, npc=110944, criteria=33363, loot={140404}, note="Wanders a bit"}, -- Guardian Thor'el
-    [61653960] = {quest=43993, npc=103223, criteria=33346, loot={121737}}, -- Hertha Grimdottir
+    [61283968] = {quest=43993, npc=103223, criteria=33346, loot={121737}, vignette=1251}, -- Hertha Grimdottir
     [62506370] = {quest=43793, npc=111653, criteria=33369, loot={121810}}, -- Miasu
     [62554810] = {quest=43495, npc=110726, criteria=33359, loot={139969}}, -- Cadraeus
     [65555915] = {quest=43481, npc=110656, criteria=33358, loot={140403}}, -- Arcanist Lylandre
     [66656715] = {quest=43968, npc=107846, criteria=33351, loot={140402,{140314, toy=true}}}, -- Pinchshank
     [67657105] = {quest=41136, npc=103214, criteria=33345, loot={140381}, note="Cave entrance @ 72.4, 68.1", path=72406810}, -- Har'kess the Insatiable
     [68155895] = {quest=41135, npc=100864, criteria=33343, loot={139952}, note="Cave entrance @ 69.9, 57.0", path=69905700}, -- Cora'Kar
-    [75505730] = {quest=44003, npc=103575, criteria=33347, loot={121801}}, -- Reef Lord Raj'his
-    [80157000] = {quest=40680, npc=103183, criteria=33344, loot={140019}, note="Wanders along the underwater trench"}, -- Rok'nash
+    [77485783] = {quest=44003, npc=103575, criteria=33347, loot={121801}, vignette=1259}, -- Reef Lord Raj'his
+    [79807221] = {quest=40680, npc=103183, criteria=33344, loot={140019}, vignette=1220, note="Wanders along the underwater trench"}, -- Rok'nash
 }, {achievement=11265})
 
 ns.RegisterPoints(680, { -- Suramar
     [35386700] = {quest=44675, npc=106526, loot={141866}, vignette=1691}, -- Lady Rivantas
     [29455333] = {quest=44676, npc=113368, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070, vignette=1692}, -- Llorian
-    [87856250] = {quest=41786, npc=103827, loot={140384}}, -- King Morgalash
+    [87456235] = {quest=41786, npc=103827, loot={140384}, vignette=1281}, -- King Morgalash / Sea Giant King
     [37987039] = {quest=44569, npc=106532, loot={}, vignette=1685}, -- Inquisitor Volitix
 })
 
@@ -185,7 +191,7 @@ local Portal = function(questid, label, data) return ns.Getterize(ns.merge({
 
 ns.RegisterPoints(680, { -- Suramar
     -- These crop up at points in the storyline
-    [36204710] = Portal(40956, "{area:8173:Ruins of Elune'eth}", {hide_before=ns.conditions.QuestComplete(40956)}), -- Ruins of Elune'eth, storyline: Survey Says...
+    [36204710] = Portal(40956, "{area:8173:Ruins of Elune'eth}", {hide_before=ns.conditions.QuestComplete(40956), outdoors_only=true}), -- Ruins of Elune'eth, storyline: Survey Says...
     [22903580] = Portal(42230, "{area:7843:Falanaar}", {hide_before=ns.conditions.QuestComplete(42228)}), -- Falanaar, storyline: Valewalker's Burden, hidden until Hidden City
     [47508200] = Portal(42487, "{area:8382:Waning Crescent}", {require=ns.conditions.QuestIncomplete(43569), hide_before=ns.conditions.QuestComplete(42486), }), --Waning Crescent, storyline: Friends on the Outside, hidden until Little One Lost, hidden after Arluin's Request
     [64006040] = Portal(44084, "{area:8149:Twilight Vineyards}", {hide_before=ns.conditions.QuestComplete(42838)}), -- Twilight Vineyards, storyline: Vengeance for Margaux, hidden until Reversal

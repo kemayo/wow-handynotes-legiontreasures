@@ -1,5 +1,7 @@
 local myname, ns = ...
 
+-- skyhold unlock: 41360 60175223
+
 ns.map_spellids[634] = 182957
 
 local grapple = ns.nodeMaker{
@@ -94,22 +96,22 @@ ns.RegisterPoints(634, { -- Stormheim
     [41753410] = {quest=40068, npc=98188, criteria=33311, loot={132898}, note="Cave under the statue's axe"}, -- Egyl the Enduring
     [44202280] = {quest=38627, npc=92604, criteria=9, loot={129264}, faction="Horde"}, -- Worgen Stalkers
     [44202281] = {quest=38630, npc=92631, criteria=9, loot={129266}, faction="Alliance"}, -- Forsaken Death Squad
-    [45857735] = {quest=38431, npc=91874, criteria=33296, loot={129048}}, -- Bladesquall
-    [46808405] = {quest=38425, npc=91803, criteria=33295, loot={129206}}, -- Fathnyr
-    [47154985] = {quest=38774, npc=93166, criteria=33306, loot={129163}}, -- Tiptog the Lost
-    [49507175] = {quest=38423, npc=91795, criteria=33294, loot={{129208, pet=1721}}}, -- Stormdrake Matriarch
-    [51607465] = {quest=42591, npc=107926, criteria=33315, loot={138417}}, -- Hannval the Butcher
+    [45847741] = {quest=38431, npc=91874, criteria=33296, loot={129048}, vignette=769}, -- Bladesquall
+    [46838412] = {quest=38425, npc=91803, criteria=33295, loot={129206}, vignette=765}, -- Fathnyr
+    [48925054] = {quest=38774, npc=93166, criteria=33306, loot={129163}, vignette=867}, -- Tiptog the Lost / Lost Ettin
+    [49547178] = {quest=38423, npc=91795, criteria=33294, loot={{129208, pet=1721}}, vignette=763}, -- Stormwing Matriarch
+    [51607473] = {quest=42591, npc=107926, criteria=33315, loot={138417}, vignette=1400}, -- Hannval the Butcher
     [58004515] = {quest=38642, npc=92685, criteria=33303, loot={129123}}, -- Captain Brvet (Helmouth Raiders)
     [58353390] = {quest=43342, npc=110363, criteria=33316, loot={139387}}, -- Roteye
     [59806805] = {quest=39031, npc=92751, criteria=33304, loot={132895}}, -- Ivory Sentinel
     [61554335] = {quest=40081, npc=98268, criteria=33312, loot={129199}}, -- Tarben
     [62056050] = {quest=39120, npc=94413, criteria=33309, loot={129133}}, -- Isel the Hammer
     [63707420] = {quest=37908, npc=90139, criteria=32404, loot={140686}}, -- Inquisitor Ernstenbok
-    [64805175] = {quest=38847, npc=93401, criteria=33308, loot={129219}}, -- Urgev the Flayer
-    [67303990] = {quest=38685, npc=92763, criteria=33305, loot={129041}}, -- The Nameless King
-    [72504990] = {quest=38837, npc=93371, criteria=33307, loot={129035}}, -- Mordvigbjorn
-    [73454765] = {quest=40109, npc=98421, criteria=33313, loot={138419}}, -- Kottr Vondyr
-    [78606115] = {quest=40113, npc=98503, criteria=33314, loot={138421}}, -- Grrvrgull the Conqueror
+    [64875182] = {quest=38847, npc=93401, criteria=33308, loot={129219}, vignette=879}, -- Urgev the Flayer
+    [67263994] = {quest=38685, npc=92763, criteria=33305, loot={129041}, vignette=840}, -- The Nameless King
+    [72494994] = {quest=38837, npc=93371, criteria=33307, loot={129035}, vignette=877}, -- Mordvigbjorn
+    [73474766] = {quest=40109, npc=98421, criteria=33313, loot={138419}, vignette=1093}, -- Kottr Vondyr
+    [78656117] = {quest=40113, npc=98503, criteria=33314, loot={138421}, vignette=1095}, -- Grrvrgull the Conqueror
 }, {achievement=11263})
 ns.RegisterPoints(649, { -- Helheim
     [28156375] = {quest=39870, npc=97630, criteria=33310, loot={{129188, pet=1753}}}, -- Soulthirster
@@ -118,7 +120,7 @@ ns.RegisterPoints(649, { -- Helheim
 
 ns.RegisterPoints(634, { -- Stormheim
     [54802940] = {quest=42437, npc=107487, loot={130132}}, -- Starbuck
-    [73906060] = {quest=43343, npc=94347, loot={130134}, faction="Alliance"}, -- Dread-Rider Cortis
+    [73906060] = {quest=43343, npc=94347, loot={130134}, faction="Alliance", vignette=1496}, -- Dread-Rider Cortis
 })
 ns.RegisterPoints(649, { -- Helheim
     [27204220] = {quest=46949, npc=115732, path=33154312}, -- Jorvild the Trusted
