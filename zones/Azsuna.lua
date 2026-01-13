@@ -30,7 +30,7 @@ ns.RegisterPoints(630, { -- Azsuna
     [55310505] = {quest=38389, label=ns.CHEST_SM},
     [55362774] = {quest=42288, label=ns.CHEST_SM},
     [55621855] = {quest=40711, label=ns.CHEST, note="Ley Portal inside tower"},
-    [55905690] = {quest=38365, label="Disputed Treasure"},
+    [55855699] = {quest=38365, label="Disputed Treasure", vignette=753},
     [56443481] = {quest=38251, loot={132950}, label=ns.CHEST},
     [56892499] = {quest=42338, label=ns.CHEST_SM, note="Cave entrance @ 55.7, 25.4", path=55702540},
     [57153106] = {quest=38419, label=ns.CHEST},
@@ -65,17 +65,17 @@ ns.RegisterPoints(632, { -- OceanusCove, Azsuna
 -- Adventurer
 ns.RegisterPoints(630, { -- Azsuna
     [28205200] = {quest=42376, npc=107269, criteria=33374, loot={141874}}, -- Inquisitor Tivos
-    [32302970] = {quest=38238, npc=91187, criteria=33268, loot={129067}, note="Patrols the beach"}, -- Beacher
+    [32362981] = {quest=38238, npc=91187, criteria=33268, loot={129067}, vignette=723, note="Patrols the beach"}, -- Beacher
     [32604880] = {quest=44108, npc=109504, criteria=33271, loot={129075}}, -- Ragemaw
     [34953390] = {quest=42505, npc=107657, criteria=33372, loot={141868}, note="Walks around the pool"}, -- Arcanist Shal'iman
     [35305030] = {quest=38037, npc=90803, criteria=33264, loot={129083}, note="Cache of Infernals"}, -- Infernal Lord
-    [37404320] = {quest=42280, npc=107113, criteria=33374, loot={141875}}, -- Vorthax
-    [41054180] = {quest=37537, npc=89016, criteria=33377, loot={129080}}, -- Ravyn-Drath
+    [37284321] = {quest=42280, npc=107113, criteria=33374, loot={141875}, vignette=1337}, -- Vorthax
+    [41004181] = {quest=37537, npc=89016, criteria=33377, loot={129080}, vignette=636}, -- Ravyn-Drath
     [43152815] = {quest=38352, npc=91579, criteria=32402, loot={129056}}, -- Doomlord Kazrok
     [43532458] = {quest=42069, npc=105938, criteria=32401, loot={129087}}, -- Felwing
-    [45305780] = {quest=37824, npc=89884, criteria=33258, loot={129090}}, -- Flog the Captain-Eater
-    [47203420] = {quest=37726, npc=89650, criteria=33248, loot={129082}}, -- Valiyaka the Stormbringer
-    [49105520] = {quest=37909, npc=90164, criteria=33260, loot={129069}, note="Patrols the road"}, -- Warbringer Mox'na (seek and destroy squad)
+    [45215783] = {quest=37824, npc=89884, criteria=33258, loot={129090}, vignette=682}, -- Flog the Captain-Eater
+    [47463445] = {quest=37726, npc=89650, criteria=33248, loot={129082}, vignette=677}, -- Valiyaka the Stormbringer
+    [49275532] = {quest=37909, npc=90164, criteria=33260, loot={129069}, vignette=692, note="Patrols the road"}, -- Warbringer Mox'na (seek and destroy squad)
     [49500880] = {quest=37928, npc=90217, criteria=33261, loot={129061}}, -- Normantis the Deposed
     [50003440] = {quest=37823, npc=89865, criteria=33257, loot={129072}}, -- Mrrgrl the Tidereaver
     [50803160] = {quest=37869, npc=90057, criteria=33259, loot={129084}}, -- Daggerbeak
@@ -84,12 +84,16 @@ ns.RegisterPoints(630, { -- Azsuna
     [56102905] = {quest=38061, npc=90901, criteria=33265, loot={138395}}, -- Pridelord Meowl
     [59304630] = {quest=38212, npc=91100, criteria=32403, loot={129068}, note="Top of the mountain"}, -- Brogozog
     [59601230] = {quest=37932, npc=90244, criteria=33262, loot={129085}, note="Unbound rift"}, -- Arcavellus
-    [59705520] = {quest=37822, npc=89850, criteria=33251, loot={129065,136833}}, -- The Oracle
-    [61306200] = {quest=38217, npc=91113, criteria=33267, loot={129062}}, -- Tide Behemoth
+    [59695516] = {quest=37822, npc=89850, criteria=33251, loot={129065,136833}, vignette=680}, -- The Oracle
+    [61306203] = {quest=38217, npc=91113, criteria=33267, loot={129062}, vignette=721}, -- Tide Behemoth
     [65164000] = {quest=37820, npc=89816, criteria=33249, loot={129091}, note="Horn of the Siren"}, -- Golza the Iron Fin
-    [65555680] = {quest=42221, npc=106990, criteria=33269, loot={129073}}, -- Chief Bitterbrine
+    [65655691] = {quest=42221, npc=106990, criteria=33269, loot={129073}, vignette=1326}, -- Chief Bitterbrine
     [67105140] = {quest=37989, npc=90505, criteria=33263, loot={129064}}, -- Syphonus
-    [50465211] = {quest=44081, npc=112636, criteria=33272, loot={140685}, note="Ley Portal @ 60.3, 46.3; kill the stallions", path={60304630, label="Ley Portal", atlas="MagePortalAlliance"}},
+    [50515204] = { -- Trecherous Stallions
+        quest=44081, npc=112636, criteria=33272, loot={140685}, vignette=1623,
+        note="Ley Portal @ 60.3, 46.3; kill the stallions",
+        path={60304630, label="Ley Portal", atlas="MagePortalAlliance"},
+    },
 }, {achievement=11261})
 
 ns.RegisterPoints(630, { -- Azsuna

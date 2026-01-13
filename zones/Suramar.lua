@@ -41,9 +41,9 @@ ns.RegisterPoints(680, { -- Suramar
     [50068061] = {quest=44325, label=ns.CHEST, note="Upstairs"},
     [51503859] = {quest=43855, label=ns.CHEST_SM},
     [51908214] = {quest=43868, label=ns.CHEST},
-    [52272989] = {quest=43854, label=ns.CHEST},
-    [52733130] = {quest=40767, label="Dusty Coffer"},
-    [49503390] = ns.path{quest={43854,40767}},
+    [52272989] = {quest=43854, label=ns.CHEST, route=49503390},
+    [52733130] = {quest=40767, label="Dusty Coffer", route=49503390},
+    [49503390] = ns.path{quest={43854,40767}, routes={{49503390,52272989},{49503390,52733130}}},
     [54326033] = {quest=43875, label=ns.CHEST},
     [55685480] = {quest=43871, label=ns.CHEST_SM},
     [57326039] = {quest=43873, label=ns.CHEST},
@@ -116,10 +116,10 @@ ns.RegisterPoints(680, { -- Suramar
     [36183384] = {quest=43718, npc=111329, criteria=33366, loot={140390}, vignette=1548}, -- Matron Hagatha
     [36972110] = {quest=43369, npc=110438, criteria=33356, loot={140406}, vignette=1500}, -- Siegemaster Aedrin
     [40953280] = {quest=43358, npc=110340, criteria=33355, loot={ns.rewards.Recipe(133816, 201500), 121739}}, -- Myonix
-    [42068013] = {quest=43348, npc=109954, criteria=33353, loot={140405}}, -- Magister Phaedris
+    [42068013] = {quest=43348, npc=109954, criteria=33353, loot={140405}, vignette=1497}, -- Magister Phaedris
     [42255658] = {quest=43580, npc=110870, criteria=33362, loot={121754}, vignette=1511}, -- Apothecary Faldren
     [48535666] = {quest=40905, npc=102303, criteria=33376, loot={121735}, vignette=1684}, -- Lieutenant Strathmar
-    [49607900] = {quest=43603, npc=111007, criteria=33364, loot={140396}}, -- Randril
+    [49657898] = {quest=43603, npc=111007, criteria=33364, loot={140396}, vignette=1518}, -- Randril
     [53203020] = {quest=40897, npc=99610, criteria=33341, loot={121755}}, -- Garvrulg
     [54425612] = {quest=43792, npc=111651, criteria=33368, loot={121808}, vignette=1558}, -- Degren (Noble Blademaster)
     [54576371] = {quest=43794, npc=111649, criteria=33367, loot={139918}, vignette=1560}, -- Ambassador D'vwinn
