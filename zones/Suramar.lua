@@ -115,7 +115,7 @@ ns.RegisterPoints(680, { -- Suramar
     [34156099] = {quest=43351, npc=110024, criteria=33354, loot={140386}, vignette=1498}, -- Mal'Dreth the Corruptor
     [36183384] = {quest=43718, npc=111329, criteria=33366, loot={140390}, vignette=1548}, -- Matron Hagatha
     [36972110] = {quest=43369, npc=110438, criteria=33356, loot={140406}, vignette=1500}, -- Siegemaster Aedrin
-    [40953280] = {quest=43358, npc=110340, criteria=33355, loot={ns.rewards.Recipe(133816, 201500), 121739}}, -- Myonix
+    [40943277] = {quest=43358, npc=110340, criteria=33355, loot={ns.rewards.Recipe(133816, 201500), 121739}, vignette=1499}, -- Myonix
     [42068013] = {quest=43348, npc=109954, criteria=33353, loot={140405}, vignette=1497}, -- Magister Phaedris
     [42255658] = {quest=43580, npc=110870, criteria=33362, loot={121754}, vignette=1511}, -- Apothecary Faldren
     [48535666] = {quest=40905, npc=102303, criteria=33376, loot={121735}, vignette=1684}, -- Lieutenant Strathmar
@@ -123,7 +123,7 @@ ns.RegisterPoints(680, { -- Suramar
     [53203020] = {quest=40897, npc=99610, criteria=33341, loot={121755}}, -- Garvrulg
     [54425612] = {quest=43792, npc=111651, criteria=33368, loot={121808}, vignette=1558}, -- Degren (Noble Blademaster)
     [54576371] = {quest=43794, npc=111649, criteria=33367, loot={139918}, vignette=1560}, -- Ambassador D'vwinn
-    [61005300] = {quest=43597, npc=110944, criteria=33363, loot={140404}, note="Wanders a bit"}, -- Guardian Thor'el
+    [57995112] = {quest=43597, npc=110944, criteria=33363, loot={140404}, vignette=1515, note="Wanders a bit"}, -- Guardian Thor'el
     [61283968] = {quest=43993, npc=103223, criteria=33346, loot={121737}, vignette=1251}, -- Hertha Grimdottir
     [62506370] = {quest=43793, npc=111653, criteria=33369, loot={121810}}, -- Miasu
     [62554810] = {quest=43495, npc=110726, criteria=33359, loot={139969}}, -- Cadraeus
@@ -140,6 +140,15 @@ ns.RegisterPoints(680, { -- Suramar
     [29455333] = {quest=44676, npc=113368, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070, vignette=1692}, -- Llorian
     [87456235] = {quest=41786, npc=103827, loot={140384}, vignette=1281}, -- King Morgalash / Sea Giant King
     [37987039] = {quest=44569, npc=106532, loot={}, vignette=1685}, -- Inquisitor Volitix
+})
+
+ns.RegisterPoints(685, { -- Falanaar Tunnels
+    [64405060] = { -- Broodmother Shu'malis
+        quest=93441,
+        npc=105632,
+        vignette=7361,
+        -- parent=true,
+    },
 })
 
 -- Leylines!
@@ -160,7 +169,7 @@ ns.RegisterPoints(680, { -- Suramar
     [35702410] = {criteria=31915, quest=43590}, -- Moonwhisper Gulch
 }, LEYLINES)
 ns.RegisterPoints(685, { -- Falanaar Tunnels
-    [65105210] = {criteria=31916, quest=43592}, -- Falanaar North
+    [66505302] = {criteria=31916, quest=43592}, -- Falanaar North
     [58107520] = {criteria=31917, quest=43593}, -- Falanaar South
 }, LEYLINES)
 ns.RegisterPoints(686, { -- Elor'shan
