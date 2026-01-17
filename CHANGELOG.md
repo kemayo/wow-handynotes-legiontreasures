@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v48
+
+* Add Unleashed Monstrosities status to the world bosses
+* Suramar: flag some of the Withered Army Training rewards appropriately
+* Assorted minor data improvements
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+
 ## Changes in v47
 
 * Ready for Midnight
