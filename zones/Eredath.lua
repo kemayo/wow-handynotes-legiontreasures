@@ -19,7 +19,7 @@ ns.RegisterPoints(882, { -- Eredath
     },
     [43445440] = {quest=48751, criteria=37602, note="You will need a Glider"}, -- Doomseeker's Treasure
     [50693851] = {quest=48744, criteria=37596}, -- Chest of Ill-Gotten Gains
-    [57097677] = {quest=48346, criteria=37600, note="Climb from 59.67, 76.40"}, -- Desperate Eredar's Cache
+    [57097677] = {quest=48346, criteria=37600, loot={253520}, vignette=2259, path=56987437}, -- Desperate Eredar's Cache
     [62152241] = {quest=49151, criteria=37956, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Secret Augari Chest
     [62207120] = {quest=48745, criteria=37597, note="Requires Light's Judgement."}, -- Student's Surprising Surplus
     [70245976] = {quest=48748, criteria=37599}, -- Augari Secret Stash
@@ -30,7 +30,7 @@ ns.RegisterPoints(882, { -- Eredath
 
 -- Junk:
 ns.RegisterPoints(882, { -- Eredath
-    [53228020] = {quest=48346, label="Legion War Supplies"},
+    [53328003] = {quest=48346, label="Ancient Eredar Cache", vignette=2069},
     [54825759] = {quest=48346, label="Ancient Eredar Cache"},
     [54806700] = {quest=48346, label="Ancient Eredar Cache"},
     [59476292] = {quest=48346, label="Ancient Eredar Cache"},
