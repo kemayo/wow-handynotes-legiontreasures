@@ -2,11 +2,11 @@ local myname, ns = ...
 
 -- skyhold unlock: 47699 or 47661 @ 44796133
 
--- ancient statue, fortitude: 63025320
+-- ancient shrine, fortitude: 63025320
 
 ns.RegisterPoints(646, { -- Broken Shore
     [31315933] = {quest=47028, npc=121112}, -- Somber Dawn
-    [39194241] = {quest=46095, npc=117091}, -- Felmaw Emberfiend
+    [39224209] = {quest=46095, npc=117091, vignette=1851}, -- Felmaw Emberfiend
     [39553265] = {quest=46965, npc=121029, alpha=0.4, note="Inside Blood Nest"}, -- Brood Mother Nix
     [40348045] = {quest=46202, npc=118993}, -- Dreadeye
     [40385977] = {quest=46951, npc=120998, alpha=0.4, note="Inside the Pit of Agony"}, -- Flllurlokkr
@@ -23,7 +23,7 @@ ns.RegisterPoints(646, { -- Broken Shore
     [58294288] = {quest=46099, npc=117093}, -- Felbringer Xar'thok
     [59692724] = {quest=46090, npc=117141, alpha=0.4, note="Inside Felbreach Hollow"}, -- Malgrazoth
     [60474504] = {quest=46313, npc=119718}, -- Imp Mother Bruva
-    [60965330] = {quest=46101, npc=116953}, -- Corrupted Bonebreaker
+    [60975338] = {quest=46101, npc=116953, vignette=1906}, -- Corrupted Bonebreaker
     [61913840] = {quest=46096, npc=117089}, -- Inquisitor Chillbane
     [64443020] = {quest=47068, npc=116166, alpha=0.4, note="Inside Felsworn Vault"}, -- Eye of Gurgh
     [65233182] = {quest=46091, npc=117140, outdoors_only=true}, -- Salethan the Broodwalker

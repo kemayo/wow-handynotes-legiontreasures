@@ -101,10 +101,10 @@ ns.RegisterPoints(634, { -- Stormheim
     [48925054] = {quest=38774, npc=93166, criteria=33306, loot={129163}, vignette=867}, -- Tiptog the Lost / Lost Ettin
     [49547178] = {quest=38423, npc=91795, criteria=33294, loot={{129208, pet=1721}}, vignette=763}, -- Stormwing Matriarch
     [51607473] = {quest=42591, npc=107926, criteria=33315, loot={138417}, vignette=1400}, -- Hannval the Butcher
-    [58004515] = {quest=38642, npc=92685, criteria=33303, loot={129123}}, -- Captain Brvet (Helmouth Raiders)
+    [58004509] = {quest=38642, npc=92685, criteria=33303, loot={129123}, vignette=833}, -- Captain Brvet (Helmouth Raiders)
     [58353390] = {quest=43342, npc=110363, criteria=33316, loot={139387}}, -- Roteye
     [59806805] = {quest=39031, npc=92751, criteria=33304, loot={132895}}, -- Ivory Sentinel
-    [61554335] = {quest=40081, npc=98268, criteria=33312, loot={129199}}, -- Tarben
+    [61444316] = {quest=40081, npc=98268, criteria=33312, loot={129199}, vignette=1071}, -- Tarben
     [62056050] = {quest=39120, npc=94413, criteria=33309, loot={129133}}, -- Isel the Hammer
     [63707420] = {quest=37908, npc=90139, criteria=32404, loot={140686}}, -- Inquisitor Ernstenbok
     [64875182] = {quest=38847, npc=93401, criteria=33308, loot={129219}, vignette=879}, -- Urgev the Flayer
