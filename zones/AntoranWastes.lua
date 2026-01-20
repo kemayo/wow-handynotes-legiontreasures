@@ -117,11 +117,6 @@ ns.RegisterPoints(885, { -- Antoran Wastes
 }, {
     achievement=12078,
 })
-ns.RegisterPoints(833, { -- Nath'raxas Spire
-    [38954032] = {quest=48561, npc=125824, criteria=37646, loot={153316}}, -- Khazaduum
-}, {
-    achievement=12078,
-})
 
 ns.RegisterPoints(885, { -- Antoran Wastes
     [65408140] = { -- Rezira the Seer

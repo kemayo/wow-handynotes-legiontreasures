@@ -22,8 +22,10 @@ ns.RegisterPoints(830, { -- Krokuun
     [43505520] = {quest=48339, label=EREDAR_SUPPLIES},
     [63014237] = {quest=48339, label=EREDAR_SUPPLIES, vignette=2046},
     [44854341] = {quest=48339, label=EREDAR_SUPPLIES, vignette=2046},
+    [45905841] = {quest=48339, label=EREDAR_SUPPLIES, vignette=2046},
 
     [48553340] = {quest=47999, label=EREDAR_SUPPLIES, vignette=2025},
+    [47782890] = {quest=47999, label=EREDAR_SUPPLIES, vignette=2025},
     [59544417] = {quest=47999, label=EREDAR_SUPPLIES},
     [61573519] = {quest=47999, label=EREDAR_SUPPLIES},
     [62803810] = {quest=47999, label=EREDAR_SUPPLIES},
@@ -57,11 +59,13 @@ ns.RegisterPoints(830, { -- Krokuun
     [55525237] = {quest=47752, label=EREDAR_SUPPLIES, vignette=2024},
     [53305110] = {quest=47752, label=LEGION_SUPPLIES},
     [52015968] = {quest=47752, label=EREDAR_SUPPLIES, vignette=2024},
+    [50365115] = {quest=47752, label=EREDAR_SUPPLIES, vignette=2024},
 
     [58207179] = {quest=47753, label=LEGION_SUPPLIES},
     [59377345] = {quest=47753, label=LEGION_SUPPLIES},
     [58607990] = {quest=47753, label=LEGION_SUPPLIES},
     [53157308] = {quest=47753, label=EREDAR_SUPPLIES, vignette=2001},
+    [56108039] = {quest=47753, label=EREDAR_SUPPLIES, vignette=2001},
 }, {
     group="junk",
     scale=0.9,
@@ -71,9 +75,12 @@ ns.RegisterPoints(830, { -- Krokuun
 
 ns.RegisterPoints(830, { -- Krokuun
     [33207615] = {quest=48562, npc=122912, criteria=37644, vignette=2198}, -- Commander Sathrenael
-    [38145920] = {quest=48563, npc=122911, criteria=37643, loot={153299}, note="Either go through the Xenedar, or climb up from 42, 57.1"}, -- Commander Vecaya
-    [41707020] = {quest=48666, npc=125820, criteria=37650, worldquest=48282}, -- Imp Mother Laglath
-    [50301730] = {quest=48561, npc=125824, criteria=37646, loot={153316}}, -- Khazaduum
+    [38105952] = { -- Commander Vecaya
+        quest=48563, npc=122911, criteria=37643, loot={153299}, vignette=2199, worldquest=48510,
+        path={38135924, 38895958, 39375948, 39685893, 40395700, 40795671, 42085721},
+        note="Either go through the Xenedar, or climb up from outside"
+    },
+    [42426987] = {quest=48666, npc=125820, criteria=37650, vignette=2228, worldquest=48282}, -- Imp Mother Laglath
     [45305882] = {quest=48564, npc=124775, criteria=37642, loot={153255}, vignette=2200, worldquest=48511}, -- Commander Endaxis
     [52833097] = {quest=48565, npc=123464, criteria=37641, loot={{153124, toy=true}}, vignette=2201, worldquest=48512}, -- Sister Subversia
     [55508020] = {quest=48628, npc=123689, criteria=37655, loot={153329}}, -- Talestra the Vile
@@ -81,7 +88,13 @@ ns.RegisterPoints(830, { -- Krokuun
     [60831972] = {quest=48629, npc=125388, criteria=37652, loot={153114}, vignette=2223, worldquest=48091}, -- Vagath the Betrayed
     [69605750] = {quest=48664, npc=124804, criteria=37653, loot={153263}, vignette=2225, path=69305934}, -- Tereck the Selector
     [69708050] = {quest=48665, npc=125479, criteria=37651, worldquest=48192}, -- Tar Spitter
-    [70503370] = {quest=48667, npc=126419, criteria=37645, loot={153190}, worldquest=48502}, -- Naroua
+    [71033276] = {quest=48667, npc=126419, criteria=37645, loot={153190}, vignette=2229, worldquest=48502}, -- Naroua
 }, {
     achievement=12078,
+})
+ns.RegisterPoints(833, { -- Nath'raxas Spire
+    [38954032] = {quest=48561, npc=125824, criteria=37646, loot={153316}, vignette=2197, worldquest=47507}, -- Khazaduum
+}, {
+    achievement=12078,
+    parent=true,
 })
