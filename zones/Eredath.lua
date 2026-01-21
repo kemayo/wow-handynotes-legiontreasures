@@ -26,6 +26,7 @@ ns.RegisterPoints(882, { -- Eredath
     [70632745] = {quest=49129, criteria=37955, vignette=2320, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Augari-Runed Chest
 }, {
     achievement=12074,
+    atlas="VignetteLootElite", scale=1.2,
 })
 
 -- Junk:
@@ -72,6 +73,7 @@ ns.RegisterPoints(882, { -- Eredath
     [37102010] = {quest=49264, label="Void-Seeped Cache"},
 }, {
     group="junk",
+    scale=0.9,
 })
 
 -- Rares

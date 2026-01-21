@@ -10,6 +10,7 @@ ns.RegisterPoints(830, { -- Krokuun
     [75176974] = {quest=49154, criteria=37958, vignette=2325, note="Requires Shroud of Arcane Echoes. Stealth before opening."}, -- Long-Lost Augari Treasure
 }, {
     achievement=12074,
+    atlas="VignetteLootElite", scale=1.2,
 })
 
 -- Junk:

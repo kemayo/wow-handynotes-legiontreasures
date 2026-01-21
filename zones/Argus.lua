@@ -52,7 +52,7 @@ ns.RegisterVignettes(905, { -- Argus
     },
     [2286] = { -- Inquisitor Meto
         areaPoi=5379,
-        quest=nil,
+        quest=49170,
         criteria=37453,
         npc=124592,
         loot={
