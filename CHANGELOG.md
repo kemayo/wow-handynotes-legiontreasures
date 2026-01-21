@@ -1,5 +1,12 @@
 # Changelog
 
+## Changes in v49
+
+* Argus: better display of the non-junk treasures
+* Various other data improvements
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+    * Fixes display of loot on the greater invasion points on Argus
+
 ## Changes in v48
 
 * Add Unleashed Monstrosities status to the world bosses
