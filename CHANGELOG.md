@@ -1,5 +1,13 @@
 # Changelog
 
+## Changes in v50
+
+* Note down a bunch of world quests
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+    * Avoid some secret issues with tooltips
+    * Performance improvement: only start caching points on-load if you're in a relevant zone
+    * Improve checks for transmog appearances in Midnight
+
 ## Changes in v49
 
 * Argus: better display of the non-junk treasures
