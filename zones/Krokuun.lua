@@ -87,7 +87,7 @@ ns.RegisterPoints(830, { -- Krokuun
     [55508020] = {quest=48628, npc=123689, criteria=37655, loot={153329}}, -- Talestra the Vile
     [58347584] = {quest=48627, npc=120393, criteria=37659, vignette=1996, worldquest=47542}, -- Siegemaster Voraan (43369?)
     [60831972] = {quest=48629, npc=125388, criteria=37652, loot={153114}, vignette=2223, worldquest=48091}, -- Vagath the Betrayed
-    [69605750] = {quest=48664, npc=124804, criteria=37653, loot={153263}, vignette=2225, path=69305934}, -- Tereck the Selector
+    [69605750] = {quest=48664, npc=124804, criteria=37653, loot={153263}, vignette=2225, worldquest=47953, path=69305934}, -- Tereck the Selector
     [69708050] = {quest=48665, npc=125479, criteria=37651, worldquest=48192}, -- Tar Spitter
     [71033276] = {quest=48667, npc=126419, criteria=37645, loot={153190}, vignette=2229, worldquest=48502}, -- Naroua
 }, {

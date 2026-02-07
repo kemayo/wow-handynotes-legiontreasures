@@ -69,7 +69,7 @@ ns.RegisterPoints(630, { -- Azsuna
     [32604880] = {quest=44108, npc=109504, criteria=33271, loot={129075}}, -- Ragemaw
     [34953390] = {quest=42505, npc=107657, criteria=33372, loot={141868}, note="Walks around the pool"}, -- Arcanist Shal'iman
     [35305030] = {quest=38037, npc=90803, criteria=33264, loot={129083}, note="Cache of Infernals"}, -- Infernal Lord
-    [37284321] = {quest=42280, npc=107113, criteria=33374, loot={141875}, vignette=1337}, -- Vorthax
+    [37284321] = {quest=42280, npc=107113, criteria=33374, loot={141875}, worldquest=43614, vignette=1337}, -- Vorthax
     [41004181] = {quest=37537, npc=89016, criteria=33377, loot={129080}, vignette=636}, -- Ravyn-Drath
     [43152815] = {quest=38352, npc=91579, criteria=32402, loot={129056}}, -- Doomlord Kazrok
     [43532458] = {quest=42069, npc=105938, criteria=32401, loot={129087}}, -- Felwing
@@ -103,6 +103,7 @@ ns.RegisterPoints(630, { -- Azsuna
     [52402305] = {quest=38268, npc=91289, loot={129063}}, -- Cailyn Paledoom
     [55476980] = {quest=42699, npc=108255, loot={141877}}, -- Coura, Mistress of Arcana
     [58517882] = {quest=44671, npc=108136, loot={129081}}, -- The Muscle
+    [28204860] = {quest=45495, npc=109630, loot={144244}, worldquest=43079}, -- Immolian
 })
 ns.RegisterPoints(633, { -- TempleofaThousandLights
     [62303090] = {quest=42699, npc=108255, loot={141877}}, -- Coura, Mistress of Arcana

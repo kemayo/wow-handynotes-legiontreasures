@@ -85,12 +85,12 @@ ns.RegisterPoints(885, { -- Antoran Wastes
     [52702950] = {quest=48822, npc=127291, criteria=37613}, -- Watcher Aival
     [53103580] = {quest=48810, npc=126199, criteria=37649, loot={{152903, mount=981}}, worldquest=48465}, -- Vrax'thul
     [54003800] = {quest=48966, npc=127581, criteria=37660, loot={{153195, pet=2136}}, note="Gather bones in Scavenger's Boneyard"}, -- The Many-Faced Devourer
-    [55702190] = {quest=48824, npc=127300, criteria=37614, loot={153319}}, -- Void Warden Valsuran
+    [55702190] = {quest=48824, npc=127300, criteria=37614, loot={153319}, worldquest=48866}, -- Void Warden Valsuran
     [56204550] = {quest=49241, npc=122999, criteria=37656, worldquest=47566}, -- Gar'zoth
-    [57353355] = {quest=49240, npc=122947, criteria=37658, loot={153327}, vignette=2345}, -- Mistress Il'thendra
+    [57353355] = {quest=49240, npc=122947, criteria=37658, loot={153327}, worldquest=47552, vignette=2345}, -- Mistress Il'thendra
     [58001200] = {quest=48968, npc=127703, criteria=37663, loot={{153194, toy=true}}, note="3 people on the runes to summon; don't interrupt Doom Star"}, -- Doomcaster Suprax
     [60644840] = {quest=48815, npc=126946, criteria=37608, loot={151543}, vignette=2271}, -- Inquisitor Vethroz
-    [60902290] = {quest=48865, npc=127376, criteria=37606}, -- Chief Alchemist Munculus
+    [60902290] = {quest=48865, npc=127376, criteria=37606, worldquest=48867}, -- Chief Alchemist Munculus
     [61703720] = {quest=49183, npc=122958, criteria=37657, loot={{152905, mount=979}}}, -- Blistermaw
     [61906430] = {quest=48814, npc=126338, criteria=37616, loot={{153126,toy=true}}}, -- Wrath-Lord Yarez
     [62405380] = {quest=48813, npc=126254, criteria=37612, worldquest=48828}, -- Lieutenant Xakaar
@@ -99,7 +99,7 @@ ns.RegisterPoints(885, { -- Antoran Wastes
     [63902090] = {quest=48809, npc=126040, criteria=37647, loot={{152903, mount=981}}, note="Entrance to the cave is south east - use the eastern bridge to get there."}, -- Puscilla
     [64304820] = {quest=48812, npc=126208, criteria=37607, loot={153190}, worldquest=48827}, -- Varga
     [66981777] = {quest=48970, npc=127705, criteria=37665, loot={{153252, pet=2135}}, note="Summon with imp meat"}, -- Mother Rosula
-    [73207080] = {quest=48817, npc=127090, criteria=37611, loot={153324}}, -- Admiral Rel'var
+    [73207080] = {quest=48817, npc=127090, criteria=37611, loot={153324}, worldquest=48832}, -- Admiral Rel'var
     [75605650] = {quest=48818, npc=127096, criteria=37609}, -- All-Seer Xanarian
     [82656580] = {quest=48816, npc=127084, criteria=37610, note="Use the portal slightly west from him at 80, 62.4"}, -- Commander Texlaz
     [84408100] = { -- Squadron Commander Vishax

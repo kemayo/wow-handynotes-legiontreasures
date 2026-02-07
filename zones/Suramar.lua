@@ -140,6 +140,7 @@ ns.RegisterPoints(680, { -- Suramar
     [29455333] = {quest=44676, npc=113368, loot={138839}, note="Cave entrance @ 29.3, 50.7", path=29305070, vignette=1692}, -- Llorian
     [87456235] = {quest=41786, npc=103827, loot={140384}, vignette=1281}, -- King Morgalash / Sea Giant King
     [37987039] = {quest=44569, npc=106532, loot={}, vignette=1685}, -- Inquisitor Volitix
+    [23804580] = {quest=45505, npc=105728, worldquest=42797}, -- Scythemaster Cil'raman
 })
 
 ns.RegisterPoints(685, { -- Falanaar Tunnels

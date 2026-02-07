@@ -124,4 +124,5 @@ ns.RegisterPoints(634, { -- Stormheim
 })
 ns.RegisterPoints(649, { -- Helheim
     [27204220] = {quest=46949, npc=115732, path=33154312}, -- Jorvild the Trusted
+    [70001920] = {quest=42864, npc=109163, worldquest=42864}, -- Captain Dargun
 })

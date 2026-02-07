@@ -85,11 +85,11 @@ ns.RegisterPoints(657, { -- Path of Huln, floor 1, Highmountain
 ns.RegisterPoints(650, { -- Highmountain
     [36751635] = {quest=40084, npc=98299, criteria=33375, loot={131799}}, -- Bodash the Hoarder
     [38084557] = {quest=40405, npc=97449, criteria=33328, loot={131761}, vignette=1148}, -- Bristlemaul
-    [41483177] = {quest=40175, npc=98890, criteria=33335, loot={131921}, vignette=1106}, -- Slumber
+    [41483177] = {quest=40175, npc=98890, criteria=33335, loot={131921}, worldquest=41838, vignette=1106}, -- Slumber
     [41964161] = {quest=39782, npc=97203, criteria=33323, loot={{129175, pet=1752}}, vignette=1001, note="The Exiled Shaman"}, -- Tenpak Flametotem
     [43384725] = {quest=40413, npc=100230, criteria=33336, loot={131781}, vignette=1150, note="Loot chest afterwards"}, -- Amateur hunters (100230, 100231, 100232)
     [44201210] = {quest=39994, npc=97933, criteria=33331, loot={131798}, note="Wanders a bit"}, -- Crab Rider Grmlrml
-    [45705500] = {quest=40681, npc=101077, criteria=33338, loot={131730}}, -- Sekhan
+    [45705500] = {quest=40681, npc=101077, criteria=33338, loot={131730}, worldquest=41844}, -- Sekhan
     [46500745] = {quest=40096, npc=98311, criteria=33333, loot={131797}}, -- Mrrklr (captured survivor)
     [47803200] = {quest=39646, npc=96410, criteria=33319, loot={{131900, toy=true}}, vignette=995, note="Wanders a bit"}, -- Majestic Elderhorn
     [48394019] = {quest=39806, npc=97345, criteria=33326, loot={{131809, toy=true}}, vignette=1006, note="1/4 of slow fall toy"}, -- Crawshuk the Hungry
