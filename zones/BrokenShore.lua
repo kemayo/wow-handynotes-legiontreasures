@@ -12,7 +12,7 @@ ns.RegisterPoints(646, { -- Broken Shore
     [40385977] = {quest=46951, npc=120998, alpha=0.4, note="Inside the Pit of Agony"}, -- Flllurlokkr
     [41601723] = {quest=47026, npc=121107}, -- Lady Eldrathe
     [42404282] = {quest=46092, npc=117094}, -- Malorus the Soulkeeper
-    [44645320] = {quest=46304, npc=119629, loot={{142233, mount=931, class="WARLOCK"}}, vignette=1887, outdoors_only=true}, -- Lord Hel'Nurath
+    [44645320] = {quest=46304, npc=119629, loot={{142233, mount=931, class="WARLOCK"}}, vignette=1887, outdoors_only=true}, -- Lord Hel'Nurath (47133?)
     [49144796] = {quest=46100, npc=117090, vignette=1850}, -- Xorogun the Flamecarver
     [49783834] = {quest=46097, npc=117136, vignette=1854}, -- Doombringer Zar'thoz
     [51814293] = {quest=46093, npc=117086}, -- Emberfire
