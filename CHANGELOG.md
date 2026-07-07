@@ -1,5 +1,10 @@
 # Changelog
 
+## Changes in v51
+
+* Update for 12.0.7
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+
 ## Changes in v50
 
 * Note down a bunch of world quests
