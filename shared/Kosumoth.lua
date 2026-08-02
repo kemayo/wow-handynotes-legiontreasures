@@ -98,7 +98,7 @@ ns.RegisterPoints(646, { -- BrokenShore
         label="{npc:102695:Drak'thul}",
         note="Now go get the Weathered Relic, then talk to him again until he tells you to go away. Once he does, go find the 10 orbs across the Broken Isles, in order from 1 to 10.",
         atlas="quest-important-available",
-        route={37017101, 58545405},
+        routes={{37017101, 58545405}},
     },
     [58545405] = {
         quest=43725, -- questid is for talking to DT after you have it

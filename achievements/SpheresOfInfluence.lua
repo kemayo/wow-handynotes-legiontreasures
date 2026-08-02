@@ -9,7 +9,7 @@ local sphere = {
 }
 
 ns.RegisterPoints(913, { -- Antorus: Elarian Sanctuary
-	[49354039] = {note="First.", route={49354039, 81625119, 33377826, 33562878, 77269857}},
+	[49354039] = {note="First.", routes={{49354039, 81625119, 33377826, 33562878, 77269857}}},
 	[81625119] = {note="Second."},
 	[33377826] = {note="Third; underneath Eonar's platform."},
 	[33562878] = {note="Fourth; on the supports under the bridge."},
@@ -17,5 +17,5 @@ ns.RegisterPoints(913, { -- Antorus: Elarian Sanctuary
 }, sphere)
 
 ns.RegisterPoints(912, { -- Antorus: Elunaria
-	[31335599] = {note="Fifth; chain-glide around the rocks", route={31335599, 0}},
+	[31335599] = {note="Fifth; chain-glide around the rocks", routes={{31335599, 0}}},
 }, sphere)
