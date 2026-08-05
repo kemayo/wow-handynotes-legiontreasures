@@ -1,5 +1,10 @@
 # Changelog
 
+## Changes in v53
+
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
+    * Turning on "Transmog exact items" didn't take effect until you reloaded
+
 ## Changes in v52
 
 * Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
